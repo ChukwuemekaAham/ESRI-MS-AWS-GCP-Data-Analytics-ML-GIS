@@ -1,0 +1,16 @@
+﻿item_id,item_name,item_price,page
+11,Shirt,10.00,apparel
+12,TShirt,5.00,apparel
+13,Jacket,15.00,apparel
+21,Pasta Sauce,8.00,food
+22,Cake Mix,12.00,food
+23,Noodle,6.00,food
+31,Head phone,25.00,electronics
+32,Keyboard,20.00,electronics
+33,Mouse,15.00,electronics
+41,Dinner set,30.00,home
+42,Kettle,15.00,home
+43,Cutting board,20.00,home
+51,Data Sciences Book,25.00,books
+52,Cookbook,15.00,books
+53,Learning Python,30.00,books

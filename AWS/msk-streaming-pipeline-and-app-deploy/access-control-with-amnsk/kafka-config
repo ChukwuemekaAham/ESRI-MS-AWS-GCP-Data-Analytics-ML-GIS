@@ -1,0 +1,54 @@
+props.put("security.protocol", "SASL_SSL");
+props.put("sasl.mechanism", "AWS_MSK_IAM");
+props.put("sasl.jaas.config", "software.amazon.msk.auth.iam.IAMLoginModule required;");
+props.put("sasl.client.callback.handler.class", "software.amazon.msk.auth.iam.IAMClientCallbackHandler");
+
+
+*****pom.xml file*****
+<dependency>
+   <groupId>software.amazon.msk</groupId>
+   <artifactId>aws-msk-iam-auth</artifactId>
+   <version>1.0.0</version>
+ </dependency>
+
+
+```bash
+
+source /opt/kafka_2.12-2.2.1/msk.env
+
+kafka-topics.sh --create --topic ExampleTopic --partitions 5 --replication-factor 3 --bootstrap-server $MSK_BOOTSTRAP  --command-config /opt/client.properties
+
+
+kafka-topics.sh --list --bootstrap-server $MSK_BOOTSTRAP --command-config /opt/client.properties
+
+
+cd /opt/msk-java
+
+mvn package
+
+java -cp target/msk-auth-demo-1.0-SNAPSHOT.jar com.amazonaws.examples.DemoProducer $MSKIAM_BOOTSTRAP ExampleTopic
+
+>Hello world
+>It is a great day
+>I got this
+
+```
+
+
+
+```bash
+#CONSUMER
+
+source /opt/kafka_2.12-2.2.1/msk.env
+
+cd /opt/msk-java
+
+
+java -cp target/msk-auth-demo-1.0-SNAPSHOT.jar com.amazonaws.examples.DemoConsumer $MSKIAM_BOOTSTRAP ExampleTopic
+
+
+
+````
+
+
+

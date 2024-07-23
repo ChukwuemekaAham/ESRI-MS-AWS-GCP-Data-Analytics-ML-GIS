@@ -1,0 +1,47 @@
+﻿event_id,event,user_id,item_id,item_quantity,event_time,os,page,url,item_id0,item_name,item_price,page0
+04a9eacd572e4cc6fbe304e72bfd24e5,reviewed_item,18,22,0,2023-07-19T14:53:32.498,ios,books,www.example.com,22,Cake Mix,12.00,food
+04a9eacd572e4cc6fbe304e72bfd24e5,reviewed_item,18,22,0,2023-07-19T14:53:32.498,ios,books,www.example.com,22,Cake Mix,12.00,food
+0f01b078785bbc83dceb9372dbda86a2,clicked_review,37,41,0,2023-07-19T14:53:29.470,web,apparel,www.example.com,41,Dinner set,30.00,home
+0f01b078785bbc83dceb9372dbda86a2,clicked_review,37,41,0,2023-07-19T14:53:29.470,web,apparel,www.example.com,41,Dinner set,30.00,home
+3ac16502d53cf46cbdcde8ec5c9e9cae,reviewed_item,44,53,0,2023-07-19T14:53:33.548,web,electronics,www.example.com,53,Learning Python,30.00,books
+3ac16502d53cf46cbdcde8ec5c9e9cae,reviewed_item,44,53,0,2023-07-19T14:53:33.548,web,electronics,www.example.com,53,Learning Python,30.00,books
+3e00ae32cce56bb1870e25f0a1924865,purchased_item,13,12,5,2023-07-19T14:53:33.585,ios,food,www.example.com,12,TShirt,5.00,apparel
+3e00ae32cce56bb1870e25f0a1924865,purchased_item,13,12,5,2023-07-19T14:53:33.585,ios,food,www.example.com,12,TShirt,5.00,apparel
+5164b91c745acd1578d275b56ee3a4f1,clicked_item_description,29,43,0,2023-07-19T14:53:25.387,web,home,www.example.com,43,Cutting board,20.00,home
+5164b91c745acd1578d275b56ee3a4f1,clicked_item_description,29,43,0,2023-07-19T14:53:25.387,web,home,www.example.com,43,Cutting board,20.00,home
+572ea323e60bbb02734e09c8a5cf08b7,clicked_review,20,22,0,2023-07-19T14:53:31.490,android,home,www.example.com,22,Cake Mix,12.00,food
+572ea323e60bbb02734e09c8a5cf08b7,clicked_review,20,22,0,2023-07-19T14:53:31.490,android,home,www.example.com,22,Cake Mix,12.00,food
+579038910ea5335a817a9a1715cab1be,clicked_review,25,33,0,2023-07-19T14:53:29.462,web,electronics,www.example.com,33,Mouse,15.00,electronics
+579038910ea5335a817a9a1715cab1be,clicked_review,25,33,0,2023-07-19T14:53:29.462,web,electronics,www.example.com,33,Mouse,15.00,electronics
+5864fb411184fedf59dcd34c730a8464,reviewed_item,1,31,0,2023-07-19T14:53:33.576,android,apparel,www.example.com,31,Head phone,25.00,electronics
+5864fb411184fedf59dcd34c730a8464,reviewed_item,1,31,0,2023-07-19T14:53:33.576,android,apparel,www.example.com,31,Head phone,25.00,electronics
+673af901e24c3e354a3a11836062f5a4,entered_payment_method,8,23,0,2023-07-19T14:53:33.528,android,home,www.example.com,23,Noodle,6.00,food
+673af901e24c3e354a3a11836062f5a4,entered_payment_method,8,23,0,2023-07-19T14:53:33.528,android,home,www.example.com,23,Noodle,6.00,food
+6847b907f72700d065056acd05abe767,purchased_item,48,22,1,2023-07-19T14:53:30.480,web,apparel,www.example.com,22,Cake Mix,12.00,food
+6847b907f72700d065056acd05abe767,purchased_item,48,22,1,2023-07-19T14:53:30.480,web,apparel,www.example.com,22,Cake Mix,12.00,food
+705ef3c730aefb1b1bc1da37c8085136,reviewed_item,35,13,0,2023-07-19T14:53:24.376,web,books,www.example.com,13,Jacket,15.00,apparel
+705ef3c730aefb1b1bc1da37c8085136,reviewed_item,35,13,0,2023-07-19T14:53:24.376,web,books,www.example.com,13,Jacket,15.00,apparel
+80d1ebc2bb3f0183827b5cf4964e69b5,purchased_item,4,33,1,2023-07-19T14:53:26.431,web,electronics,www.example.com,33,Mouse,15.00,electronics
+80d1ebc2bb3f0183827b5cf4964e69b5,purchased_item,4,33,1,2023-07-19T14:53:26.431,web,electronics,www.example.com,33,Mouse,15.00,electronics
+a8ae594ed1a4015b7aaab6924f3c08e9,entered_payment_method,42,31,0,2023-07-19T14:53:25.417,web,apparel,www.example.com,31,Head phone,25.00,electronics
+a8ae594ed1a4015b7aaab6924f3c08e9,entered_payment_method,42,31,0,2023-07-19T14:53:25.417,web,apparel,www.example.com,31,Head phone,25.00,electronics
+ad0e593351497eaf02e9b65211818ebe,purchased_item,38,52,4,2023-07-19T14:53:32.507,web,electronics,www.example.com,52,Cookbook,15.00,books
+ad0e593351497eaf02e9b65211818ebe,purchased_item,38,52,4,2023-07-19T14:53:32.507,web,electronics,www.example.com,52,Cookbook,15.00,books
+ae72617c416edd6f39099cf61ff01f91,liked_item,9,13,0,2023-07-19T14:53:33.567,ios,home,www.example.com,13,Jacket,15.00,apparel
+ae72617c416edd6f39099cf61ff01f91,liked_item,9,13,0,2023-07-19T14:53:33.567,ios,home,www.example.com,13,Jacket,15.00,apparel
+bcb2c5856574100a5529246623014c71,entered_payment_method,12,13,0,2023-07-19T14:53:33.558,ios,electronics,www.example.com,13,Jacket,15.00,apparel
+bcb2c5856574100a5529246623014c71,entered_payment_method,12,13,0,2023-07-19T14:53:33.558,ios,electronics,www.example.com,13,Jacket,15.00,apparel
+cc1cf12540ca9e31229caaff83c4465e,clicked_item_description,9,11,0,2023-07-19T14:53:28.452,ios,electronics,www.example.com,11,Shirt,10.00,apparel
+cc1cf12540ca9e31229caaff83c4465e,clicked_item_description,9,11,0,2023-07-19T14:53:28.452,ios,electronics,www.example.com,11,Shirt,10.00,apparel
+cd5d724a87bb1c18849bf98307f0d0d2,reviewed_item,32,32,0,2023-07-19T14:53:25.398,ios,home,www.example.com,32,Keyboard,20.00,electronics
+cd5d724a87bb1c18849bf98307f0d0d2,reviewed_item,32,32,0,2023-07-19T14:53:25.398,ios,home,www.example.com,32,Keyboard,20.00,electronics
+ce0b2a6ba9c45c8b3dea079604dde313,entered_payment_method,22,33,0,2023-07-19T14:53:33.538,web,apparel,www.example.com,33,Mouse,15.00,electronics
+ce0b2a6ba9c45c8b3dea079604dde313,entered_payment_method,22,33,0,2023-07-19T14:53:33.538,web,apparel,www.example.com,33,Mouse,15.00,electronics
+d21012bae089baa22cfb9763b2b1c7e6,clicked_review,21,21,0,2023-07-19T14:53:27.441,web,books,www.example.com,21,Pasta Sauce,8.00,food
+d21012bae089baa22cfb9763b2b1c7e6,clicked_review,21,21,0,2023-07-19T14:53:27.441,web,books,www.example.com,21,Pasta Sauce,8.00,food
+d7734ea3bb0409dc49cc4e5d953dbde4,reviewed_item,1,43,0,2023-07-19T14:53:33.517,android,food,www.example.com,43,Cutting board,20.00,home
+d7734ea3bb0409dc49cc4e5d953dbde4,reviewed_item,1,43,0,2023-07-19T14:53:33.517,android,food,www.example.com,43,Cutting board,20.00,home
+df80e2e1e1b891ec6a9723ef838b7ab9,purchased_item,28,22,2,2023-07-19T14:53:23.366,web,electronics,www.example.com,22,Cake Mix,12.00,food
+df80e2e1e1b891ec6a9723ef838b7ab9,purchased_item,28,22,2,2023-07-19T14:53:23.366,web,electronics,www.example.com,22,Cake Mix,12.00,food
+ef57d1f944398300f01f93e9dd5c3ca7,liked_item,30,22,0,2023-07-19T14:53:22.354,android,books,www.example.com,22,Cake Mix,12.00,food
+ef57d1f944398300f01f93e9dd5c3ca7,liked_item,30,22,0,2023-07-19T14:53:22.354,android,books,www.example.com,22,Cake Mix,12.00,food

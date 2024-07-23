@@ -1,0 +1,570 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n### Task 4: Analytics development from Kinesis Data Analytics Studio\n\nThis is the notebook for Task 4 as noted in the lab markdown file.\n*****\n\n### Note:\n### This is an instruction-only paragraph.  You will find similar \"instruction-only paragraphs\" in this notebook. Instructions paragraphs need not be run.  \n### Only paragraphs with code needs to be run. \n### Instruction paragraph provide instructions that apply to code paragraphs that follow along with the expected output.\n*****\n### CREATE statement\nIn this step, you create in-memory tables in AWS Glue Data Catalog for the streaming data and the user data that is stored in Amazon Simple Storage Service (Amazon S3).  You also create an in-memory table for the data being written to an Amazon Kinesis output data stream.\n\nIn lines 11-21 and 55-66, you define the table along with its elements. Apache Flink will use this statement to define what it expects to see in each record coming into a Kafka topic. \n\nThe streaming data will be written to the **clickstreamdatatopic** topic and items catalog will be written to **catalog_items_stream** topic created.\n\n### Connection detauks\nFollowing the CREATE statement, you define all the configuration properties about the Kafka cluster, including the topic name, bootstrap server string, and group ID.\n\nLines 29-32 and 62-65 specify the properties to enable AWS Identity and Access Management (IAM) authenticated communication with the Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.  \n\nLines 44 and 84 define the Amazon S3 path for the user reference data stored in Amazon S3 and the S3 path for the output data.\n\nIn lines 86 and 87,\n\n**sink.rolling-policy.rollover-interval** determines how long the part file will stay open before being rolled.\n\n**sink.rolling-policy.check-interval** determines how often to check the time based rolling policies.\n*****\n\n### Instructions:\n1. Replace the **YOUR_IAM_BOOTSTRAP_BROKERS_GO_HERE** placeholder value within the single quote (lines 25 and 58) with the **IAM bootstrap server private endpoint connection string**. This information is available in the Amazon MSK console.\n2. Replace the **YOUR_DataBucketName_GOES_HERE** placeholder value (lines 44 and 84) with the **DataBucketName** found in the left panel of lab markdown instructions.\n3. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.\n\n*****\n### Expected output:\n\nYou will notice four tables deleted and re-created as the output.\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:37:06+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Task 4: Analytics development from Kinesis Data Analytics Studio</h3>\n<p>This is the notebook for Task 4 as noted in the lab markdown file.</p>\n<hr />\n<h3>Note:</h3>\n<h3>This is an instruction-only paragraph.  You will find similar &ldquo;instruction-only paragraphs&rdquo; in this notebook. Instructions paragraphs need not be run.</h3>\n<h3>Only paragraphs with code needs to be run.</h3>\n<h3>Instruction paragraph provide instructions that apply to code paragraphs that follow along with the expected output.</h3>\n<hr />\n<h3>CREATE statement</h3>\n<p>In this step, you create in-memory tables in AWS Glue Data Catalog for the streaming data and the user data that is stored in Amazon Simple Storage Service (Amazon S3).  You also create an in-memory table for the data being written to an Amazon Kinesis output data stream.</p>\n<p>In lines 11-21 and 55-66, you define the table along with its elements. Apache Flink will use this statement to define what it expects to see in each record coming into a Kafka topic.</p>\n<p>The streaming data will be written to the <strong>clickstreamdatatopic</strong> topic and items catalog will be written to <strong>catalog_items_stream</strong> topic created.</p>\n<h3>Connection detauks</h3>\n<p>Following the CREATE statement, you define all the configuration properties about the Kafka cluster, including the topic name, bootstrap server string, and group ID.</p>\n<p>Lines 29-32 and 62-65 specify the properties to enable AWS Identity and Access Management (IAM) authenticated communication with the Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.</p>\n<p>Lines 44 and 84 define the Amazon S3 path for the user reference data stored in Amazon S3 and the S3 path for the output data.</p>\n<p>In lines 86 and 87,</p>\n<p><strong>sink.rolling-policy.rollover-interval</strong> determines how long the part file will stay open before being rolled.</p>\n<p><strong>sink.rolling-policy.check-interval</strong> determines how often to check the time based rolling policies.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Replace the <strong>YOUR_IAM_BOOTSTRAP_BROKERS_GO_HERE</strong> placeholder value within the single quote (lines 25 and 58) with the <strong>IAM bootstrap server private endpoint connection string</strong>. This information is available in the Amazon MSK console.</li>\n<li>Replace the <strong>YOUR_DataBucketName_GOES_HERE</strong> placeholder value (lines 44 and 84) with the <strong>DataBucketName</strong> found in the left panel of lab markdown instructions.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will notice four tables deleted and re-created as the output.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785684_500870340",
+      "id": "paragraph_1659991463698_45009026",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:277",
+      "dateFinished": "2022-09-06T17:37:06+0000",
+      "dateStarted": "2022-09-06T17:37:06+0000"
+    },
+    {
+      "title": "CREATE STATEMENT:",
+      "text": "%flink.ssql(type=update)\n\n-- Replace the YOUR_IAM_BOOTSTRAP_BROKERS_GO_HERE placeholder value within the single quote (lines 25 and 58) with the IAM bootstrap server private endpoint connection string. This information is available in the MSK console.\n-- Replace the YOUR_DataBucketName_GOES_HERE placeholder value (lines 44 and 84) with the DataBucketName found in the left panel of lab markdown instructions.\n\nDROP TABLE IF EXISTS clickstream_events;\nDROP TABLE IF EXISTS catalog_items_s3;\nDROP TABLE IF EXISTS catalog_items_stream;\nDROP TABLE IF EXISTS sink_table;\n\nCREATE TABLE clickstream_events (\n    event_id STRING,\n    event STRING,\n    user_id STRING,\n    item_id STRING,\n    item_quantity BIGINT,\n    event_time TIMESTAMP(3),\n    os STRING,\n    page STRING,\n    url STRING\n  )\nWITH (\n    'connector' = 'kafka',\n    'topic' = 'clickstreamtopic',\n    'properties.bootstrap.servers' = 'YOUR_IAM_BOOTSTRAP_BROKERS_GO_HERE',\n    'properties.group.id' = 'KdaStudioGroup',\n    'scan.startup.mode' = 'latest-offset',\n    'format' = 'json',\n    'properties.security.protocol' = 'SASL_SSL',\n    'properties.sasl.mechanism' = 'AWS_MSK_IAM',\n    'properties.sasl.jaas.config' = 'software.amazon.msk.auth.iam.IAMLoginModule required;',\n    'properties.sasl.client.callback.handler.class' = 'software.amazon.msk.auth.iam.IAMClientCallbackHandler'\n);\n\n\nCREATE TABLE catalog_items_s3 (\n    item_id STRING,\n    item_name STRING,\n    item_price STRING,\n    page STRING\n  )\nWITH (\n    'connector' = 'filesystem',\n    'path' = 's3a://YOUR_DataBucketName_GOES_HERE/input/',\n    'format' = 'json'\n);\n\n\nCREATE TABLE catalog_items_stream (\n    item_id STRING,\n    item_name STRING,\n    item_price STRING,\n    page STRING\n  )\nWITH (\n    'connector' = 'kafka',\n    'topic' = 'catalog',\n    'properties.bootstrap.servers' = 'YOUR_IAM_BOOTSTRAP_BROKERS_GO_HERE',\n    'properties.group.id' = 'KdaStudioGroup',\n    'scan.startup.mode' = 'earliest-offset',\n    'format' = 'json',\n    'properties.security.protocol' = 'SASL_SSL',\n    'properties.sasl.mechanism' = 'AWS_MSK_IAM',\n    'properties.sasl.jaas.config' = 'software.amazon.msk.auth.iam.IAMLoginModule required;',\n    'properties.sasl.client.callback.handler.class' = 'software.amazon.msk.auth.iam.IAMClientCallbackHandler'\n);\n\nCREATE TABLE sink_table (\n    event_id STRING,\n    event STRING,\n    user_id STRING,\n    item_id STRING,\n    item_quantity BIGINT,\n    event_time TIMESTAMP(3),\n    os STRING,\n    page STRING,\n    url STRING,\n    item_name STRING,\n    item_price STRING\n)\nPARTITIONED BY ( page , event )\nWITH (\n 'connector'= 'filesystem',\n 'path' = 's3://YOUR_DataBucketName_GOES_HERE/data/',\n 'format' = 'json',\n 'sink.rolling-policy.rollover-interval' = '60s',\n 'sink.rolling-policy.check-interval' = '30s'\n);",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "tableHide": false,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785684_1200296582",
+      "id": "paragraph_1659484623097_1764627269",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:278"
+    },
+    {
+      "text": "%md\n## INSERT\n\nIn the following code block, you will **INSERT INTO** the **catalog_items_stream** table the items catalog stored in Amazon S3.\n\n*****\n### Instructions:\n1.   Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.\n\n*****\n### Expected output:\n\nYou will see **Insertion successful** returned on a successful run of the command. There will be no results presented on the screen because this is an **INSERT** statement. \n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:37:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>INSERT</h2>\n<p>In the following code block, you will <strong>INSERT INTO</strong> the <strong>catalog_items_stream</strong> table the items catalog stored in Amazon S3.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will see <strong>Insertion successful</strong> returned on a successful run of the command. There will be no results presented on the screen because this is an <strong>INSERT</strong> statement.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_1539969780",
+      "id": "paragraph_1661187473203_91410207",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:279",
+      "dateFinished": "2022-09-06T17:37:00+0000",
+      "dateStarted": "2022-09-06T17:37:00+0000"
+    },
+    {
+      "title": "INSERT",
+      "text": "%flink.ssql(type=update)\nINSERT INTO catalog_items_stream \nSELECT item_id,item_name,item_price,page\nFROM  catalog_items_s3;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_1197444775",
+      "id": "paragraph_1659484975566_1079152170",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:280"
+    },
+    {
+      "text": "%md\n## JOINS\n\nIn the following code block, you will perform a **JOIN**, thereby enriching the streaming data with reference data stored in Amazon S3.\nYou will also filter the output according to the event (*purchased_item* in the following block) and **GROUP** the event over every 10 seconds.\n**This provides the SALES per Segment page in the last 10 seconds.**\n\n*****\n### Instructions:\n1.  Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.\n2. `Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by pressing Ctrl + Option + C (Ctrl + Alt + C in Windows) keys with the paragraph selected when you have seen the results to optimize Apache Flink resource allocation.`\n***** \n### Expected output:\n\nIt can take 1-2 minutes for the data to appear in the graph. \nOutput is a bar graph of the purchased_item every 10 seconds per segment page. \n`Initially only the blue bar will be presented. This graph updates over time, and we recommend that you leave it running for a couple of minutes to visualize and explore the results.`\n\n*****",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:37:29+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>JOINS</h2>\n<p>In the following code block, you will perform a <strong>JOIN</strong>, thereby enriching the streaming data with reference data stored in Amazon S3.<br />\nYou will also filter the output according to the event (<em>purchased_item</em> in the following block) and <strong>GROUP</strong> the event over every 10 seconds.<br />\n<strong>This provides the SALES per Segment page in the last 10 seconds.</strong></p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.</li>\n<li><code>Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by pressing Ctrl + Option + C (Ctrl + Alt + C in Windows) keys with the paragraph selected when you have seen the results to optimize Apache Flink resource allocation.</code></li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>It can take 1-2 minutes for the data to appear in the graph.<br />\nOutput is a bar graph of the purchased_item every 10 seconds per segment page.<br />\n<code>Initially only the blue bar will be presented. This graph updates over time, and we recommend that you leave it running for a couple of minutes to visualize and explore the results.</code></p>\n<hr />\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_1962210827",
+      "id": "paragraph_1659992706158_59558642",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:281",
+      "dateFinished": "2022-09-06T17:37:29+0000",
+      "dateStarted": "2022-09-06T17:37:29+0000"
+    },
+    {
+      "title": "JOINS",
+      "text": "%flink.ssql(type=update)\n\n--identify Sales per Segment in the last 10 seconds\n\n    SELECT\n        TUMBLE_START(PROCTIME(), INTERVAL '10' seconds) as start_window,\n        TUMBLE_END(PROCTIME(), INTERVAL '10' seconds) as end_window,\n        clickstream_events.page, \n        SUM(CAST(item_price as FLOAT) * item_quantity) AS SALES\nfrom clickstream_events \ninner join  catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id\nWHERE (event= 'purchased_item')\nGROUP BY TUMBLE(PROCTIME(), INTERVAL '10' seconds ), clickstream_events.page, item_price;\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "tableHide": false,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "xLabelStatus": "default",
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "stacked": true
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "start_window": "string",
+                      "end_window": "string",
+                      "page": "string",
+                      "SALES": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "page",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "end_window",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "start_window",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "SALES",
+                  "index": 3,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_931326431",
+      "id": "paragraph_1659969722594_1825908457",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:282"
+    },
+    {
+      "text": "%md\n## Enable Checkpointing\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Enable Checkpointing</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_1011994893",
+      "id": "paragraph_1659994165207_904893425",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:283"
+    },
+    {
+      "text": "%md\nIn the following code block, you will enable checkpointing.\n\nCheckpointing needs to be enabled to write data to Amazon S3. Data within the bucket directories is split into part files.\n\nPart files can only be finalized on successful checkpoints. \n\nIf checkpointing is turned off, part files will forever stay in the in-progress or the pending state and cannot be safely read by downstream systems.\n\n*****\n### Instructions:\n1. Check the previous code block to ensure that it has been stopped. \n2. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.\n*****\n### Expected output:\nThere will be no result presented as output because this is a config setting for checkpointing to write data to Amazon S3.  You will notice the Play button at the right of the paragraph turn to **FINISHED**",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:37:46+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>In the following code block, you will enable checkpointing.</p>\n<p>Checkpointing needs to be enabled to write data to Amazon S3. Data within the bucket directories is split into part files.</p>\n<p>Part files can only be finalized on successful checkpoints.</p>\n<p>If checkpointing is turned off, part files will forever stay in the in-progress or the pending state and cannot be safely read by downstream systems.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Check the previous code block to ensure that it has been stopped.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>There will be no result presented as output because this is a config setting for checkpointing to write data to Amazon S3.  You will notice the Play button at the right of the paragraph turn to <strong>FINISHED</strong></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_388071078",
+      "id": "paragraph_1659993826381_1660618367",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:284",
+      "dateFinished": "2022-09-06T17:37:46+0000",
+      "dateStarted": "2022-09-06T17:37:46+0000"
+    },
+    {
+      "text": "%flink.pyflink\n\nst_env.get_config().get_configuration().set_string(\n    \"execution.checkpointing.interval\", \"1min\"\n)\n\nst_env.get_config().get_configuration().set_string(\n    \"execution.checkpointing.mode\", \"EXACTLY_ONCE\"\n)",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_695229596",
+      "id": "paragraph_1659485382175_493688621",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:285"
+    },
+    {
+      "text": "%md\n## Sink events in Amazon S3\n\nIn the following code block, the **INSERT INTO sink_table** clause will write this data to the S3 bucket.\n\n*****\n### Instructions:\n1.  Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.\n`Keep it running for a couple of minutes to you see the results in Amazon S3.`\n\n*****\n### Expected output:\n\n**There will be no results presented on the screen because this is an INSERT statement. Please use the following numbered steps to access the data in Amazon S3.**\n\n1. Navigate to the S3 bucket starting with **databucket-** and the **data** folder contained therein. Note: **data** folder is created only on running the following code block.\n2. You will notice that the incoming data stream has been dynamically partitioned into **page/** and **event/**. Note: Choose the refresh icon to see the folders with hive style partitioning. It can take up to 5 minutes for the output to be available in the S3 bucket.\n3. Choose any of the categories and then choose an event.  Select the box next the object.\n4. In the **Actions** menu, choose **Query with S3 Select**.\n5. In the **Input settings**, for **Format**, choose **JSON**.\n6. In the **Output settings**, for **Format**, choose **JSON**.\n7. In **SQL query**,  choose <span style=\"ssb_orange; border-color:grey;\">Run SQL query</span>. This returns a JSON output limited to five results.\n8. The **query results** will return a json output of the event_id, event, user_id, event_time, os, page and url.\n9. `Stop the next paragraph by choosing the Pause button at the top right of the paragraph or by pressing Ctrl + Option + C (Ctrl + Alt + C in Windows) keys with the paragraph selected when you have seen the results in Amazon S3.`\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:37:59+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Sink events in Amazon S3</h2>\n<p>In the following code block, the <strong>INSERT INTO sink_table</strong> clause will write this data to the S3 bucket.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter with the paragraph selected.<br />\n<code>Keep it running for a couple of minutes to you see the results in Amazon S3.</code></li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p><strong>There will be no results presented on the screen because this is an INSERT statement. Please use the following numbered steps to access the data in Amazon S3.</strong></p>\n<ol>\n<li>Navigate to the S3 bucket starting with <strong>databucket-</strong> and the <strong>data</strong> folder contained therein. Note: <strong>data</strong> folder is created only on running the following code block.</li>\n<li>You will notice that the incoming data stream has been dynamically partitioned into <strong>page/</strong> and <strong>event/</strong>. Note: Choose the refresh icon to see the folders with hive style partitioning. It can take up to 5 minutes for the output to be available in the S3 bucket.</li>\n<li>Choose any of the categories and then choose an event.  Select the box next the object.</li>\n<li>In the <strong>Actions</strong> menu, choose <strong>Query with S3 Select</strong>.</li>\n<li>In the <strong>Input settings</strong>, for <strong>Format</strong>, choose <strong>JSON</strong>.</li>\n<li>In the <strong>Output settings</strong>, for <strong>Format</strong>, choose <strong>JSON</strong>.</li>\n<li>In <strong>SQL query</strong>,  choose <span style=\"ssb_orange; border-color:grey;\">Run SQL query</span>. This returns a JSON output limited to five results.</li>\n<li>The <strong>query results</strong> will return a json output of the event_id, event, user_id, event_time, os, page and url.</li>\n<li><code>Stop the next paragraph by choosing the Pause button at the top right of the paragraph or by pressing Ctrl + Option + C (Ctrl + Alt + C in Windows) keys with the paragraph selected when you have seen the results in Amazon S3.</code></li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785685_664091342",
+      "id": "paragraph_1659994671798_1867692810",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:286",
+      "dateFinished": "2022-09-06T17:37:59+0000",
+      "dateStarted": "2022-09-06T17:37:59+0000"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nINSERT INTO sink_table\nSELECT  \n event_id ,\n    event ,\n    user_id,\n    catalog_items_stream.item_id,\n    item_quantity,\n    event_time,\n    os,\n    catalog_items_stream.page,\n    url,\n    item_name,\n    item_price\nfrom clickstream_events \ninner join catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785686_1457424722",
+      "id": "paragraph_1659485235554_1149575331",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:287"
+    },
+    {
+      "text": "%md\n## Congratulations!\n### You have successfully completed the following:\n\n### 1.  Built a stream processing pipeline with MSK in Kinesis Data Analytics Studio using Apache Flink and Apache Zeppelin by ingesting clickstream data and enriching the clickstream data with catalog data stored in Amazon S3. You performed analysis on the enriched data to identify the sales per category in real time.\n\n### 2.  Visualized the output.\n\n###  You will now return to the lab instructions to continue task 5 where you build and deploy the Zeppelin notebook as a long-standing application storing data in Amazon S3 for further analysis.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T17:36:25+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Congratulations!</h2>\n<h3>You have successfully completed the following:</h3>\n<h3>1.  Built a stream processing pipeline with MSK in Kinesis Data Analytics Studio using Apache Flink and Apache Zeppelin by ingesting clickstream data and enriching the clickstream data with catalog data stored in Amazon S3. You performed analysis on the enriched data to identify the sales per category in real time.</h3>\n<h3>2.  Visualized the output.</h3>\n<h3>You will now return to the lab instructions to continue task 5 where you build and deploy the Zeppelin notebook as a long-standing application storing data in Amazon S3 for further analysis.</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662485785686_202355392",
+      "id": "paragraph_1661557213992_412176936",
+      "dateCreated": "2022-09-06T17:36:25+0000",
+      "status": "READY",
+      "$$hashKey": "object:288"
+    }
+  ],
+  "name": "Lab4_MSK_Analytics",
+  "id": "2HBC4WEAX",
+  "defaultInterpreterGroup": "flink",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Lab4_MSK_Analytics"
+}

@@ -1,0 +1,52 @@
+{
+  "Name": "catalog_items_s3",
+  "DatabaseName": "kdadatabase-0umj1zlmdnvw",
+  "CreateTime": "2023-07-19T14:39:13.000Z",
+  "UpdateTime": "2023-07-19T14:39:13.000Z",
+  "LastAccessTime": "1970-01-01T00:00:00.000Z",
+  "Retention": 0,
+  "StorageDescriptor": {
+    "Columns": [],
+    "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+    "OutputFormat": "org.apache.hadoop.hive.ql.io.IgnoreKeyTextOutputFormat",
+    "Compressed": false,
+    "NumberOfBuckets": -1,
+    "SerdeInfo": {
+      "SerializationLibrary": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+      "Parameters": {
+        "serialization.format": "1"
+      }
+    },
+    "BucketColumns": [],
+    "SortColumns": [],
+    "Parameters": {},
+    "SkewedInfo": {
+      "SkewedColumnNames": [],
+      "SkewedColumnValues": [],
+      "SkewedColumnValueLocationMaps": {}
+    },
+    "StoredAsSubDirectories": false
+  },
+  "PartitionKeys": [],
+  "TableType": "MANAGED_TABLE",
+  "Parameters": {
+    "flink.schema.1.name": "item_name",
+    "flink.format": "json",
+    "flink.schema.2.data-type": "VARCHAR(2147483647)",
+    "flink.schema.3.data-type": "VARCHAR(2147483647)",
+    "flink.schema.0.data-type": "VARCHAR(2147483647)",
+    "flink.schema.0.name": "item_id",
+    "transient_lastDdlTime": "1689777552",
+    "flink.schema.3.name": "page",
+    "flink.connector": "filesystem",
+    "flink.schema.2.name": "item_price",
+    "flink.schema.1.data-type": "VARCHAR(2147483647)",
+    "flink.path": "s3a://databucket-us-west-2-747367001/input/"
+  },
+  "CreatedBy": "arn:aws:sts::148347484251:assumed-role/LabStack-29e32d98-34dc-411a-a712-8c6fb0-KdaAppRole-1TM2T2IGSORG6/kiam-kiam",
+  "IsRegisteredWithLakeFormation": false,
+  "CatalogId": "148347484251",
+  "IsRowFilteringEnabled": false,
+  "VersionId": "0",
+  "DatabaseId": "9877e8bfce1a406fa458e6fbf5738a9d"
+}

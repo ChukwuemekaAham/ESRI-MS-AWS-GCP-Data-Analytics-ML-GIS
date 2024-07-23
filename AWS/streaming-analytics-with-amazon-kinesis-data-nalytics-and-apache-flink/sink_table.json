@@ -1,0 +1,69 @@
+{
+  "Name": "sink_table",
+  "DatabaseName": "kdadatabase-0umj1zlmdnvw",
+  "CreateTime": "2023-07-19T15:00:30.000Z",
+  "UpdateTime": "2023-07-19T15:00:30.000Z",
+  "LastAccessTime": "1970-01-01T00:00:00.000Z",
+  "Retention": 0,
+  "StorageDescriptor": {
+    "Columns": [],
+    "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+    "OutputFormat": "org.apache.hadoop.hive.ql.io.IgnoreKeyTextOutputFormat",
+    "Compressed": false,
+    "NumberOfBuckets": -1,
+    "SerdeInfo": {
+      "SerializationLibrary": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+      "Parameters": {
+        "serialization.format": "1"
+      }
+    },
+    "BucketColumns": [],
+    "SortColumns": [],
+    "Parameters": {},
+    "SkewedInfo": {
+      "SkewedColumnNames": [],
+      "SkewedColumnValues": [],
+      "SkewedColumnValueLocationMaps": {}
+    },
+    "StoredAsSubDirectories": false
+  },
+  "PartitionKeys": [],
+  "TableType": "MANAGED_TABLE",
+  "Parameters": {
+    "flink.schema.3.data-type": "VARCHAR(2147483647)",
+    "flink.schema.8.name": "url",
+    "transient_lastDdlTime": "1689778830",
+    "flink.schema.5.data-type": "TIMESTAMP(3)",
+    "flink.schema.5.name": "event_time",
+    "flink.schema.2.name": "user_id",
+    "flink.scan.stream.initpos": "LATEST",
+    "flink.stream": "LabStack-29e32d98-34dc-411a-a712-8c6fb0d3e559-jmXfRsmEn6Ku7vemrzh3fw-1-AlertDataStream-wed05kTDqDrg",
+    "flink.schema.0.data-type": "VARCHAR(2147483647)",
+    "flink.schema.3.name": "item_id",
+    "flink.schema.10.name": "item_price",
+    "flink.sink.producer.aggregation-enabled": "false",
+    "flink.schema.7.data-type": "VARCHAR(2147483647)",
+    "flink.schema.6.name": "os",
+    "flink.format": "json",
+    "flink.schema.2.data-type": "VARCHAR(2147483647)",
+    "flink.schema.9.name": "item_name",
+    "flink.schema.0.name": "event_id",
+    "flink.schema.10.data-type": "VARCHAR(2147483647)",
+    "flink.schema.9.data-type": "VARCHAR(2147483647)",
+    "flink.connector": "kinesis",
+    "flink.aws.region": "us-west-2",
+    "flink.schema.4.data-type": "BIGINT",
+    "flink.schema.4.name": "item_quantity",
+    "flink.schema.1.name": "event",
+    "flink.schema.6.data-type": "VARCHAR(2147483647)",
+    "flink.schema.7.name": "page",
+    "flink.schema.8.data-type": "VARCHAR(2147483647)",
+    "flink.schema.1.data-type": "VARCHAR(2147483647)"
+  },
+  "CreatedBy": "arn:aws:sts::148347484251:assumed-role/LabStack-29e32d98-34dc-411a-a712-8c6fb0-KdaAppRole-1TM2T2IGSORG6/kiam-kiam",
+  "IsRegisteredWithLakeFormation": false,
+  "CatalogId": "148347484251",
+  "IsRowFilteringEnabled": false,
+  "VersionId": "0",
+  "DatabaseId": "9877e8bfce1a406fa458e6fbf5738a9d"
+}

@@ -1,0 +1,924 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Lab 3: Data orchestration using Spark and Glue with AWS Step Functions"
+Parameters:
+  UserId:
+    Default: awsstudent
+    Type: String
+  LabVPCCIDR:
+    Description: CIDR Block for Lab VPC
+    Type: String
+    Default: 10.0.0.0/16
+    AllowedValues:
+      - 10.0.0.0/16
+  LabVPCPublicSubnetCIDR:
+    Description: Lab VPC Public Subnet
+    Type: String
+    Default: 10.0.10.0/24
+    AllowedValues:
+      - 10.0.10.0/24
+  EmrRelease:
+    Type: String
+    Description: The current EMR AMI version to use for labs.
+    Default: emr-6.3.0
+  SSHLocation:
+    Description: The IP address range that can be used to SSH to the EC2 instances
+    Type: String
+    MinLength: "9"
+    MaxLength: "18"
+    Default: 10.0.0.0/16
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: Must be a valid IP CIDR range of the form x.x.x.x/x
+  S3PathPrefix:
+    Type: String
+    Description: 'The path prefix where lab resources are stored'
+    Default: "courses/ILT-TF-200-PTBBDA/v1.2.3.prod-9d331af3/lab-3"
+  S3ResourceBucket:
+    Type: String
+    Description: 'S3 Bucket of were to pull lab resources from'
+    Default: '-tcprod'
+  DatabaseName:
+    Type: String
+    Default: stock-db
+Resources:
+
+#-----Start - Lambda function to generate random number to use with bucket names-----#
+  LambdaNumberGeneratorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LambdaNumberGeneratorRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: allowLambdaLogging
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "logs:*"
+                Resource: "*"
+
+  NumberGeneratorLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        ZipFile: >
+          const response = require("cfn-response");
+
+          const generateNumber = (length, chars) => {
+            var result = '';
+            for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+            return result;
+          }
+
+          exports.handler = (event, context) =>{
+            const str = generateNumber(event['ResourceProperties']['Length'], '0123456789');
+            const responseData = {RandomNumber: str};
+            response.send(event, context, response.SUCCESS, responseData);
+          };
+      Handler: index.handler
+      FunctionName: numberGeneratorLambdaFunction
+      Description: "Generates a random number for an Amazon S3 bucket name"
+      Runtime: nodejs16.x
+      Role: !GetAtt LambdaNumberGeneratorRole.Arn
+      MemorySize: 128
+      Timeout: 20
+
+  GenerateNumber:
+    Type: AWS::CloudFormation::CustomResource
+    Properties:
+      Length: 9
+      ServiceToken: !GetAtt NumberGeneratorLambdaFunction.Arn
+#-----End - Lambda function to generate random number to use with bucket names-----#
+
+## KMS Key to encrypt data at rest ##
+  emrKMSKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: KMS key used to encrypt emr and s3 data
+      KeyPolicy:
+        Version: '2012-10-17'
+        Id: emrKey
+        Statement:
+          - Sid: Enable IAM User Permissions
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: kms:*
+            Resource: '*'
+          - Sid: Enable IAM User Permissions
+            Effect: Allow
+            Principal:
+              AWS: !GetAtt EMREC2DefaultRole.Arn
+            Action: 'kms:*'
+            Resource: '*'
+
+### S3 bucket used for the lab. Here we are using one bucket only
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+      BucketName: !Sub databucket-${AWS::Region}-${GenerateNumber.RandomNumber}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
+              KMSMasterKeyID: !GetAtt emrKMSKey.Arn
+            BucketKeyEnabled: true
+
+### IAM ROLES ###
+### EMR related Roles and Instance profile.
+  EMREC2DefaultRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role'
+      Path: /
+      Policies:
+        - PolicyName: allowkmscommands
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kms:Decrypt
+                  - kms:Encrypt
+                  - kms:GenerateDataKey
+                  - kms:ReEncryptTo
+                  - kms:ReEncryptFrom
+                Resource: '*'
+              - Effect: Deny
+                Action:
+                  - ec2:RunInstances
+                Resource: arn:aws:ec2:*:*:instance/*
+                Condition:
+                  StringNotEquals:
+                    ec2:InstanceType:
+                      - m4.large
+                      - m5.xlarge
+              - Effect: Deny
+                Action:
+                  - ec2:*Spot*
+                Resource: '*'
+
+  EMREC2InstanceProfile:
+    Properties:
+      Path: /
+      Roles:
+        - !Ref EMREC2DefaultRole
+    Type: 'AWS::IAM::InstanceProfile'
+
+  EMRDefaultRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: ''
+            Effect: Allow
+            Principal:
+              Service: elasticmapreduce.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole'
+      Path: /
+      Policies:
+        - PolicyName: allowkmscommands
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kms:Decrypt
+                  - kms:Encrypt
+                  - kms:GenerateDataKey
+                  - kms:ReEncryptTo
+                  - kms:ReEncryptFrom
+                Resource: '*'
+              - Effect: Deny
+                Action:
+                  - ec2:RunInstances
+                Resource: arn:aws:ec2:*:*:instance/*
+                Condition:
+                  StringNotEquals:
+                    ec2:InstanceType:
+                      - m4.large
+                      - m5.xlarge
+              - Effect: Deny
+                Action:
+                  - ec2:*Spot*
+                Resource: '*'
+
+
+####### StepFunctionRole ######
+  stepFunctionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - elasticmapreduce.amazonaws.com
+                - states.amazonaws.com
+                - ec2.amazonaws.com
+                - glue.amazonaws.com
+                - lakeformation.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole
+      Path: /
+      Policies:
+        - PolicyName: "athena"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - athena:startQueryExecution
+                  - athena:stopQueryExecution
+                  - athena:getQueryExecution
+                  - athena:getDataCatalog
+                Resource:
+                  - !Sub arn:aws:athena:${AWS::Region}:${AWS::AccountId}:workgroup/primary
+                  - !Sub arn:aws:athena:${AWS::Region}:${AWS::AccountId}:datacatalog/*
+        - PolicyName: "S3_access"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketLocation
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
+                  - s3:ListMultipartUploadParts
+                  - s3:AbortMultipartUpload
+                  - s3:CreateBucket
+                  - s3:PutObject
+                Resource:
+                  - arn:aws:s3:::*
+        - PolicyName: "glue_access"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - glue:Batch*
+                  - glue:Cancel*
+                  - glue:Create*
+                  - glue:Delete*
+                  - glue:Get*
+                  - glue:ImportCatalogToGlue
+                  - glue:List*
+                  - glue:Put*
+                  - glue:ResetJobBookmark
+                  - glue:Search*
+                  - glue:Start*
+                  - glue:Stop*
+                  - glue:Tag*
+                  - glue:Untag*
+                  - glue:Update*
+                  - glue:UseMLTransforms
+                  - lakeformation:Batch*
+                  - lakeformation:Deregister*
+                  - lakeformation:Describe*
+                  - lakeformation:Get*
+                  - lakeformation:Grant*
+                  - lakeformation:List*
+                  - lakeformation:Put*
+                  - lakeformation:Register*
+                  - lakeformation:Revoke*
+                  - lakeformation:Update*
+                Resource:
+                  - "*"
+        - PolicyName: "event_access"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - events:PutTargets
+                  - events:PutRule
+                  - events:DescribeRule
+                Resource:
+                  - !Sub arn:aws:events:${AWS::Region}:${AWS::AccountId}:rule/StepFunctionsGetEventForEMRAddJobFlowStepsRule
+        - PolicyName: "emr_access"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - elasticmapreduce:AddJobFlowSteps
+                  - elasticmapreduce:DescribeStep
+                  - elasticmapreduce:CancelSteps
+                  - elasticmapreduce:TerminateJobFlows
+                Resource:
+                  - arn:aws:elasticmapreduce:*:*:cluster/*
+        - PolicyName: "Other_access"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - elasticmapreduce:RunJobFlow
+                  - elasticmapreduce:DescribeCluster
+                  - elasticmapreduce:TerminateJobFlows
+                  - lakeformation:GetDataAccess
+                  - logs:CreateLogDelivery
+                  - logs:GetLogDelivery
+                  - logs:UpdateLogDelivery
+                  - logs:DeleteLogDelivery
+                  - logs:ListLogDeliveries
+                  - logs:PutResourcePolicy
+                  - logs:DescribeResourcePolicies
+                  - logs:DescribeLogGroups
+                  - xray:PutTraceSegments
+                  - xray:PutTelemetryRecords
+                  - xray:GetSamplingRules
+                  - xray:GetSamplingTargets
+                Resource:
+                  - "*"
+              - Effect: Allow
+                Action:
+                  - SNS:Publish
+                Resource:
+                  - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:${TaskCompleteSNS.TopicName}"
+        - PolicyName: "IAM"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - iam:PassRole
+                Resource:
+                  - !GetAtt EMREC2DefaultRole.Arn
+                  - !GetAtt EMREC2InstanceProfile.Arn
+                  - !GetAtt EMRDefaultRole.Arn
+        - PolicyName: "IAM_Delete_EMR"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - iam:CreateServiceLinkedRole
+                  - iam:PutRolePolicy
+                  - iam:UpdateRoleDescription
+                  - iam:DeleteServiceLinkedRole
+                  - iam:GetServiceLinkedRoleDeletionStatus
+                Resource:
+                  - "arn:aws:iam::*:role/aws-service-role/elasticmapreduce.amazonaws.com*/AWSServiceRoleForEMRCleanup*"
+        - PolicyName: "KMS"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kms:Decrypt
+                  - kms:Encrypt
+                  - kms:GenerateDataKey
+                  - kms:ReEncryptTo
+                  - kms:ReEncryptFrom
+                  - kms:Create
+                Resource:
+                  - "*"
+
+## Step Functions run Lambda Role
+  runSFRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+                - s3.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: "log_create"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:PutLogEvents
+                  - logs:CreateLogStream
+                Resource: "*"
+        - PolicyName: "allow_kms_commands"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kms:Decrypt
+                  - kms:Encrypt
+                  - kms:GenerateDataKey
+                  - kms:ReEncryptTo
+                  - kms:ReEncryptFrom
+                Resource: '*'
+        - PolicyName: "Lambda_StepFunctions_Run"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - lambda:InvokeFunction
+                Resource: !Sub '${DataBucket.Arn}'
+              - Effect: Allow
+                Action:
+                  - states:StartExecution
+                Resource: !Sub '${BatchProcessingStep}'
+
+### Networking Resources      
+  LabVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref LabVPCCIDR
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: VPC
+          Value: Lab VPC
+        - Key: Name
+          Value: Lab VPC
+  LabVPCInternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    DependsOn: LabVPC
+  LabVPCAttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    DependsOn:
+      - LabVPC
+      - LabVPCInternetGateway
+    Properties:
+      VpcId: !Ref LabVPC
+      InternetGatewayId: !Ref LabVPCInternetGateway
+  LabVPCPublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    DependsOn: LabVPCAttachGateway
+    Properties:
+      VpcId: !Ref LabVPC
+      CidrBlock: !Ref LabVPCPublicSubnetCIDR
+      AvailabilityZone: !Select
+        - '0'
+        - !GetAZs ''
+      Tags:
+        - Key: Name
+          Value: Lab VPC Public Subnet
+  LabVPCPublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    DependsOn:
+      - LabVPC
+      - LabVPCAttachGateway
+    Properties:
+      VpcId: !Ref LabVPC
+      Tags:
+        - Key: Name
+          Value: Lab VPC Public Route Table
+  DevPublicRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn:
+      - LabVPCPublicRouteTable
+      - LabVPCAttachGateway
+    Properties:
+      RouteTableId: !Ref LabVPCPublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref LabVPCInternetGateway
+  DevPublicSubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    DependsOn:
+      - LabVPCPublicRouteTable
+      - LabVPCPublicSubnet
+      - LabVPCAttachGateway
+    Properties:
+      SubnetId: !Ref LabVPCPublicSubnet
+      RouteTableId: !Ref LabVPCPublicRouteTable
+  ElasticMapReduceMasterSSH:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22 for EMR master node
+      VpcId: !Ref LabVPC
+      Tags:
+        - Key: Name
+          Value: ElasticMapReduce-master-SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref LabVPCCIDR
+
+#### Data Copy/Delete to S3 bucket ####
+  dataRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: "dataCopyPol"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:DeleteObject
+                  - s3:List*
+                  - kms:Decrypt
+                  - kms:Encrypt
+                  - kms:GenerateDataKey
+                  - kms:ReEncryptTo
+                  - kms:ReEncryptFrom
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:DeleteLogGroup
+                  - logs:DeleteLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+  FunctionS3Cleaner:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      FunctionName: functionS3Cleaner
+      Code:
+        S3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+        S3Key: !Sub "${S3PathPrefix}/scripts/s3_resource.zip"
+      Description: Emtpies an S3 bucket on delete - always returns success message to cloudformation
+      Handler: index.lambda_handler
+      Role: !GetAtt dataRole.Arn
+      MemorySize: 128
+      Timeout: 10
+      Runtime: python3.8
+    DependsOn:
+      - dataRole
+
+  FunctionS3Upload:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      FunctionName: functionS3Upload
+      Code:
+        S3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+        S3Key: !Sub "${S3PathPrefix}/scripts/s3_resource.zip"
+      Description: Copies files to S3 bucket on create - always returns success message to cloudformation
+      Handler: index.lambda_handler
+      Role: !GetAtt dataRole.Arn
+      MemorySize: 128
+      Timeout: 10
+      Runtime: python3.8
+    DependsOn:
+      - dataRole
+
+  CopyFilesToS3DataBucket:
+    Type: Custom::FunctionCopyFilesToS3
+    Properties:
+      ServiceToken: !GetAtt FunctionS3Upload.Arn
+      SourceS3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+      SourceBucketRegion: !Sub "${AWS::Region}"
+      TargetS3Bucket: !Ref DataBucket
+      TargetBucketRegion: !Ref AWS::Region
+      FileList:
+        - SourceKey: !Sub "${S3PathPrefix}/scripts/stock_prices_2019.csv"
+          TargetKey: "data/stock_prices_2019.csv"
+        - SourceKey: ""
+          TargetKey: "logs/"
+        - SourceKey: ""
+          TargetKey: "results/"
+        - SourceKey: ""
+          TargetKey: "scripts/"
+        - SourceKey: ""
+          TargetKey: "output/"
+  CleanS3DataBucket:
+    Type: Custom::FunctionS3Cleaner
+    Properties:
+      ServiceToken: !GetAtt FunctionS3Cleaner.Arn
+      TargetS3Bucket: !Ref DataBucket
+
+#### End Data Copy ####
+
+### Start update workgroup Lambda Function ###
+
+  LambdaUpdateWorkgroup:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: lambdaUpdateWorkgroup
+      Code:
+        S3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+        S3Key: !Sub "${S3PathPrefix}/scripts/update_workgroup.zip"
+      Description: Updates the primary workgroup with the output location
+      Handler: index.lambda_handler
+      Role: !GetAtt LambdaUpdateWorkgroupRole.Arn
+      MemorySize: 128
+      Timeout: 60
+      Runtime: python3.8
+    DependsOn:
+      - LambdaUpdateWorkgroupRole
+
+  InvokeLambdaUpdateWorkgroup:
+    Type: 'Custom::InvokeLambdaUpdateWorkgroup'
+    Properties:
+      ServiceToken: !GetAtt LambdaUpdateWorkgroup.Arn
+      dataBucket: !Ref DataBucket
+
+  LambdaUpdateWorkgroupRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      Policies:
+        - PolicyName: customLambdaPol
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'cloudwatch:describe*'
+                  - 'cloudwatch:Get*'
+                  - 'cloudwatch:List*'
+                  - 'cloudwatch:PutMetricData'
+                  - 'logs:CreateLogDelivery'
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:Describe*'
+                  - 'logs:Get*'
+                  - 'logs:List*'
+                  - 'logs:PutLogEvents'
+                  - 'athena:Get*'
+                  - 'athena:List*'
+                  - 'athena:UpdateWorkGroup'
+                Resource: '*'
+
+### End update workgroup Lambda Function ###
+
+### Start run Step Functions Lambda Function ###
+# This Lambda function runs the Step Functions State Machine
+
+  runFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: DataBucket
+    Properties:
+      #FunctionName: runFunction
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      Code:
+        S3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+        S3Key: !Sub "${S3PathPrefix}/scripts/run_function.zip"
+      Description: Invoke a function to start Step Function
+      MemorySize: 128
+      Timeout: 90
+      Role: !GetAtt runSFRole.Arn
+      Environment:
+        Variables:
+          dataBucket: !Ref DataBucket
+          batchProcessingStep: !Ref BatchProcessingStep
+
+
+### End run Step Functions Lambda Function ###
+
+
+### SNS TOPIC ###
+  TaskCompleteSNS:
+    Type: AWS::SNS::Topic
+
+
+### Start Batch Processing Step Functions State machine ###
+
+  BatchProcessingStep:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      RoleArn: !GetAtt stepFunctionRole.Arn
+      DefinitionString: !Sub |
+        {
+          "Comment": "An example of the Amazon States Language for running jobs on Amazon EMR",
+          "StartAt": "Create an EMR cluster",
+          "States": {
+              "Create an EMR cluster": {
+                  "Type": "Task",
+                  "Resource": "arn:aws:states:::elasticmapreduce:createCluster.sync",
+                  "Parameters": {
+                      "Name": "labCluster",
+                      "VisibleToAllUsers": true,
+                      "ReleaseLabel": "emr-6.3.0",
+                      "Applications": [
+                          {
+                            "Name": "Spark"
+                          },
+                          {
+                            "Name": "Flink"
+                          },
+                          {
+                            "Name": "Livy"
+                          }
+                      ],
+                  "ServiceRole": "${EMRDefaultRole}",
+                  "JobFlowRole": "${EMREC2InstanceProfile}",
+                  "LogUri": "s3://${DataBucket}/logs/",
+                  "Instances": {
+                    "Ec2SubnetId": "${LabVPCPublicSubnet}",
+                    "KeepJobFlowAliveWhenNoSteps": true,
+                  	"InstanceFleets": [
+                      {
+                        "Name": "LeaderFleet",
+                        "InstanceFleetType": "MASTER",
+                        "TargetOnDemandCapacity": 1,
+                        "InstanceTypeConfigs": [
+                        {
+                          "InstanceType": "m4.large"
+                        }
+                        ]
+                      },
+                  		{
+                        "Name": "MyCoreFleet",
+                        "InstanceFleetType": "CORE",
+                        "TargetOnDemandCapacity": 2,
+                        "InstanceTypeConfigs": [
+                          {
+                            "InstanceType": "m4.large"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  },
+                  "ResultPath": "$.cluster",
+                  "Next": "Submit PySpark Job"
+                  },
+                  "Submit PySpark Job": {
+                  "Type": "Task",
+                  "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                  "Parameters": {
+                  "ClusterId.$": "$.cluster.ClusterId",
+                  "Step": {
+                    "Name": "pyspark-job",
+                    "HadoopJarStep": {
+                      "Jar": "command-runner.jar",
+                      "Args": [
+                          "spark-submit",
+                          "--deploy-mode",
+                          "cluster",
+                          "--executor-memory",
+                          "1g",
+                          "s3://${DataBucket}/scripts/script.py"
+                      ]
+                    }
+                  }
+                  },
+                  "ResultPath": "$.sparkJob",
+                  "Next": "Terminate the EMR cluster"
+                  },
+                  "Terminate the EMR cluster": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::elasticmapreduce:terminateCluster",
+                    "Parameters": {
+                      "ClusterId.$": "$.cluster.ClusterId"
+                      },
+                    "ResultPath": "$.terminateCluster",
+                    "Next": "Create Amazon Athena summarized table"
+                    },
+                  "Create Amazon Athena summarized table": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::athena:startQueryExecution.sync",
+                    "Parameters": {
+                      "QueryString": "CREATE EXTERNAL TABLE IF NOT EXISTS default.stock_summary(`Trade_Date` string,`Ticker` string,`Close` string) ROW FORMAT SERDE   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' STORED AS INPUTFORMAT   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat' OUTPUTFORMAT   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat' LOCATION  's3://${DataBucket}/output/' TBLPROPERTIES ('classification'='parquet', 'compressionType'='none', 'typeOfData'='file')",
+                      "WorkGroup": "primary",
+                      "ResultConfiguration": {
+                        "OutputLocation": "s3://${DataBucket}/results/"
+                      }
+                    },
+                    "ResultPath": "$.athenaTable",
+                    "Next": "Send message with Amazon SNS"
+                    },
+                  "Send message with Amazon SNS": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::sns:publish",
+                    "Parameters": {
+                      "TopicArn": "${TaskCompleteSNS}",
+                      "Message": {
+                        "Input": "The Task is complete!"
+                      }
+                  },
+                  "End": true
+                  }
+                  }
+                  }
+### End Batch Processing Step Functions State machine ###
+
+
+##### Start EMR Resource Monitor #####
+
+# IAM Role for Resource Monitoring   
+  EMRDeleteRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: "Iam_Policies"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                  - elasticmapreduce:ListInstances
+                  - elasticmapreduce:ListInstanceFleets
+                  - elasticmapreduce:ListClusters
+                  - elasticmapreduce:DescribeCluster
+                  - elasticmapreduce:TerminateJobFlows
+                  - elasticmapreduce:ListInstanceGroups
+                Resource:
+                  - "*"
+  functionDeleteResource:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      FunctionName: functionDeleteResource
+      Code:
+        S3Bucket: !Sub "${AWS::Region}${S3ResourceBucket}"
+        S3Key: !Sub "${S3PathPrefix}/scripts/emr_resource_monitor.zip"
+      Description: Deletes EMR Cluster if the count is more than 2
+      Handler: index.lambda_handler
+      Role: !GetAtt EMRDeleteRole.Arn
+      MemorySize: 128
+      Timeout: 60
+      Runtime: python3.8
+    DependsOn:
+      - EMRDeleteRole
+
+  resourceFunctionRule:
+    Type: AWS::Events::Rule
+    Properties:
+      EventPattern:
+        source:
+          - "aws.emr"
+        detail-type:
+          - "EMR Cluster State Change"
+        detail:
+          state:
+            - "STARTING"
+      State: "ENABLED"
+      Targets:
+        - Arn: !GetAtt functionDeleteResource.Arn
+          Id: !Ref functionDeleteResource
+
+  resourceFunctionRulePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref functionDeleteResource
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: !GetAtt resourceFunctionRule.Arn
+
+##### Stop Resource Monitor #####
+
+### ReadOnly permission ###
+Outputs:
+  Region:
+    Description: Lab Region
+    Value: !Ref AWS::Region
+  dataBucket:
+    Description: Data Bucket
+    Value: !Ref DataBucket

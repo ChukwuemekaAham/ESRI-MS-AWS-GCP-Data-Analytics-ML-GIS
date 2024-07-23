@@ -1,0 +1,113 @@
+{
+  "Comment": "An example of the Amazon States Language for running jobs on Amazon EMR",
+  "StartAt": "Create an EMR cluster",
+  "States": {
+    "Create an EMR cluster": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:createCluster.sync",
+      "Parameters": {
+        "Name": "labCluster",
+        "VisibleToAllUsers": true,
+        "ReleaseLabel": "emr-6.3.0",
+        "Applications": [
+          {
+            "Name": "Spark"
+          },
+          {
+            "Name": "Flink"
+          },
+          {
+            "Name": "Livy"
+          }
+        ],
+        "ServiceRole": "LabStack-29e32d98-34dc-411a-a712-8c-EMRDefaultRole-1ATSCUO4Q9S4F",
+        "JobFlowRole": "LabStack-29e32d98-34dc-411a-a712-8c6fb0d3e559-rgCK9F7v7CeJx7wpQbfzaw-0-EMREC2InstanceProfile-ASLnYYoqXCve",
+        "LogUri": "s3://databucket-us-west-2-612964232/logs/",
+        "Instances": {
+          "Ec2SubnetId": "subnet-056c640e06a97e6a6",
+          "KeepJobFlowAliveWhenNoSteps": true,
+          "InstanceFleets": [
+            {
+              "Name": "LeaderFleet",
+              "InstanceFleetType": "MASTER",
+              "TargetOnDemandCapacity": 1,
+              "InstanceTypeConfigs": [
+                {
+                  "InstanceType": "m4.large"
+                }
+              ]
+            },
+            {
+              "Name": "MyCoreFleet",
+              "InstanceFleetType": "CORE",
+              "TargetOnDemandCapacity": 2,
+              "InstanceTypeConfigs": [
+                {
+                  "InstanceType": "m4.large"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ResultPath": "$.cluster",
+      "Next": "Submit PySpark Job"
+    },
+    "Submit PySpark Job": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+      "Parameters": {
+        "ClusterId.$": "$.cluster.ClusterId",
+        "Step": {
+          "Name": "pyspark-job",
+          "HadoopJarStep": {
+            "Jar": "command-runner.jar",
+            "Args": [
+              "spark-submit",
+              "--deploy-mode",
+              "cluster",
+              "--executor-memory",
+              "1g",
+              "s3://databucket-us-west-2-612964232/scripts/script.py"
+            ]
+          }
+        }
+      },
+      "ResultPath": "$.sparkJob",
+      "Next": "Terminate the EMR cluster"
+    },
+    "Terminate the EMR cluster": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:terminateCluster",
+      "Parameters": {
+        "ClusterId.$": "$.cluster.ClusterId"
+      },
+      "ResultPath": "$.terminateCluster",
+      "Next": "Create Amazon Athena summarized table"
+    },
+    "Create Amazon Athena summarized table": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::athena:startQueryExecution.sync",
+      "Parameters": {
+        "QueryString": "CREATE EXTERNAL TABLE IF NOT EXISTS default.stock_summary(`Trade_Date` string,`Ticker` string,`Close` string) ROW FORMAT SERDE   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' STORED AS INPUTFORMAT   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat' OUTPUTFORMAT   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat' LOCATION  's3://databucket-us-west-2-612964232/output/' TBLPROPERTIES ('classification'='parquet', 'compressionType'='none', 'typeOfData'='file')",
+        "WorkGroup": "primary",
+        "ResultConfiguration": {
+          "OutputLocation": "s3://databucket-us-west-2-612964232/results/"
+        }
+      },
+      "ResultPath": "$.athenaTable",
+      "Next": "Send message with Amazon SNS"
+    },
+    "Send message with Amazon SNS": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-west-2:148347484251:LabStack-29e32d98-34dc-411a-a712-8c6fb0d3e559-rgCK9F7v7CeJx7wpQbfzaw-0-TaskCompleteSNS-mecLLUITti8n",
+        "Message": {
+          "Input": "The Task is complete!"
+        }
+      },
+      "End": true
+    }
+  }
+}

@@ -1,0 +1,914 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": " %md\n### Task 4: Analytics development from Kinesis Data Analytics Studio\nThis is the notebook for Task 4 as noted in the lab markdown file.\n*****\n\n### Note\n### This is an instruction-only paragraph.  You will find similar \"instruction-only paragraphs\" in this notebook. Instructions paragraphs need not be run.  \n### Only paragraphs with code need to be run. \n### Instruction paragrahs provide instructions that apply to code paragraphs that follow along with the expected output.\n*****\n# Task 4.1: Ingestion\nIn this task, you ingest data into Amazon Kinesis Data Analytics Studio from two sources:\n- From the Kinesis data stream with clickstream data (produced by the clickstream generator)\n- From the Kinesis data stream with catalog data in an Amazon Simple Storage Service (AmazonS3) bucket\n\n### Step 4.1.1 \nIn this step, you create an in-memory table in AWS Glue Data Catalog for the streaming clickstream data.\n\n### CREATE statement: \nCreates the in-memory table, **clickstream_events**,  and defines the table with its element. Apache Flink will use this statement to define the metadata for records coming into a data stream using a **Kinesis** connector.\n\n### Kinesis connector details:\nThe table uses the **Kinesis** connector to read from a Kinesis data stream called **ClickstreamDataStreamName** in the **Region** from the **latest** stream position in **JSON** format.\n*****\n### Instructions:\n1. Replace the **YOUR_ClickstreamDataStream_GOES_HERE** placeholder value within the single quotes with the **ClickstreamDataStream** found in the left panel of the lab markdown instructions.\n2. Replace the **YOUR_Region_GOES_HERE** placeholder value within the single quote with the **Region** found in the left panel of the lab markdown instructions.\n3. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n\n*****\n### Expected output:\nYou will notice the table deleted and re-created as the output.\n`It can take 1-2 minutes for the table to be created.`",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Task 4: Analytics development from Kinesis Data Analytics Studio</h3>\n<p>This is the notebook for Task 4 as noted in the lab markdown file.</p>\n<hr />\n<h3>Note</h3>\n<h3>This is an instruction-only paragraph.  You will find similar &ldquo;instruction-only paragraphs&rdquo; in this notebook. Instructions paragraphs need not be run.</h3>\n<h3>Only paragraphs with code need to be run.</h3>\n<h3>Instruction paragrahs provide instructions that apply to code paragraphs that follow along with the expected output.</h3>\n<hr />\n<h1>Task 4.1: Ingestion</h1>\n<p>In this task, you ingest data into Amazon Kinesis Data Analytics Studio from two sources:</p>\n<ul>\n<li>From the Kinesis data stream with clickstream data (produced by the clickstream generator)</li>\n<li>From the Kinesis data stream with catalog data in an Amazon Simple Storage Service (AmazonS3) bucket</li>\n</ul>\n<h3>Step 4.1.1</h3>\n<p>In this step, you create an in-memory table in AWS Glue Data Catalog for the streaming clickstream data.</p>\n<h3>CREATE statement:</h3>\n<p>Creates the in-memory table, <strong>clickstream_events</strong>,  and defines the table with its element. Apache Flink will use this statement to define the metadata for records coming into a data stream using a <strong>Kinesis</strong> connector.</p>\n<h3>Kinesis connector details:</h3>\n<p>The table uses the <strong>Kinesis</strong> connector to read from a Kinesis data stream called <strong>ClickstreamDataStreamName</strong> in the <strong>Region</strong> from the <strong>latest</strong> stream position in <strong>JSON</strong> format.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Replace the <strong>YOUR_ClickstreamDataStream_GOES_HERE</strong> placeholder value within the single quotes with the <strong>ClickstreamDataStream</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Replace the <strong>YOUR_Region_GOES_HERE</strong> placeholder value within the single quote with the <strong>Region</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will notice the table deleted and re-created as the output.<br />\n<code>It can take 1-2 minutes for the table to be created.</code></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800250_1249043880",
+      "id": "paragraph_1661796835147_1029496031",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:288"
+    },
+    {
+      "text": "%flink.ssql\n\n-- Replace the YOUR_ClickstreamDataStream_GOES_HERE placeholder value within the single quote with the ClickstreamDataStream found in the left panel of lab markdown instructions.\n-- Replace the YOUR_Region_GOES_HERE placeholder value within the single quote with the Region found in the left panel of lab markdown instructions.\n\nDROP TABLE IF EXISTS clickstream_events;\nCREATE TABLE clickstream_events (\n    event_id STRING,\n    event STRING,\n    user_id STRING,\n    item_id STRING,\n    item_quantity BIGINT,\n    event_time TIMESTAMP(3),\n    os STRING,\n    page STRING,\n    url STRING\n  )\nWITH (\n    'connector' = 'kinesis',\n    'stream' = 'YOUR_ClickstreamDataStream_GOES_HERE',\n    'aws.region' = 'YOUR_Region_GOES_HERE',\n    'scan.stream.initpos' = 'LATEST',\n    'format' = 'json'\n);",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800250_2090095395",
+      "id": "paragraph_1661796868134_484983635",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:289"
+    },
+    {
+      "text": "%md\n### Step 4.1.2\n### SELECT query:\nRetrieves all data from the **clickstream_events** table.\n\n*****\n### Instructions:\n1.Run the next paragraph either by choosing the Play button at the top right of the following paragraph or by pressing Shift + Enter keys with the paragraph selected.\n2. `Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (CONTROL + Alt + C in Windows) with the paragraph selected when you have seen the results to optimize Apache Flink resource allocation.`\n\n*****\n### Expected output:\n A table of the simulated clickstream data.\n`It can take 1-2 minutes for the query to return the output.`\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.1.2</h3>\n<h3>SELECT query:</h3>\n<p>Retrieves all data from the <strong>clickstream_events</strong> table.</p>\n<hr />\n<h3>Instructions:</h3>\n<p>1.Run the next paragraph either by choosing the Play button at the top right of the following paragraph or by pressing Shift + Enter keys with the paragraph selected.<br />\n2. <code>Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (CONTROL + Alt + C in Windows) with the paragraph selected when you have seen the results to optimize Apache Flink resource allocation.</code></p>\n<hr />\n<h3>Expected output:</h3>\n<p>A table of the simulated clickstream data.<br />\n<code>It can take 1-2 minutes for the query to return the output.</code></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800251_574300310",
+      "id": "paragraph_1661796918733_260438838",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:290"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nSELECT * FROM clickstream_events;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800251_739296983",
+      "id": "paragraph_1661796944026_1522153662",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:291"
+    },
+    {
+      "text": "%md\nNow you proceed to ingesting the catalog data that is stored in Amazon S3.  This is a three-step process.\nIn the first step (step 4.1.3), you create and define an in-memory table to read the catalog data from Amazon S3.\nIn the second step (step 4.1.4), you create and define an in-memory table for the Kinesis data stream that will ingest the catalog data.\nIn the third step (step 4.1.5), you insert the data into the Kinesis data stream.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Now you proceed to ingesting the catalog data that is stored in Amazon S3.  This is a three-step process.<br />\nIn the first step (step 4.1.3), you create and define an in-memory table to read the catalog data from Amazon S3.<br />\nIn the second step (step 4.1.4), you create and define an in-memory table for the Kinesis data stream that will ingest the catalog data.<br />\nIn the third step (step 4.1.5), you insert the data into the Kinesis data stream.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800252_1536071860",
+      "id": "paragraph_1661796984005_311233047",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:292"
+    },
+    {
+      "text": "%md\n###  Step 4.1.3\n\nIn this step, you create an in-memory table in AWS Glue Data Catalog for the item catalog in Amazon S3.\n\n### CREATE statement: \nCreates an in-memory **catalog_items_s3** table  and defines the table with its element. Apache Flink will use this statement to define the metadata for the JSON file stored in Amazon S3 using the **filesystem** connector.\n\n### Filesystem connector details: \nThe table uses the **filesystem** connector to read from an S3 bucket path in **JSON** format.\n*****\n### Instructions:\n\n1. Check the previous code block to ensure that it has been stopped. \n2. Replace the **YOUR_DataBucketName_GOES_HERE** placeholder value with the **DataBucketName** found in the left panel of the lab markdown instructions.\n3. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n\n*****\n### Expected output:\nYou will notice the table deleted and re-created as the output.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.1.3</h3>\n<p>In this step, you create an in-memory table in AWS Glue Data Catalog for the item catalog in Amazon S3.</p>\n<h3>CREATE statement:</h3>\n<p>Creates an in-memory <strong>catalog_items_s3</strong> table  and defines the table with its element. Apache Flink will use this statement to define the metadata for the JSON file stored in Amazon S3 using the <strong>filesystem</strong> connector.</p>\n<h3>Filesystem connector details:</h3>\n<p>The table uses the <strong>filesystem</strong> connector to read from an S3 bucket path in <strong>JSON</strong> format.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Check the previous code block to ensure that it has been stopped.</li>\n<li>Replace the <strong>YOUR_DataBucketName_GOES_HERE</strong> placeholder value with the <strong>DataBucketName</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will notice the table deleted and re-created as the output.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800252_757714690",
+      "id": "paragraph_1661797034355_1921830170",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:293"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\n-- Replace the YOUR_DataBucketName_GOES_HERE placeholder value with the DataBucketName found in the left panel of lab markdown instructions.\n\nDROP TABLE IF EXISTS catalog_items_s3;\nCREATE TABLE catalog_items_s3(\n     item_id STRING,\n    item_name STRING,\n    item_price STRING,\n    page STRING\n  )\nWITH (\n    'connector' = 'filesystem',\n    'path' = 's3a://YOUR_DataBucketName_GOES_HERE/input/',\n    'format' = 'json'\n);",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:20+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800252_1590137468",
+      "id": "paragraph_1661797047627_222413333",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:294"
+    },
+    {
+      "text": "%md\n### Step 4.1.4 \nIn this step, you create an in-memory table in AWS Glue Data Catalog for the Kinesis data stream that will ingest the catalog data that is available in an S3 bucket.\n\n### CREATE statement: \nCreates the **catalog_items_stream** in-memory table and defines the table with its element. Apache Flink will use this statement to define the metadata for records coming into a data stream using a **kinesis** connector.\n### Kinesis connector details:\nThe table uses the **Kinesis** connector to read from a Kinesis data stream called **ItemDataStream** in the **Region** Region from the **TRIM_HORIZON** stream position in **JSON** format.\n\n*****\n### Instructions:\n\n1. Replace the **YOUR_ItemDataStream_GOES_HERE** placeholder value within the single quotes with the **ItemDataStream** found in the left panel of the lab markdown instructions.\n2. Replace the **YOUR_Region_GOES_HERE** placeholder value within the single quote with the **Region** found in the left panel of the lab markdown instructions.\n3. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n\n*****\n### Expected output:\nYou will notice the table deleted and re-created as the output.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.1.4</h3>\n<p>In this step, you create an in-memory table in AWS Glue Data Catalog for the Kinesis data stream that will ingest the catalog data that is available in an S3 bucket.</p>\n<h3>CREATE statement:</h3>\n<p>Creates the <strong>catalog_items_stream</strong> in-memory table and defines the table with its element. Apache Flink will use this statement to define the metadata for records coming into a data stream using a <strong>kinesis</strong> connector.</p>\n<h3>Kinesis connector details:</h3>\n<p>The table uses the <strong>Kinesis</strong> connector to read from a Kinesis data stream called <strong>ItemDataStream</strong> in the <strong>Region</strong> Region from the <strong>TRIM_HORIZON</strong> stream position in <strong>JSON</strong> format.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Replace the <strong>YOUR_ItemDataStream_GOES_HERE</strong> placeholder value within the single quotes with the <strong>ItemDataStream</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Replace the <strong>YOUR_Region_GOES_HERE</strong> placeholder value within the single quote with the <strong>Region</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will notice the table deleted and re-created as the output.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800252_591036918",
+      "id": "paragraph_1661797273385_468932827",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:295"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\n-- Replace the `YOUR_ItemDataStream_GOES_HERE` placeholder value within the single quote with the `ItemDataStream` found in the left panel of lab markdown instructions.\n-- Replace the `YOUR_Region_GOES_HERE` placeholder value within the single quote with the `Region` found in the left panel of lab markdown instructions.\n\nDROP TABLE IF EXISTS catalog_items_stream;\nCREATE TABLE catalog_items_stream (\n    item_id STRING,\n    item_name STRING,\n    item_price STRING,\n    page STRING\n  )\nWITH (\n    'connector' = 'kinesis',\n    'stream' = 'YOUR_ItemDataStream_GOES_HERE',\n    'aws.region' = 'YOUR_Region_GOES_HERE',\n    'scan.stream.initpos' = 'TRIM_HORIZON',\n    'format' = 'json'\n);",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800252_1045753565",
+      "id": "paragraph_1661797120747_991292231",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:296"
+    },
+    {
+      "text": "%md\n### Step 4.1.5 \nYou insert catalog data into the Kinesis data stream.\n### INSERT statement: \nInserts the data records from the **catalog_items_s3** table  into the **catalog_items_stream** table.\n*****\n### Instructions:\n1. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n\n*****\n### Expected output:\nYou will see **Insertion successfully** returned on a successful run of the command.  There will be no results presented on the screen because this is an **INSERT** statement.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.1.5</h3>\n<p>You insert catalog data into the Kinesis data stream.</p>\n<h3>INSERT statement:</h3>\n<p>Inserts the data records from the <strong>catalog_items_s3</strong> table  into the <strong>catalog_items_stream</strong> table.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will see <strong>Insertion successfully</strong> returned on a successful run of the command.  There will be no results presented on the screen because this is an <strong>INSERT</strong> statement.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_543899079",
+      "id": "paragraph_1661797170278_231977691",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:297"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nINSERT INTO catalog_items_stream\nSELECT item_id,\n    item_name,\n    item_price,\n    page\nFROM  catalog_items_s3;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_8581172",
+      "id": "paragraph_1661797190658_213928073",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:298"
+    },
+    {
+      "text": "%md\n### Step 4.1.6\nRetrieves the catalog data from the Kinesis data stream.\n\n### SELECT query:\nRetrieves all catalog data from the **catalog_items_stream** table.  \n\n*****\n### Instructions:\n1.  Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n2. `Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results`.\n\n*****\n### Expected output:\nA table of the catalog items stored in Amazon S3.\n`It can take 1-2 minutes for the query to return the output.`\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.1.6</h3>\n<p>Retrieves the catalog data from the Kinesis data stream.</p>\n<h3>SELECT query:</h3>\n<p>Retrieves all catalog data from the <strong>catalog_items_stream</strong> table.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n<li><code>Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results</code>.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>A table of the catalog items stored in Amazon S3.<br />\n<code>It can take 1-2 minutes for the query to return the output.</code></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_1235371972",
+      "id": "paragraph_1661797334556_972929602",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:299"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nSELECT * FROM catalog_items_stream;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_1099266083",
+      "id": "paragraph_1661797363920_584648605",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:300"
+    },
+    {
+      "text": "%md\n# Task 4.2: Data enrichment\nNow that you have ingested the data, you enrich the streaming clickstream data with the catalog data available in an S3 bucket.\nThis is accomplished with the **JOIN** statement.\n### JOIN statement: \nPerforms an inner join of the clickstream data and user data based on the **item_id** primary key.\n*****\n### Instructions:\n1. Check the previous code block to ensure that it has been stopped. \n2. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n3. `Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results`.\n\n*****\n### Expected output:\nA table of the clickstream data enriched with catalog data.\n`It can take 1-2 minutes for the query to return the output.`\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Task 4.2: Data enrichment</h1>\n<p>Now that you have ingested the data, you enrich the streaming clickstream data with the catalog data available in an S3 bucket.<br />\nThis is accomplished with the <strong>JOIN</strong> statement.</p>\n<h3>JOIN statement:</h3>\n<p>Performs an inner join of the clickstream data and user data based on the <strong>item_id</strong> primary key.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Check the previous code block to ensure that it has been stopped.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n<li><code>Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results</code>.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>A table of the clickstream data enriched with catalog data.<br />\n<code>It can take 1-2 minutes for the query to return the output.</code></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_498717256",
+      "id": "paragraph_1661797395104_156854109",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:301"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nSELECT  *\nfrom clickstream_events \ninner join  catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_1254529815",
+      "id": "paragraph_1661797421416_1571677426",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:302"
+    },
+    {
+      "text": "%md\n# Task 4.3: Analysis and visualization\nNow that the streaming clickstream data has been ingested and enriched with the catalog data stored in Amazon S3, you will analyze the data to determine the Sales per category in a given time interval.\nIn this task, you filter the output according to the event (**purchased-item**) and **GROUP** the output for every category for every 10 seconds.\n**This provides the SALES per category in the last 10 seconds.**\n\n### WHERE statement:\nPerforms a filter on **purchased_item**.\n### GROUP BY statement: \nGroups the SALES per category in the last 10 seconds.\n### TUMBLE PROCTIME statement:\nThis will essentially create a mini-batch of data on top of which you can run an aggregation. \nIn this lab, we will define a tumbling window over the past 10 seconds and perform a **SUM** of **purchased_items** to provide sales figures. \n\n*****\n### Instructions:\n1. Check the previous code block to ensure that it has been stopped. \n2. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n3. `Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results`.\n\n*****\n### Expected output:\nIt can take 1-2 minutes for the data to appear in the graph. \nOutput is a bar graph of the purchased_item every 10 seconds per segment page. \n`Initially only the blue bar will be presented. This graph updates over time, and we recommend that you leave it running for a couple of minutes to visualize and explore the results.`\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Task 4.3: Analysis and visualization</h1>\n<p>Now that the streaming clickstream data has been ingested and enriched with the catalog data stored in Amazon S3, you will analyze the data to determine the Sales per category in a given time interval.<br />\nIn this task, you filter the output according to the event (<strong>purchased-item</strong>) and <strong>GROUP</strong> the output for every category for every 10 seconds.<br />\n<strong>This provides the SALES per category in the last 10 seconds.</strong></p>\n<h3>WHERE statement:</h3>\n<p>Performs a filter on <strong>purchased_item</strong>.</p>\n<h3>GROUP BY statement:</h3>\n<p>Groups the SALES per category in the last 10 seconds.</p>\n<h3>TUMBLE PROCTIME statement:</h3>\n<p>This will essentially create a mini-batch of data on top of which you can run an aggregation.<br />\nIn this lab, we will define a tumbling window over the past 10 seconds and perform a <strong>SUM</strong> of <strong>purchased_items</strong> to provide sales figures.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Check the previous code block to ensure that it has been stopped.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n<li><code>Stop the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results</code>.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>It can take 1-2 minutes for the data to appear in the graph.<br />\nOutput is a bar graph of the purchased_item every 10 seconds per segment page.<br />\n<code>Initially only the blue bar will be presented. This graph updates over time, and we recommend that you leave it running for a couple of minutes to visualize and explore the results.</code></p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800253_1392692550",
+      "id": "paragraph_1661797459277_1464228391",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:303"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n SELECT\n        TUMBLE_START(PROCTIME(), INTERVAL '10' seconds) as start_window,\n        TUMBLE_END(PROCTIME(), INTERVAL '10' seconds) as end_window,\n        clickstream_events.page,  \n        SUM(CAST(item_price as FLOAT) * item_quantity) AS SALES\nfrom clickstream_events \ninner join catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id\nWHERE (event= 'purchased_item')\nGROUP BY TUMBLE(PROCTIME(), INTERVAL '10' seconds ),clickstream_events.page, item_price;\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "xLabelStatus": "default",
+                  "stacked": true
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "page",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "end_window",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "start_window",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "SALES",
+                  "index": 3,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_1145376793",
+      "id": "paragraph_1661797492310_251847900",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:304"
+    },
+    {
+      "text": "%md\n# Task 4.4: Output to Kinesis data stream\n\nNow that you have visualized the analysis, you write the output of the analysis to a Kinesis data stream which will be used for further downstream processing.\n\n### Step 4.4.1\n### CREATE statement: \nYou create an in-memory table **sink_table** for the Kinesis data stream that will contain the output data (enriched data). Apache Flink will use this statement to define the metadata for records coming into a data stream using a **kinesis** connector.\n\n### Kinesis connector details:\nThe table uses the **Kinesis** connector to read from a Kinesis data stream called **OutputDataStream** in the **Region** Region from the **latest** stream position in **JSON** format.\n\n*****\n### Instructions:\n\n1. Check the previous code block to ensure that it has been stopped.\n2. Replace the **YOUR_OutputDataStream_GOES_HERE** placeholder value within the single quote with the **OutputDataStream** found in the left panel of the lab markdown instructions.\n3. Replace the **YOUR_Region_GOES_HERE** placeholder value within the single quote with the **Region** found in the left panel of lab markdown instructions.\n4. Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.\n\n*****\n### Expected output:\nYou will notice the table deleted and re-created as the output.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Task 4.4: Output to Kinesis data stream</h1>\n<p>Now that you have visualized the analysis, you write the output of the analysis to a Kinesis data stream which will be used for further downstream processing.</p>\n<h3>Step 4.4.1</h3>\n<h3>CREATE statement:</h3>\n<p>You create an in-memory table <strong>sink_table</strong> for the Kinesis data stream that will contain the output data (enriched data). Apache Flink will use this statement to define the metadata for records coming into a data stream using a <strong>kinesis</strong> connector.</p>\n<h3>Kinesis connector details:</h3>\n<p>The table uses the <strong>Kinesis</strong> connector to read from a Kinesis data stream called <strong>OutputDataStream</strong> in the <strong>Region</strong> Region from the <strong>latest</strong> stream position in <strong>JSON</strong> format.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li>Check the previous code block to ensure that it has been stopped.</li>\n<li>Replace the <strong>YOUR_OutputDataStream_GOES_HERE</strong> placeholder value within the single quote with the <strong>OutputDataStream</strong> found in the left panel of the lab markdown instructions.</li>\n<li>Replace the <strong>YOUR_Region_GOES_HERE</strong> placeholder value within the single quote with the <strong>Region</strong> found in the left panel of lab markdown instructions.</li>\n<li>Run the following paragraph either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>You will notice the table deleted and re-created as the output.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_164925495",
+      "id": "paragraph_1661797530605_1865792316",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:305"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\n-- Replace the `YOUR_OutputDataStream_GOES_HERE` placeholder value within the single quote with the `OutputDataStream` found in the left panel of lab markdown instructions.\n-- Replace the `YOUR_Region_GOES_HERE` placeholder value within the single quote with the `Region` found in the left panel of lab markdown instructions.\n\nDROP TABLE IF EXISTS sink_table;\nCREATE TABLE sink_table (\n    event_id STRING,\n    event STRING,\n    user_id STRING,\n    item_id STRING,\n    item_quantity BIGINT,\n    event_time TIMESTAMP(3),\n    os STRING,\n    page STRING,\n    url STRING,\n    item_name STRING,\n    item_price STRING\n)\nWITH (\n'connector' = 'kinesis',\n'stream' = 'YOUR_OutputDataStream_GOES_HERE',\n'aws.region' = 'YOUR_Region_GOES_HERE',\n'scan.stream.initpos' = 'LATEST',\n'sink.producer.aggregation-enabled' ='false',\n'format' = 'json'\n);\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_821423827",
+      "id": "paragraph_1661797687506_962488046",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:306"
+    },
+    {
+      "text": "%md\n### Step 4.4.2 \nAfter the **sink_table** has been defined, you insert catalog records into the Kinesis data stream and visualize the data as a table.\n### INSERT statement: \nInserts the data records into the **sink_table** table created.\n\n### SELECT query:\nRetrieves all catalog data from the **sink_table** table.\n*****\n### Instructions:\n1. `Run the following two paragraphs either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.`\n    You will notice a table of the clickstream data enriched with the catalog data.\n2. `Stop both the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results`.\n\n*****\n### Expected output:\nA table of the clickstream data enriched with the catalog data.\nIt can take 1-2 minutes for the query to return the output.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Step 4.4.2</h3>\n<p>After the <strong>sink_table</strong> has been defined, you insert catalog records into the Kinesis data stream and visualize the data as a table.</p>\n<h3>INSERT statement:</h3>\n<p>Inserts the data records into the <strong>sink_table</strong> table created.</p>\n<h3>SELECT query:</h3>\n<p>Retrieves all catalog data from the <strong>sink_table</strong> table.</p>\n<hr />\n<h3>Instructions:</h3>\n<ol>\n<li><code>Run the following two paragraphs either by choosing the Play button at the top right of the paragraph or by pressing Shift + Enter keys with the paragraph selected.</code><br />\nYou will notice a table of the clickstream data enriched with the catalog data.</li>\n<li><code>Stop both the following paragraph by choosing the Pause button at the top right of the paragraph or by choosing Ctrl + Option + C (Ctrl + Alt + C in Windows) with the paragraph selected when you have seen the results</code>.</li>\n</ol>\n<hr />\n<h3>Expected output:</h3>\n<p>A table of the clickstream data enriched with the catalog data.<br />\nIt can take 1-2 minutes for the query to return the output.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_1499412665",
+      "id": "paragraph_1661797746396_1359411522",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:307"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nINSERT INTO sink_table\nSELECT  \n event_id ,\n    event ,\n    user_id,\n    catalog_items_stream.item_id,\n    item_quantity,\n    event_time,\n    os,\n    catalog_items_stream.page,\n    url,\n    item_name,\n    item_price\nfrom clickstream_events \ninner join catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_70107349",
+      "id": "paragraph_1661797819938_2110739499",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:308"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nSELECT * FROM sink_table;\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_1638879358",
+      "id": "paragraph_1661798102508_1335305551",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:309"
+    },
+    {
+      "text": "%md\n## Congratulations!\n### You have successfully completed the following:\n### 1.  Built a real-time streaming analytics pipeline with Kinesis Data Streams in Kinesis Data Analytics Studio using Apache Flink and Apache Zeppelin by ingesting clickstream data and enriching the clickstream data with catalog data stored in Amazon S3. You performed analysis on the enriched data to identify the sales per category in real time. \n### 2.  Visualized the analysis.\n### 3.  Output the data to a Kinesis data stream for further downstream processing depending on operational needs.\n\n### You will now return to the lab instructions to continue to the optional task (Understanding in-memory table creation in AWS Glue Data Calalog) or end the lab.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-07T18:20:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Congratulations!</h2>\n<h3>You have successfully completed the following:</h3>\n<h3>1.  Built a real-time streaming analytics pipeline with Kinesis Data Streams in Kinesis Data Analytics Studio using Apache Flink and Apache Zeppelin by ingesting clickstream data and enriching the clickstream data with catalog data stored in Amazon S3. You performed analysis on the enriched data to identify the sales per category in real time.</h3>\n<h3>2.  Visualized the analysis.</h3>\n<h3>3.  Output the data to a Kinesis data stream for further downstream processing depending on operational needs.</h3>\n<h3>You will now return to the lab instructions to continue to the optional task (Understanding in-memory table creation in AWS Glue Data Calalog) or end the lab.</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662574800254_253196133",
+      "id": "paragraph_1661797899386_763882426",
+      "dateCreated": "2022-09-07T18:20:00+0000",
+      "status": "READY",
+      "$$hashKey": "object:310"
+    }
+  ],
+  "name": "Lab2_Kinesis_Analytics",
+  "id": "2HEF2NX5U",
+  "defaultInterpreterGroup": "flink",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Lab2_Kinesis_Analytics"
+}

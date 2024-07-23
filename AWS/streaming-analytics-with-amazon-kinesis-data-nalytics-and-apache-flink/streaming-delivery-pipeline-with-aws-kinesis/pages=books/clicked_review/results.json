@@ -1,0 +1,5 @@
+{"event_id":"b2d01f77f188739f7649a0030414c169","event":"clicked_review","user_id":5,"item_id":52,"item_quantity":0,"event_time":"2023-07-19 12:29:33.431793","os":"web","page":"books","url":"www.example.com"}
+{"event_id":"33e1e29ac790a9834359e5c3fa1a9b51","event":"clicked_review","user_id":27,"item_id":32,"item_quantity":0,"event_time":"2023-07-19 12:29:33.480272","os":"ios","page":"books","url":"www.example.com"}
+{"event_id":"520edfa2edb890587e656e231856377f","event":"clicked_review","user_id":50,"item_id":43,"item_quantity":0,"event_time":"2023-07-19 12:29:49.783893","os":"web","page":"books","url":"www.example.com"}
+{"event_id":"2a27f15a2e7f8144a32a0d4e1e1e1b95","event":"clicked_review","user_id":39,"item_id":32,"item_quantity":0,"event_time":"2023-07-19 12:30:12.334266","os":"web","page":"books","url":"www.example.com"}
+{"event_id":"61877a1c0f53740b3905a1af92d83d87","event":"clicked_review","user_id":26,"item_id":12,"item_quantity":0,"event_time":"2023-07-19 12:30:18.471031","os":"ios","page":"books","url":"www.example.com"}

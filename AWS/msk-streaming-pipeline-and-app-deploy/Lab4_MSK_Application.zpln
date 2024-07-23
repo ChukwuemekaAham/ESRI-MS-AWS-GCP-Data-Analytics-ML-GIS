@@ -1,0 +1,138 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n### Build and deploy application\nThis is the notebook for Task 5.3 as noted in the lab markdown file.\n\nIt is necessary that all prior tasks / steps be completed prior to this step.\n\n*****\nIn this notebook, you promote the code in your analysis note (Lab4_MSK_Analytics) to a continuously running stream processing application. After you deploy a note to run in streaming mode, Kinesis Data Analytics creates an application for you that runs continuously, reads data from your sources, writes to your destinations, maintains long-running application state, and autoscales automatically based on the throughput of your source streams.\n\nHowever, there are certain criteria a deployable notebook must meet, such as not mixing and matching Python and Scala, only having one Flink application per notebook, etc.\n\nTo meet these criteria, you will notice that in this note (code block in the following paragraph) all of the **SELECT** statements from your analysis note (Lab4_MSK_Analytics) has been removed, and only the last **INSERT**  into sink_table statement has been retained. \n\nThis is the note that will be built and deployed as an application and the following code paragraph does not need to run.\n\nPlease follow the instructions in the subsequent paragraph to build, export and deploy the application.\n*****\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T20:22:55+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Build and deploy application</h3>\n<p>This is the notebook for Task 5.3 as noted in the lab markdown file.</p>\n<p>It is necessary that all prior tasks / steps be completed prior to this step.</p>\n<hr />\n<p>In this notebook, you promote the code in your analysis note (Lab4_MSK_Analytics) to a continuously running stream processing application. After you deploy a note to run in streaming mode, Kinesis Data Analytics creates an application for you that runs continuously, reads data from your sources, writes to your destinations, maintains long-running application state, and autoscales automatically based on the throughput of your source streams.</p>\n<p>However, there are certain criteria a deployable notebook must meet, such as not mixing and matching Python and Scala, only having one Flink application per notebook, etc.</p>\n<p>To meet these criteria, you will notice that in this note (code block in the following paragraph) all of the <strong>SELECT</strong> statements from your analysis note (Lab4_MSK_Analytics) has been removed, and only the last <strong>INSERT</strong>  into sink_table statement has been retained.</p>\n<p>This is the note that will be built and deployed as an application and the following code paragraph does not need to run.</p>\n<p>Please follow the instructions in the subsequent paragraph to build, export and deploy the application.</p>\n<hr />\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662493655139_347493427",
+      "id": "paragraph_1660323469737_1648625936",
+      "dateCreated": "2022-09-06T19:47:35+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:274",
+      "dateFinished": "2022-09-06T20:22:55+0000",
+      "dateStarted": "2022-09-06T20:22:55+0000"
+    },
+    {
+      "text": "%flink.ssql(type=update)\nINSERT INTO sink_table\nSELECT  \n event_id ,\n    event ,\n    user_id,\n    catalog_items_stream.item_id,\n    item_quantity,\n    event_time,\n    os,\n    catalog_items_stream.page,\n    url,\n    item_name,\n    item_price\nfrom clickstream_events \ninner join catalog_items_stream\non   clickstream_events.item_id = catalog_items_stream.item_id;",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T19:47:35+0000",
+      "progress": 0,
+      "config": {
+        "lineNumbers": true,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662493655140_874806554",
+      "id": "paragraph_1659716287826_2143243873",
+      "dateCreated": "2022-09-06T19:47:35+0000",
+      "status": "READY",
+      "$$hashKey": "object:275"
+    },
+    {
+      "text": "%md\n### Please follow the numbered steps below to build, export and deploy the application:\n\n1. At the top right, click on **Actions for kdastudio-**\n \n2. Choose **Build Lab4_MSK_Application and export to Amazon S3**.  Select **Build and export** \nYou will notice a pop up within the notebook which reads **Lab4_MSK_Application has been successfully built and exported to AmazonS3** once the build and export is complete.\n\n3. Once the build and export has been completed, choose **Deploy Lab4_MSK_Application as Kinesis Analytics application** in the same drop down.\nThis will bring up the deploy model which will show you where the application will be saved in Amazon S3. Pressing the **Deploy using AWS console** will open up the Create wizard for Kinesis Data Analytics for Apache Flink.\n\n4. Near the middle of the Create wizard page, under **Application configuration**, select **Choose from IAM roles that Kinesis Data Analytics can assume** and choose the **LabStack-** role to run the Kinesis Data Analytics for Apache Flink application.\n\n5. Scroll to the bottom of the page and select **Create streaming application** to create your Kinesis Data Analytics for Apache Flink application. The application will now be available in the **Streaming applications** tab of the AWS Management Console.\n\n### You will now return to the lab instructions to continue to task 5.4, where you will be test the application deployment.\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-09-06T19:47:35+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Please follow the numbered steps below to build, export and deploy the application:</h3>\n<ol>\n<li>\n<p>At the top right, click on <strong>Actions for kdastudio-</strong></p>\n</li>\n<li>\n<p>Choose <strong>Build Lab4_MSK_Application and export to Amazon S3</strong>.  Select <strong>Build and export</strong><br />\nYou will notice a pop up within the notebook which reads <strong>Lab4_MSK_Application has been successfully built and exported to AmazonS3</strong> once the build and export is complete.</p>\n</li>\n<li>\n<p>Once the build and export has been completed, choose <strong>Deploy Lab4_MSK_Application as Kinesis Analytics application</strong> in the same drop down.<br />\nThis will bring up the deploy model which will show you where the application will be saved in Amazon S3. Pressing the <strong>Deploy using AWS console</strong> will open up the Create wizard for Kinesis Data Analytics for Apache Flink.</p>\n</li>\n<li>\n<p>Near the middle of the Create wizard page, under <strong>Application configuration</strong>, select <strong>Choose from IAM roles that Kinesis Data Analytics can assume</strong> and choose the <strong>LabStack-</strong> role to run the Kinesis Data Analytics for Apache Flink application.</p>\n</li>\n<li>\n<p>Scroll to the bottom of the page and select <strong>Create streaming application</strong> to create your Kinesis Data Analytics for Apache Flink application. The application will now be available in the <strong>Streaming applications</strong> tab of the AWS Management Console.</p>\n</li>\n</ol>\n<h3>You will now return to the lab instructions to continue to task 5.4, where you will be test the application deployment.</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1662493655140_1316984239",
+      "id": "paragraph_1661556931446_509676031",
+      "dateCreated": "2022-09-06T19:47:35+0000",
+      "status": "READY",
+      "$$hashKey": "object:276"
+    }
+  ],
+  "name": "Lab4_MSK_Application",
+  "id": "2HBPF1YVE",
+  "defaultInterpreterGroup": "flink",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Lab4_MSK_Application"
+}

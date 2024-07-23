@@ -1,0 +1,15 @@
+{"item_id": "11","item_name": "Shirt","item_price": "10.00", "page":"apparel"}
+{"item_id": "12","item_name": "TShirt","item_price": "5.00", "page":"apparel"}
+{"item_id": "13","item_name": "Jacket","item_price": "15.00", "page":"apparel"}
+{"item_id": "21","item_name": "Pasta Sauce","item_price": "8.00", "page":"food"}
+{"item_id": "22","item_name": "Cake Mix","item_price": "12.00", "page":"food"}
+{"item_id": "23","item_name": "Noodle","item_price": "6.00", "page":"food"}
+{"item_id": "31","item_name": "Head phone","item_price": "25.00", "page":"electronics"}
+{"item_id": "32","item_name": "Keyboard","item_price": "20.00", "page":"electronics"}
+{"item_id": "33","item_name": "Mouse","item_price": "15.00", "page":"electronics"}
+{"item_id": "41","item_name": "Dinner set","item_price": "30.00", "page":"home"}
+{"item_id": "42","item_name": "Kettle","item_price": "15.00", "page":"home"}
+{"item_id": "43","item_name": "Cutting board","item_price": "20.00", "page":"home"}
+{"item_id": "51","item_name": "Data Sciences Book","item_price": "25.00", "page":"books"}
+{"item_id": "52","item_name": "Cookbook","item_price": "15.00", "page":"books"}
+{"item_id": "53","item_name": "Learning Python","item_price": "30.00", "page":"books"}

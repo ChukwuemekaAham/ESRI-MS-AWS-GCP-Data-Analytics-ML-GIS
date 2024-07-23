@@ -1,0 +1,3 @@
+{"event_id":"247093ee4021b853092d71856f79c316","user_id":"4","item_id":"23","item_quantity":0,"event_time":"2023-07-20 04:03:13.237","os":"android","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
+{"event_id":"1e20b4230732f17795b056fefd517156","user_id":"42","item_id":"21","item_quantity":0,"event_time":"2023-07-20 04:04:10.643","os":"ios","url":"www.example.com","item_name":"Pasta Sauce","item_price":"8.00"}
+{"event_id":"80ae18abbd66e624fa8356a5a65034d9","user_id":"11","item_id":"22","item_quantity":0,"event_time":"2023-07-20 04:04:21.694","os":"ios","url":"www.example.com","item_name":"Cake Mix","item_price":"12.00"}

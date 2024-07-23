@@ -1,0 +1,119 @@
+{
+  "took": 115,
+  "timed_out": false,
+  "_shards": {
+    "total": 0,
+    "successful": 0,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AsVCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.566569",
+          "ticker": "MSFT",
+          "price": 62.84
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3As1CddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.607859",
+          "ticker": "AMZN",
+          "price": 69.95
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AtFCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.623781",
+          "ticker": "INTC",
+          "price": 64.88
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AtlCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.649964",
+          "ticker": "MSFT",
+          "price": 7.92
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AuFCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.680857",
+          "ticker": "AMZN",
+          "price": 96.42
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AuVCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.693113",
+          "ticker": "TBV",
+          "price": 14.29
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AulCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.706654",
+          "ticker": "AMZN",
+          "price": 64.94
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3Au1CddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.725123",
+          "ticker": "TBV",
+          "price": 15.35
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AvFCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.746273",
+          "ticker": "AMZN",
+          "price": 51.83
+        }
+      },
+      {
+        "_index": "firehose-ingest",
+        "_id": "1%3A0%3AvVCddYkBagqXVm_6wEXj",
+        "_score": 1,
+        "_source": {
+          "event_time": "2023-07-20T23:22:38.758213",
+          "ticker": "MSFT",
+          "price": 17.52
+        }
+      }
+    ]
+  }
+}

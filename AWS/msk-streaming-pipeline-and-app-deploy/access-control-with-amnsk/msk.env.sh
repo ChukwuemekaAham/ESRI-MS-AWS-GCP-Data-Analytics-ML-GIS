@@ -1,0 +1,5 @@
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/kafka_2.12-2.2.1/bin:/opt/apache-maven-3.8.8/bin:/usr/local/bin/
+export MSK_ARN=arn:aws:kafka:us-west-2:609665080633:cluster/MSK-Demo/13852ee1-6892-4e9e-86fb-ecd5ef57cfa3-12
+export MSK_BOOTSTRAP="b-2.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9094,b-1.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9094,b-3.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9094"
+export MSK_ZOOKEEPER="z-1.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:2181,z-3.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:2181,z-2.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:2181"
+export MSKIAM_BOOTSTRAP="b-1.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9098,b-3.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9098,b-2.mskdemo.ptwgon.c12.kafka.us-west-2.amazonaws.com:9098"

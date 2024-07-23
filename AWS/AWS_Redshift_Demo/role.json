@@ -1,0 +1,316 @@
+// AWSServiceRoleForRedshift
+// Allows Amazon Redshift to call AWS services on your behalf
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "redshift.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+// AmazonRedshiftServiceLinkedRolePolicy
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeAddresses",
+                "ec2:AssociateAddress",
+                "ec2:DisassociateAddress",
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:CreateVpcEndpoint",
+                "ec2:DeleteVpcEndpoints",
+                "ec2:DescribeVpcEndpoints",
+                "ec2:ModifyVpcEndpoint"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AllocateAddress"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:elastic-ip/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestTag/Redshift": "true"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:ReleaseAddress"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:elastic-ip/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/Redshift": "true"
+                }
+            }
+        },
+        {
+            "Sid": "EnableCreationAndManagementOfRedshiftCloudwatchLogGroups",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:PutRetentionPolicy"
+            ],
+            "Resource": [
+                "arn:aws:logs:*:*:log-group:/aws/redshift/*"
+            ]
+        },
+        {
+            "Sid": "EnableCreationAndManagementOfRedshiftCloudwatchLogStreams",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "logs:DescribeLogStreams",
+                "logs:GetLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:*:*:log-group:/aws/redshift/*:log-stream:*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
+                "ec2:ReplaceRouteTableAssociation",
+                "ec2:CreateRouteTable",
+                "ec2:AttachInternetGateway",
+                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
+                "ec2:AssociateRouteTable",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:CreateRoute",
+                "ec2:CreateSecurityGroup",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:ModifyVpcAttribute",
+                "ec2:CreateSubnet"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:subnet/*",
+                "arn:aws:ec2:*:*:route-table/*",
+                "arn:aws:ec2:*:*:security-group/*",
+                "arn:aws:ec2:*:*:vpc/*",
+                "arn:aws:ec2:*:*:internet-gateway/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/Purpose": "RedshiftMigrateToVpc"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateSecurityGroup",
+                "ec2:CreateInternetGateway",
+                "ec2:CreateVpc",
+                "ec2:CreateRouteTable",
+                "ec2:CreateSubnet"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:subnet/*",
+                "arn:aws:ec2:*:*:route-table/*",
+                "arn:aws:ec2:*:*:security-group/*",
+                "arn:aws:ec2:*:*:vpc/*",
+                "arn:aws:ec2:*:*:internet-gateway/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestTag/Purpose": "RedshiftMigrateToVpc"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": "ec2:CreateTags",
+            "Resource": [
+                "arn:aws:ec2:*:*:subnet/*",
+                "arn:aws:ec2:*:*:route-table/*",
+                "arn:aws:ec2:*:*:security-group/*",
+                "arn:aws:ec2:*:*:vpc/*",
+                "arn:aws:ec2:*:*:internet-gateway/*",
+                "arn:aws:ec2:*:*:elastic-ip/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:CreateAction": [
+                        "CreateVpc",
+                        "CreateSecurityGroup",
+                        "CreateSubnet",
+                        "CreateInternetGateway",
+                        "CreateRouteTable",
+                        "AllocateAddress"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeVpcAttribute",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeSecurityGroupRules",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeNetworkAcls",
+                "ec2:DescribeRouteTables"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:PutMetricData"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "cloudwatch:namespace": [
+                        "AWS/Redshift-Serverless",
+                        "AWS/Redshift"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+
+
+
+// Redshift Role
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": [
+                    "redshift.amazonaws.com",
+                    "s3.amazonaws.com",
+                    "glue.amazonaws.com",
+                    "ec2.amazonaws.com"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+// -	Glue-policy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "athena:Batch*",
+                "athena:Create*",
+                "athena:Delete*",
+                "athena:Get*",
+                "athena:List*",
+                "athena:Start*",
+                "athena:Stop*",
+                "athena:TagResource",
+                "athena:UntagResource",
+                "athena:Update",
+                "glue:BatchCreatePartition",
+                "glue:BatchDeleteTableVersion",
+                "glue:BatchGetCrawlers",
+                "glue:BatchGetDevEndpoints",
+                "glue:BatchGetJobs",
+                "glue:BatchGetPartition",
+                "glue:BatchGetTriggers",
+                "glue:BatchGetWorkflows",
+                "glue:CreateDatabase",
+                "glue:CreateTable",
+                "glue:DeleteTableVersion",
+                "glue:DeleteTable",
+                "glue:Get*",
+                "glue:List*",
+                "glue:SearchTables",
+                "lakeformation:*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+
+// -	S3-policy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::labstack-29e32d98-34dc-411a-a712-8c6fb-databucket-g2lhzau2rv56/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:List*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+
+
+// -	Secrets-policy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:ListSecretVersionIds"
+            ],
+            "Resource": [
+                "arn:aws:secretsmanager:us-west-2:748558094155:secret:AuroraSecrets-1PX1iv",
+                "arn:aws:secretsmanager:us-west-2:748558094155:secret:RedshiftSecrets-XqSubh"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "secretsmanager:GetRandomPassword",
+                "secretsmanager:ListSecrets"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}

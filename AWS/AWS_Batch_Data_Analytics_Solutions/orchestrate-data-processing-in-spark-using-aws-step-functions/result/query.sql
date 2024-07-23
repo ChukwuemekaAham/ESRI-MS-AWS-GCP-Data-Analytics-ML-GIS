@@ -1,0 +1,1 @@
+SELECT * FROM "default"."stock_summary" ORDER BY trade_date DESC LIMIT 10;

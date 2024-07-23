@@ -1,0 +1,9 @@
+{"event_id":"57b1b02f22f3153d1b9d221423a6315a","user_id":"45","item_id":"21","item_quantity":0,"event_time":"2023-07-20 03:56:26.438","os":"android","url":"www.example.com","item_name":"Pasta Sauce","item_price":"8.00"}
+{"event_id":"ce5e3f55639dd9d369d11b792d78ccfa","user_id":"35","item_id":"23","item_quantity":0,"event_time":"2023-07-20 03:56:33.47","os":"android","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
+{"event_id":"aaf972a18bf8796a28e4b852eeb06f0b","user_id":"45","item_id":"21","item_quantity":0,"event_time":"2023-07-20 03:56:45.529","os":"ios","url":"www.example.com","item_name":"Pasta Sauce","item_price":"8.00"}
+{"event_id":"dce5268eb48050ffd9ee75029cc3772b","user_id":"16","item_id":"21","item_quantity":0,"event_time":"2023-07-20 03:56:46.537","os":"web","url":"www.example.com","item_name":"Pasta Sauce","item_price":"8.00"}
+{"event_id":"8d5c53ca45d03f940242519bebb786f4","user_id":"48","item_id":"22","item_quantity":0,"event_time":"2023-07-20 03:56:50.559","os":"android","url":"www.example.com","item_name":"Cake Mix","item_price":"12.00"}
+{"event_id":"f1c009980b0fcf183f4fd64149ef33a9","user_id":"46","item_id":"23","item_quantity":0,"event_time":"2023-07-20 03:57:04.689","os":"android","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
+{"event_id":"f8e0fc5db14218749841e8b9a84eacba","user_id":"46","item_id":"23","item_quantity":0,"event_time":"2023-07-20 03:57:16.777","os":"web","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
+{"event_id":"0de0e04cd2ebce995c4578180203705f","user_id":"30","item_id":"23","item_quantity":0,"event_time":"2023-07-20 03:57:27.846","os":"web","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
+{"event_id":"6a09e5d1e2a73a344e5cc157b8b1368c","user_id":"24","item_id":"23","item_quantity":0,"event_time":"2023-07-20 03:57:45.962","os":"android","url":"www.example.com","item_name":"Noodle","item_price":"6.00"}
