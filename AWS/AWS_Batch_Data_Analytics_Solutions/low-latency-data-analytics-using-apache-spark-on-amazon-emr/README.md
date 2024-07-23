@@ -4,7 +4,7 @@ High-Performance Batch Data Analytics Using Apache Spark on Amazon EMR
 **Case Study**
 
 # Low-Latency Data Analytics Using Apache Spark on Amazon EMR
-Your company, AnyCompany Finanacials, is creating a platform for users to perform customized stock queries. You are asked to investigate low-latency data analytics for the dynamic stock application. You've decide to use Apache Spark to process the data and investigate differnt monitoring methods.
+Your company, is creating a platform for users to perform customized stock queries. You are asked to investigate low-latency data analytics for the dynamic stock application. You've decide to use Apache Spark to process the data and investigate differnt monitoring methods.
 
 Your task is to use an EMR notebook (based on Jupyter Notebook) to create an application using PySpark, and research the operational visibility of your stock application using the Spark history server.
 
