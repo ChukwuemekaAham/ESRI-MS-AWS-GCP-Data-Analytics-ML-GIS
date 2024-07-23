@@ -1,0 +1,74 @@
+{
+  "reference": {
+    "jobId": "default_Reusable-Pipeline_DataPipelineWorkflow_acc0b644-6e6f-11ee-922a-76d66aa536bf",
+    "projectId": "qwiklabs-gcp-00-76e3553b437c"
+  },
+  "placement": {
+    "clusterName": "cdap-reusable--acc0b644-6e6f-11ee-922a-76d66aa536bf"
+  },
+  "status": {
+    "state": "DONE",
+    "stateStartTime": "2023-10-19T11:15:39.961585Z"
+  },
+  "statusHistory": [
+    {
+      "state": "PENDING",
+      "stateStartTime": "2023-10-19T11:11:37.867027Z"
+    },
+    {
+      "state": "SETUP_DONE",
+      "stateStartTime": "2023-10-19T11:11:37.916018Z"
+    },
+    {
+      "state": "RUNNING",
+      "details": "Agent reported job success",
+      "stateStartTime": "2023-10-19T11:11:38.423021Z"
+    }
+  ],
+  "driverControlFilesUri": "gs://dataproc-staging-us-central1-355531587894-qoyije6o/google-cloud-dataproc-metainfo/352a67a0-889d-4929-b8b8-2f6a321016b0/jobs/default_Reusable-Pipeline_DataPipelineWorkflow_acc0b644-6e6f-11ee-922a-76d66aa536bf/",
+  "driverOutputResourceUri": "gs://dataproc-staging-us-central1-355531587894-qoyije6o/google-cloud-dataproc-metainfo/352a67a0-889d-4929-b8b8-2f6a321016b0/jobs/default_Reusable-Pipeline_DataPipelineWorkflow_acc0b644-6e6f-11ee-922a-76d66aa536bf/driveroutput",
+  "labels": {
+    "goog-datafusion-version": "6_9",
+    "cdap-version": "6_9_2-1693551895972",
+    "goog-datafusion-edition": "basic",
+    "cdap-program": "datapipelineworkflow",
+    "cdap-program-type": "workflow"
+  },
+  "jobUuid": "9d477b99-fa4a-4794-a972-2b37c3b864e0",
+  "done": true,
+  "hadoopJob": {
+    "properties": {
+      "cdap.runtime.namespace": "default",
+      "cdap.runtime.application": "Reusable-Pipeline",
+      "cdap.runtime.version": "638945f3-6e6f-11ee-b8b1-76d66aa536bf",
+      "cdap.runtime.program": "DataPipelineWorkflow",
+      "cdap.runtime.program.type": "WORKFLOW",
+      "cdap.runtime.runid": "acc0b644-6e6f-11ee-922a-76d66aa536bf"
+    },
+    "jarFileUris": [
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/cached-artifacts/artifacts_archive_8b15b8f093c355780d12cf46559b43d58fe3a0b8c746816c37f0b1a8695cf0fa_1696723200000.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/cached-artifacts/application_1885cc324047173e4c0d085dac0429ab_1696723200000.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/cached-artifacts/6.9.2/twill.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/cached-artifacts/program_2175d575c5a2777c489faa9c8821b9dc6a3a4e580b4fcf9901cb1f1eecbe7c63_1698192000000.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/acc0b644-6e6f-11ee-922a-76d66aa536bf/resources.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/cached-artifacts/6.9.2/launcher.jar",
+      "gs://df-4501071077951205923-awwd2w3onei65hzjaizbbqaaaa/cdap-job/acc0b644-6e6f-11ee-922a-76d66aa536bf/runtime.config.jar"
+    ],
+    "args": [
+      "--runtimeJobClass=io.cdap.cdap.internal.app.runtime.distributed.runtimejob.DefaultRuntimeJob",
+      "--sparkCompat=spark3_2.12",
+      "--archive=artifacts_8b15b8f093c355780d12cf46559b43d58fe3a0b8c746816c37f0b1a8695cf0fa_1696723200000",
+      "--archive=application_1885cc324047173e4c0d085dac0429ab_1696723200000.jar",
+      "--archive=log-appender-ext",
+      "--archive=twill.jar",
+      "--archive=resources.jar",
+      "--archive=runtime.config.jar",
+      "--proplogback.configurationFile=\"logback.xml\"",
+      "--propCDAP_LOG_DIR=\"<LOG_DIR>\"",
+      "--proptwill.container.class.loader=\"io.cdap.cdap.common.app.MainClassLoader\"",
+      "--application.jar=application_1885cc324047173e4c0d085dac0429ab_1696723200000.jar",
+      "--launchMode=CLUSTER"
+    ],
+    "mainClass": "io.cdap.cdap.runtime.spi.runtimejob.DataprocJobMain"
+  }
+}
