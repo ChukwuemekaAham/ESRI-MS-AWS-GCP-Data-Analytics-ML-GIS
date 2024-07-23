@@ -1,0 +1,104 @@
+[2023-08-17T21:51:37.069+0000] {processor.py:157} INFO - Started process (PID=79546) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:51:37.071+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:51:37.072+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:51:37.072+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:51:37.594+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:51:37.590+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:51:37.594+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:51:37.625+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.562 seconds
+[2023-08-17T21:52:09.263+0000] {processor.py:157} INFO - Started process (PID=79653) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:09.265+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:52:09.267+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:52:09.266+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:09.747+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:52:09.743+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:52:09.748+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:09.782+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.525 seconds
+[2023-08-17T21:52:36.637+0000] {processor.py:157} INFO - Started process (PID=79677) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:36.638+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:52:36.640+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:52:36.639+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:36.642+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:52:36.642+0000] {dagbag.py:327} INFO - File /home/aham/airflow/dag/weather_etl.py assumed to contain no DAGs. Skipping.
+[2023-08-17T21:52:36.642+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:52:36.665+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.034 seconds
+[2023-08-17T21:53:27.393+0000] {processor.py:157} INFO - Started process (PID=79762) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:53:27.396+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:53:27.398+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:53:27.397+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:53:27.905+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:53:27.902+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:53:27.906+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:53:27.934+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.546 seconds
+[2023-08-17T21:54:13.581+0000] {processor.py:157} INFO - Started process (PID=79877) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:54:13.584+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:54:13.586+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:54:13.586+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:54:14.125+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:54:14.122+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:54:14.126+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:54:14.157+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.581 seconds
+[2023-08-17T21:55:01.301+0000] {processor.py:157} INFO - Started process (PID=79956) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:01.303+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:55:01.305+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:55:01.305+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:01.859+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:55:01.856+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:55:01.860+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:01.891+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.596 seconds
+[2023-08-17T21:55:49.093+0000] {processor.py:157} INFO - Started process (PID=80040) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:49.095+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:55:49.097+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:55:49.096+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:49.639+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:55:49.636+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open('~/airflow/dag/keyy.json'))
+FileNotFoundError: [Errno 2] No such file or directory: '~/airflow/dag/keyy.json'
+[2023-08-17T21:55:49.640+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:55:49.667+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.580 seconds
+[2023-08-17T21:56:13.460+0000] {processor.py:157} INFO - Started process (PID=80062) to work on /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:56:13.461+0000] {processor.py:826} INFO - Processing file /home/aham/airflow/dag/weather_etl.py for tasks to queue
+[2023-08-17T21:56:13.462+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:56:13.462+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:56:13.913+0000] {logging_mixin.py:150} INFO - [2023-08-17T21:56:13.910+0000] {dagbag.py:350} ERROR - Failed to import: /home/aham/airflow/dag/weather_etl.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/aham/airflow/dag/weather_etl.py", line 8, in <module>
+    service_account_info = json.load(open("/airflow/dag/keyy.json"))
+FileNotFoundError: [Errno 2] No such file or directory: '/airflow/dag/keyy.json'
+[2023-08-17T21:56:13.914+0000] {processor.py:838} WARNING - No viable dags retrieved from /home/aham/airflow/dag/weather_etl.py
+[2023-08-17T21:56:13.938+0000] {processor.py:179} INFO - Processing /home/aham/airflow/dag/weather_etl.py took 0.483 seconds

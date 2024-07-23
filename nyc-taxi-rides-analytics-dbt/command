@@ -1,0 +1,33 @@
+htop
+gcloud --version
+wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
+bash Anaconda3-2023.07-2-Linux-x86_64.sh
+source .bashrc
+sudo apt update
+sudo apt-get install docker.io
+sudo groupadd docker
+sudo gpasswd -a $USER docker #Add user aham to group docker
+sudo service docker restart
+sudo docker run hello-world
+#To try something more ambitious, you can run an Ubuntu container with:
+sudo docker run -it ubuntu bash
+mkdir bin
+cd bin
+wget https://github.com/docker/compose/releases/download/v2.21.0/docker-compose-linux-x86_64 -O docker-compose
+chmod +x docker-compose
+./docker-compose version
+
+export PATH="${HOME}/bin:${PATH}" #Add to .bashrc file
+source .bashrc
+which docker-compose
+
+cd bin
+wget https://releases.hashicorp.com/terraform/1.5.6/terraform_1.5.6_linux_amd64.zip
+sudo apt install unzip
+unzip terraform_1.5.6_linux_amd64.zip
+ls
+rm terraform_1.5.6_linux_amd64.zip
+terraform version
+
+export GOOGLE_APPLICATION_CREDENTIALS="/home/aham/.google/credentials/google_credentials.json"
+echo ${GOOGLE_APPLICATION_CREDENTIALS}

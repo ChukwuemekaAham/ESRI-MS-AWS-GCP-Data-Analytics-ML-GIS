@@ -1,0 +1,8 @@
+{
+  "gcp_project": "${GCP_PROJECT_ID}",
+  "gcp_region": "${COMPOSER_REGION}",
+  "gcp_zone": "${COMPOSER_ZONE_ID}",
+  "gcs_bucket": "${INPUT_BUCKET}",
+  "gcs_output_bucket": "${RESULT_BUCKET}",
+  "dataproc_service_account": "${DATAPROC_SERVICE_ACCOUNT}"
+}
