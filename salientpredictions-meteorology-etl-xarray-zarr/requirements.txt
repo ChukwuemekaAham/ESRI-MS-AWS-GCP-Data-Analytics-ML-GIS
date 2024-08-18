@@ -1,0 +1,6 @@
+pandas
+numpy
+matplotlib
+xarray==0.18.2
+zarr==2.7.0
+dask
