@@ -1,4 +1,4 @@
-# Building Data Analytics Solutions Using Amazon Redshift: Lab 1 - Load and Query Data in an Amazon Redshift Cluster
+# Building Data Analytics Solutions Using Amazon Redshift: Load and Query Data in an Amazon Redshift Cluster
 
 Setting up your Data Warehouse using Amazon Redshift
 

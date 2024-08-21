@@ -1,9 +1,9 @@
 # Overview 
 
 **Case Study**
-You are a data engineer at AnyCompany, a cloud marketing organization. You are asked to run a pilot project to build a data lake using AWS Lake Formation. 
+You are a data engineer at a cloud marketing organization. You are asked to run a pilot project to build a data lake using AWS Lake Formation. 
 
-In this lab, you work through the basic steps to register storage with Lake Formation and define a crawler to crawl the initial dataset. You then create an AWS Glue job to generate a version of the dataset in a partitioned Apache Parquet format. You also use Amazon Athena to validate the tables, their schema, and the ability to access the underlying data source through the data catalog. 
+Work through the steps to register storage with Lake Formation and define a crawler to crawl the initial dataset. Then create an AWS Glue job to generate a version of the dataset in a partitioned Apache Parquet format and use Amazon Athena to validate the tables, their schema, and the ability to access the underlying data source through the data catalog. 
 
 **Objectives:**
 • Create a data lake and a database. 

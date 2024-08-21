@@ -4,7 +4,7 @@
 
 **case study**
 
-You are a data engineer at a Company, a cloud marketing organization. You are asked to populate a data lake with content from AWS CloudTrail so the operational analytics team can efficiently query their data with Amazon Athena. 
+You are a data engineer at a cloud marketing organization. You are asked to populate a data lake with content from AWS CloudTrail so the operational analytics team can efficiently query their data with Amazon Athena. 
 
 use a workflow provided as an AWS Lake Formation blueprint to greatly simplify the creation of a data lake and ingestion of data. Lake Formation blueprints are workflows you can apply to an existing Lake Formation data lake. You can also apply them as a task in the setup and creation of a new data lake. 
  
