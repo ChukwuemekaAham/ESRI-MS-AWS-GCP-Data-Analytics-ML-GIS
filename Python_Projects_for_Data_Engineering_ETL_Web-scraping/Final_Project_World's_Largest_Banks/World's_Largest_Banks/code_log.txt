@@ -1,0 +1,8 @@
+2024-Aug-29-21:47:13 : Preliminaries complete. Initiating ETL process
+2024-Aug-29-21:47:20 : Data extraction complete. Initiating Transformation process
+2024-Aug-29-21:47:20 : Retrieved market capitalization of the 5th largest bank in billion EUR successfully
+2024-Aug-29-21:47:20 : Data transformation complete. Initiating loading process
+2024-Aug-29-21:47:20 : Data saved to CSV file
+2024-Aug-29-21:47:20 : SQL Connection initiated.
+2024-Aug-29-21:47:20 : Data loaded to Database as table. Running the query
+2024-Aug-29-21:47:21 : Process Complete.

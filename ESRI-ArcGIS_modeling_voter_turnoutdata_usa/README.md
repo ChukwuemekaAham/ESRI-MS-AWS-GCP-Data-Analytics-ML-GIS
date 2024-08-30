@@ -41,7 +41,7 @@ Rename: DE_Vis.gdb to DataEngineering_and_Visualization.gdb
 **d.** Browse to the DataEngineering_and_Visualization folder that you saved on your computer.
 **e.** Click DataEngineering_and_Visualization.aprx to select it, and then click OK.
 
-see: [DataEngineering_and_Visualization](./DataEngineering_and_Visualization/) for project files
+see: [DataEngineering_and_Visualization](./DataEngineering_and_Visualization/) for project files and Data Engineering Notebook.ipynb specifically
 
 see [screenshots](./1%20-%20Perform%20data%20engineering%20tasks/screenshot/)
 
