@@ -1,0 +1,46 @@
+training_set:
+  object_type: pipeline
+  object_uuid: data_preparation
+  outdated_after:
+    seconds: 700
+  project: mlops
+  repo_path: /home/src/mlops/mlops
+  settings:
+    build:
+      partitions: 1
+gold_prediction:
+  object_type: pipeline
+  object_uuid: gold_prediction_training
+  outdated_after:
+    seconds: 86400
+    weeks: null
+  outdated_starting_at:
+    hour_of_day: 12
+  project: mlops
+  repo_path: /home/src/mlops/mlops
+  settings:
+    gold_prediction:
+      partitions: 1
+sklearn:
+  object_type: pipeline
+  object_uuid: sklearn_training
+  outdated_after:
+    seconds: 86400
+    weeks: null
+  outdated_starting_at:
+    hour_of_day: 12
+  project: mlops
+  repo_path: /home/src/mlops/mlops
+  settings:
+    sklearn_training:
+      partitions: 1
+postgres_test:
+  object_type: pipeline
+  object_uuid: postgres_test
+  outdated_after:
+    seconds: 700
+  project: mlops
+  repo_path: /home/src/mlops/mlops
+  settings:
+    postgres_test:
+      partitions: 1

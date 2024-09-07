@@ -1,0 +1,123 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/data_load.py
+  downstream_blocks:
+  - transform
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: data_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/transform.py
+  downstream_blocks:
+  - load_and_new_inference
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - data_load
+  uuid: transform
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/load_and_new_inference.py
+  downstream_blocks:
+  - data_predict
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_and_new_inference
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - transform
+  uuid: load_and_new_inference
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: transformers/data_predict.py
+  downstream_blocks:
+  - data_export
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_predict
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_and_new_inference
+  uuid: data_predict
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/data_export.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_export
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - data_predict
+  uuid: data_export
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-09-02 18:27:30.977732+00:00'
+data_integration: null
+description: This project aims to build an end-to-end MLOps pipeline for predicting
+  gold prices. It encompasses data collection, preprocessing, model training, deployment,
+  and monitoring.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: gold_prediction
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- final project
+- testing
+type: python
+updated_at: '2024-09-06 08:00:22'
+uuid: gold_prediction
+variables_dir: /home/src/mage_data/mlops
+widgets: []

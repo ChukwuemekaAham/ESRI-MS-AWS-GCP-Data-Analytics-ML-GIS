@@ -1,0 +1,15 @@
+{
+  "id": "474a5bbe-9951-4294-8c65-c636692a3347",
+  "name": "Gold Market Data Quality Project",
+  "description": "Ascertain the quality of dataset",
+  "dashboard": {
+    "name": "Gold Market Data Quality Project",
+    "panels": [],
+    "tabs": [],
+    "tab_id_to_panel_ids": {}
+  },
+  "team_id": null,
+  "date_from": null,
+  "date_to": null,
+  "created_at": "2024-09-07T06:09:04.622820"
+}
