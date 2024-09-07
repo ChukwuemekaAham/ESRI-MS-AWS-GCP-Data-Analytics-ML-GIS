@@ -1,0 +1,17 @@
+﻿Variable Name,Variable Description
+ID,Unique ID for each row
+Lon,Longtitude of the sample
+Lat,Latgtitude of the sample
+blue_p50,"50 percentile of the surface reflectance for blue band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+green_p50,"50 percentile of the surface reflectance for green band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+nir_p50,"50 percentile of the surface reflectance for nir band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+nira_p50,"50 percentile of the surface reflectance for nira band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+re1_p50,"50 percentile of the surface reflectance for re1 band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+re2_p50,"50 percentile of the surface reflectance for re2 band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+re3_p50,"50 percentile of the surface reflectance for re3 band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+red_p50,"50 percentile of the surface reflectance for red band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+swir1_p50,"50 percentile of the surface reflectance for swir1 band during the target time phase (e.g. 20231/1~2023/1/15), scale factor 0.0001"
+swir2_p50,50 percentile of the surface reflectance for swir2 band during the target time phase (e.g. 20231/1~2023/1/15)
+VV_p50,50 percentile of the back satter for VV polarization during the target time phase (e.g. 20231/1~2023/1/15)
+VH_p50,50 percentile of the back satter for VH polarization during the target time phase (e.g. 20231/1~2023/1/15)
+TARGET,"This is what you are predicting, 1 denotes agricultural plasic cover, 2 denotes non-agricultural plastic cover"
