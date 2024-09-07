@@ -17,6 +17,7 @@ This project takes a comprehensive approach to gold close price forecasting, lev
 By automating this entire pipeline, I aim to achieve a gold price prediction system that remains accurate, reliable, and continuously evolving to adapt to market dynamics. 
 
 ## Technologies Used
+
 - Terraform - as Infrastructure-as-Code (IaC) provide setup aws and gcp services
 - MLFlow - for experiment tracking and model registry
 - MageAI - for orchestration load, transform, train, inference, export
