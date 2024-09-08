@@ -1,0 +1,7 @@
+2024-Sep-08-21:49:31 : Preliminaries complete. Initiating process create_stac_item
+2024-Sep-08-21:49:31 : Stack creation complete. Initiating process_deforestation_analysis
+2024-Sep-08-21:50:15 : Raster dataset saved. process_deforestation_analysis complete
+2024-Sep-08-21:50:31 : Loading Zarr dataset
+2024-Sep-08-21:50:35 : Loading complete
+2024-Sep-08-21:50:35 : Creating NDVI Map
+2024-Sep-08-21:50:45 : Map created. ETL workflow complete.

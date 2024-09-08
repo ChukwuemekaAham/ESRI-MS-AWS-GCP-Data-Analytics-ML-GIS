@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  scheduler:
+    image: daskdev/dask
+    ports:
+      - "8786:8786" # Dask scheduler port
+      - "8787:8787" # Dask dashboard port
+    command: dask-scheduler
+    volumes:
+      - /tmp/dask:/tmp/dask
+    restart: unless-stopped
+
+  worker1:
+    image: daskdev/dask
+    depends_on:
+      - scheduler
+    command: dask-worker tcp://scheduler:8786
+    volumes:
+      - /tmp/dask:/tmp/dask
+    restart: unless-stopped
+
+  worker2:
+    image: daskdev/dask
+    depends_on:
+      - scheduler
+    command: dask-worker tcp://scheduler:8786
+    volumes:
+      - /tmp/dask:/tmp/dask
+    restart: unless-stopped

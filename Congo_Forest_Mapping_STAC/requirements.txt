@@ -1,0 +1,10 @@
+rasterio 
+pystac
+pystac-client 
+geopandas 
+shapely 
+xarray 
+rioxarray 
+dask 
+distributed
+zarr

@@ -1,0 +1,87 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE",
+  "properties": {
+    "cloud_coverage": 22.568591,
+    "platform": "SENTINEL-2",
+    "instrument": "MSI",
+    "absolute_orbit": 47523,
+    "beginning_datetime": "2023-07-01T00:00:00.000000Z",
+    "ending_datetime": "2024-08-02T23:59:00.000000Z",
+    "processing_level": "S2MSI2A",
+    "product_id": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(749637bc-7caa-4e2c-bdfe-70864e3792ec)/$value",
+    "sourceProduct": "S2A_OPER_MSI_L2A_TL_2APS_20240728T165450_A047523_T33MTR_N05.11,S2A_OPER_MSI_L2A_DS_2APS_20240728T165450_S20240728T092442_N05.11",
+    "sourceProductOriginDate": "2024-07-28T17:51:23Z,2024-07-28T17:50:29Z",
+    "tile_id": "33MTR",
+    "datetime": "2024-07-28T09:06:01.024000Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.834091,
+          -4.56342
+        ],
+        [
+          12.834091,
+          -4.39776
+        ],
+        [
+          13.07579,
+          -4.39776
+        ],
+        [
+          13.07579,
+          -4.56342
+        ],
+        [
+          12.834091,
+          -4.56342
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "/eodata/Sentinel-2/MSI/L2A/2024/07/28/S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE",
+      "type": "image/tiff; application=geotiff",
+      "title": "Sentinel-2 Data"
+    },
+    "ndvi": {
+      "href": "./Browser_images/SENTINEL-2/2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_NDVI.tiff",
+      "type": "image/tiff",
+      "title": "Sentinel-2 NDVI"
+    },
+    "B04": {
+      "href": "./Browser_images/SENTINEL-2/2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B04_(Raw).tiff",
+      "type": "image/tiff",
+      "title": "Sentinel-2 B04"
+    },
+    "B08": {
+      "href": "./Browser_images/SENTINEL-2/2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B08_(Raw).tiff",
+      "type": "image/tiff",
+      "title": "Sentinel-2 B08"
+    }
+  },
+  "bbox": [
+    12.834091,
+    -4.56342,
+    13.07579,
+    -4.39776
+  ],
+  "stac_extensions": []
+}
