@@ -235,3 +235,20 @@ pip install -r requirements.txt
 
 4. Run the Jupyter Notebook:
 `jupyter notebook ETL_Workflow.ipynb`
+
+
+# RESULT
+
+![NDVI Map](./NDVI%20Map.png)
+
+### Deduction
+
+The map provides a visual representation of possible deforestation in the Maiombe Congo Basin. It suggests that while there is still a significant amount of forest cover, some deforestation has occurred.
+
+# Next step in my analysis:
+
+Additional data is needed to provide more information for complete analysis:
+
+- **Baseline NDVI**: Comparing the NDVI values to a baseline map from before the deforestation period to quantify the extent of change.
+
+- **Land Use Data**: Overlaying the NDVI map with land use data (e.g., agriculture, mining, urban areas) to understand the causes of deforestation.
