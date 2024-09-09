@@ -237,13 +237,29 @@ pip install -r requirements.txt
 `jupyter notebook ETL_Workflow.ipynb`
 
 
+# NDVI (Normalized Difference Vegetation Index) and Deforestation:
+
+![NDVI](./img/12.png)
+
+- NDVI: NDVI is a widely used index in remote sensing. It measures the "greenness" of vegetation by comparing the reflectance of near-infrared (NIR) light and red light. Higher NDVI values indicate denser and healthier vegetation.
+
+Deforestation is the clearing of forests, usually for agriculture, logging, or development. It leads to a decrease in vegetation and thus a decrease in NDVI values.
+
+
 # RESULT
 
 ![NDVI Map](./NDVI%20Map.png)
 
+
+- Green Areas: Areas with dark green colors on the map likely represent areas with dense and healthy vegetation.
+
+- Yellow Areas: Areas with yellowish hue indicate less dense vegetation or areas where some deforestation might have occurred.
+
+- Red Areas: Areas with reddish colors are likely areas with very low NDVI, which could represent significant deforestation or areas of bare soil.
+
 ### Deduction
 
-The map provides a visual representation of possible deforestation in the Maiombe Congo Basin. It suggests that while there is still a significant amount of forest cover, some deforestation has occurred.
+The map provides a visual representation of possible deforestation in the Kimongo Area of Maiombe, Congo Basin. It suggests that while there is still a significant amount of forest cover, some deforestation has occurred.
 
 # Next step in my analysis:
 
