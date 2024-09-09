@@ -1,4 +1,4 @@
-# ETL Workflow for Deforestation Monitoring in the Congo Basin (Forest Cover Change Analysis)
+# ETL Workflow for Deforestation Monitoring in the Congo Basin.
 
 ## Project Overview
 This project demonstrates an ETL workflow for ingesting and processing geospatial data, specifically focusing on monitoring deforestation in the Congo Basin using Sentinel-2 satellite imagery.
@@ -26,18 +26,18 @@ The following where considered when making a choice:
 Kimongo is a town located in the Maiombe region of the Republic of the Congo. It is situated in the southwestern part of the country, within the Kouilou Department. Maiombe is known for its lush rainforest and diverse ecosystems, and Kimongo serves as a local center for the surrounding areas.  Efforts are being made to monitor and combat deforestation through sustainable practices and conservation initiatives, but challenges remain.
 
 ## Research Question:
-How has deforestation progressed in the Congo Basin between 2023-07-31 and 2024-08-02?
+How has deforestation progressed in the Kimongo Area of Maiombe, Congo Basin between 2023-07-31 and 2024-08-02?
 
 ## Project Goals:
 
-* Ingest and process Sentinel-2 satellite imagery to map forest cover change over time in the Congo Basin.
+* Ingest and process Sentinel-2 satellite imagery to map forest cover change over time in the Kimongo Area.
 * Use STAC (SpatioTemporal Asset Catalog) metadata for efficient data discovery and access.
 * Leverage the open-source geospatial ecosystem (rasterio/GDAL, Shapely, GeoPandas, xarray/rioxarray, Dask) for geospatial data processing.
-* Output a map product visualizing forest cover change in Congo Basin for the specified time period.
+* Output a map product visualizing forest cover change in Kimongo Area for the specified time period.
 
 ## Data Sources:
 
-- Data Space website to download Sentinel-2 data covering the Congo Basin for 2020.
+- Data Space website to download Sentinel-2 data covering the Kimongo Area from July 2023 - August 2024.
 
 * **Sentinel-2:** Download Sentinel-2 data from the Copernicus Open Access Hub: The Copernicus Open Access Hub has moved to https://dataspace.copernicus.eu/.
 
@@ -57,7 +57,7 @@ To download Sentinel-2 data from the new Data Space website, follow these steps:
 
 - A STAC Catalog JSON file was generated for my downloaded data. There are several options you can use:
     - Manual Creation: You can create the STAC JSON file manually by following the STAC specification. This might involve   using tools like a text editor or spreadsheet software.
-    - STAC Tools: Use STAC-compatible tools like `Pystac`, `https://stac-browser.com/` or `https://explorer.earthdata.nasa.gov/` to help you create a STAC catalog from your downloaded data. 
+    - STAC Tools: Use STAC-compatible tools like `Pystac`, https://stac-browser.com/ or https://explorer.earthdata.nasa.gov/ to help you create a STAC catalog from your downloaded data. 
 
 # PRODUCT INFO
 
@@ -148,7 +148,7 @@ A
 - Product id:
 https://zipper.dataspace.copernicus.eu/odata/v1/Products(749637bc-7caa-4e2c-bdfe-70864e3792ec)/$value
 
-https://link.dataspace.copernicus.eu/m72t
+    https://link.dataspace.copernicus.eu/m72t
 
 ## Key Considerations:
 - Cloud Coverage: Cloud cover can significantly impact the accuracy of forest cover change analysis. Aim for a maximum cloud coverage threshold of 20-30% for your Sentinel-2 data. This threshold can be adjusted based on specific region, time of year, and desired accuracy may be necessary.
@@ -176,39 +176,7 @@ C:.
 │           T33MTR_20240728T090601_B08_10m.jp2
 │
 ├───img
-│       Screenshot 2024-09-07 170615.png
-│       Screenshot 2024-09-07 173759.png
-│       Screenshot 2024-09-07 173813.png
-│       Screenshot 2024-09-07 175131.png
-│       Screenshot 2024-09-07 185747.png
-│       Screenshot 2024-09-07 185823.png
-│       Screenshot 2024-09-07 185909.png
-│       Screenshot 2024-09-07 190333.png
-│       Screenshot 2024-09-07 190937.png
-│       Screenshot 2024-09-07 190957.png
-│       Screenshot 2024-09-07 200011.png
-│       Screenshot 2024-09-07 200251.png
-│       Screenshot 2024-09-07 202036.png
-│       Screenshot 2024-09-07 202517.png
-│       Screenshot 2024-09-07 202826.png
-│       Screenshot 2024-09-07 202845.png
-│       Screenshot 2024-09-07 220106.png
-│       Screenshot 2024-09-08 093635.png
-│       Screenshot 2024-09-08 093721.png
-│       Screenshot 2024-09-08 093949.png
-│       Screenshot 2024-09-08 094047.png
-│       Screenshot 2024-09-08 094430.png
-│       Screenshot 2024-09-08 095158.png
-│       Screenshot 2024-09-08 095216.png
-│       Screenshot 2024-09-08 095543.png
-│       Screenshot 2024-09-08 155940.png
-│       Screenshot 2024-09-08 160019.png
-│       Screenshot 2024-09-08 160138.png
-│       Screenshot 2024-09-08 160413.png
-│       Screenshot 2024-09-08 160935.png
-│       Screenshot 2024-09-08 161928.png
-│       Screenshot 2024-09-08 163046.png
-│       Screenshot 2024-09-08 163429.png
+│       Screenshot.png   
 │       
 ├───kimongo_ndvi_archive
 │   └───kimongo.zarr
