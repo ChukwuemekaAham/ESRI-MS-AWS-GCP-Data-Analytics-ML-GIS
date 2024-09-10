@@ -1,0 +1,25 @@
+{
+  "type": "Catalog",
+  "id": "kimongo-catalog",
+  "stac_version": "1.0.0",
+  "description": "STAC Catalog for Sentinel-2 Current Product in the Kimongo Area, Maiombe Congo Basin, for monitoring deforestation.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "Kimongo Sentinel-2 Catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE/S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "c:/Users/HP/Downloads/Cloud/00-analytics-ready/AWS-GCP-Data-Analytics-ML-GIS/Congo_Forest_Mapping_STAC/stac_catalog/catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "title": "Kimongo Sentinel-2 Catalog"
+}

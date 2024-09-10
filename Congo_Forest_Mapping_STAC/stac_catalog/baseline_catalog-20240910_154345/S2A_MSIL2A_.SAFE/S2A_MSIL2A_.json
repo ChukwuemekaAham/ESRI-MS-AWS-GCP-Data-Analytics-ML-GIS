@@ -1,0 +1,87 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722.SAFE",
+  "properties": {
+    "platform": "SENTINEL-2",
+    "cloud_coverage": 15.5165,
+    "beginning_datetime": "2018-11-17T09:12:41.024000Z",
+    "ending_datetime": "2018-11-17T09:12:41.024000Z",
+    "absolute_orbit": 17779,
+    "instrument": "MSI",
+    "acquisition_mode": "INS-NOBS",
+    "processing_level": "S2MSI2A",
+    "tile_id": "33MTR",
+    "spatial_resolution": 60.0,
+    "published": "2020-11-29T23:50:08.138215Z",
+    "size": "< 1MB",
+    "product_id": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(2f9d2507-208f-5e71-a973-18f02458d48f)/$value",
+    "download_link": "https://link.dataspace.copernicus.eu/yxsh",
+    "datetime": "2018-11-17T09:12:41.024000Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.834091,
+          -4.56342
+        ],
+        [
+          12.834091,
+          -4.39776
+        ],
+        [
+          13.07579,
+          -4.39776
+        ],
+        [
+          13.07579,
+          -4.56342
+        ],
+        [
+          12.834091,
+          -4.56342
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Kimongo Sentinel-2 Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Kimongo Sentinel-2 Catalog"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "/eodata/Sentinel-2/MSI/L2A/2018/11/17/S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722.SAFE",
+      "type": "image/tiff; application=geotiff",
+      "title": "Sentinel-2 S3 Data"
+    },
+    "BaseB04": {
+      "href": "./Browser_images/SENTINEL-2/Baseline/2018-07-31-00_00_2023-07-30-23_59_Sentinel-2_L2A_B04_(Raw).tiff",
+      "type": "image/tiff",
+      "title": "Sentinel-2 Baseline B04"
+    },
+    "BaseB08": {
+      "href": "./Browser_images/SENTINEL-2/Baseline/2018-07-31-00_00_2023-07-30-23_59_Sentinel-2_L2A_B08_(Raw).tiff",
+      "type": "image/tiff",
+      "title": "Sentinel-2 Baseline B08"
+    }
+  },
+  "bbox": [
+    12.834091,
+    -4.56342,
+    13.07579,
+    -4.39776
+  ],
+  "stac_extensions": []
+}

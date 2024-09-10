@@ -8,6 +8,8 @@ Deforestation in the Congo Basin is a significant issue, contributing to climate
 
 ### Maiombe, Republic of the Congo
 
+![Maiombe, Republic of the Congo](./img/03.png)
+
 - Key Deforestation Drivers: This area is facing high deforestation rates driven by:
     - Logging: Industrial logging is a major pressure, with some areas having been significantly depleted.
     - Agriculture: The expansion of agricultural land, particularly for palm oil plantations, is also a concern.
@@ -21,18 +23,20 @@ The following where considered when making a choice:
 - Research Focus: Matched the area to the specific challenge related to deforestation in the Congo Basin.
 - Availability of Supporting Data: Additional data sets (e.g., land use maps, forest inventory data) that might be relevant for the analysis.
 
-#### Narrowig the Area down to Kimongo
+#### Narrowing the Area down to Kimongo
+
+![Kimongo](./img/05.png)
 
 Kimongo is a town located in the Maiombe region of the Republic of the Congo. It is situated in the southwestern part of the country, within the Kouilou Department. Maiombe is known for its lush rainforest and diverse ecosystems, and Kimongo serves as a local center for the surrounding areas.  Efforts are being made to monitor and combat deforestation through sustainable practices and conservation initiatives, but challenges remain.
 
 ## Research Question:
-How has deforestation progressed in the Kimongo Area of Maiombe, Congo Basin between 2023-07-31 and 2024-08-02?
+How has deforestation progressed in the Kimongo Area of Maiombe, Congo Basin between 2018-07-30 and 2024-08-02?
 
 ## Project Goals:
 
 * Ingest and process Sentinel-2 satellite imagery to map forest cover change over time in the Kimongo Area.
 * Use STAC (SpatioTemporal Asset Catalog) metadata for efficient data discovery and access.
-* Leverage the open-source geospatial ecosystem (rasterio/GDAL, Shapely, GeoPandas, xarray/rioxarray, Dask) for geospatial data processing.
+* Leverage the open-source geospatial ecosystem (rasterio/GDAL, Shapely, GeoPandas, xarray/rioxarray, Zarr, Dask) for geospatial data processing.
 * Output a map product visualizing forest cover change in Kimongo Area for the specified time period.
 
 ## Data Sources:
@@ -55,11 +59,11 @@ To download Sentinel-2 data from the new Data Space website, follow these steps:
 
 - STAC Specification: Follow the STAC specification for creating a valid STAC Catalog JSON file. https://github.com/radiantearth/stac-spec
 
-- A STAC Catalog JSON file was generated for my downloaded data. There are several options you can use:
-    - Manual Creation: You can create the STAC JSON file manually by following the STAC specification. This might involve   using tools like a text editor or spreadsheet software.
-    - STAC Tools: Use STAC-compatible tools like `Pystac`, https://stac-browser.com/ or https://explorer.earthdata.nasa.gov/ to help you create a STAC catalog from your downloaded data. 
+- A STAC Catalog JSON file was generated for the Map Products using `Pystac` a python library for generating and managing STAC Catalogs. 
 
-# PRODUCT INFO
+# CURRENT RASTER DATASET PRODUCT INFO
+
+[Stac_Catalog](./stac_catalog/current_catalog-20240910_145458/)
 
 **AREA - 494.66 km2**
 
@@ -156,34 +160,117 @@ https://zipper.dataspace.copernicus.eu/odata/v1/Products(749637bc-7caa-4e2c-bdfe
 
 ## Project Structure:
 
-```
+```Folder PATH listing
+Volume serial number is B091-13FC
 C:.
+│   Baseline.ipynb
+│   Change.ipynb
+│   current ndvi map.png
+│   Current_ETL.ipynb
 │   docker-compose.yaml
-│   ETL_Workflow.ipynb
 │   INSPIRE.xml
 │   manifest.safe
 │   MTD_MSIL2A.xml
-│   NDVI Map.png
+│   NDVI Diff Map.png
 │   README.md
 │   requirements.txt
 │   
 ├───Browser_images
 │   └───SENTINEL-2
-│           2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B04_(Raw).tiff
-│           2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B08_(Raw).tiff
-│           2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_NDVI.tiff
-│           T33MTR_20240728T090601_B04_10m.jp2
-│           T33MTR_20240728T090601_B08_10m.jp2
+│       │   2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B04_(Raw).tiff
+│       │   2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_B08_(Raw).tiff
+│       │   2023-07-01-00_00_2024-08-02-23_59_Sentinel-2_L2A_NDVI.tiff
+│       │   S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722-ql.jpg
+│       │
+│       └───Baseline
+│               2018-07-31-00_00_2023-07-30-23_59_Sentinel-2_L2A_B04_(Raw).tiff
+│               2018-07-31-00_00_2023-07-30-23_59_Sentinel-2_L2A_B08_(Raw).tiff
+│               2018-07-31-00_00_2023-07-30-23_59_Sentinel-2_L2A_NDVI.tiff
 │
 ├───img
-│       Screenshot.png   
-│       
+│       01.png
+│       02.png
+│       03.png
+│       04.png
+│       05.png
+│       06.png
+│       07.png
+│       08.png
+│       09.png
+│       10.png
+│       11.png
+│       12.png
+│       base-1.png
+│       base-2.png
+│       base-3.png
+│       base-4.png
+│
 ├───kimongo_ndvi_archive
 │   └───kimongo.zarr
 │       │   .zgroup
 │       │   .zmetadata
 │       │
-│       └───kimongo-etl-job
+│       ├───kimongo-etl-job
+│       │   │   .zattrs
+│       │   │   .zgroup
+│       │   │   
+│       │   ├───band
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───spatial_ref
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───x
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───y
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   └───__xarray_dataarray_variable__
+│       │           .zarray
+│       │           .zattrs
+│       │           0.0.0
+│       │           1.0.0
+│       │
+│       ├───kimongo-etl-job-baseline
+│       │   │   .zattrs
+│       │   │   .zgroup
+│       │   │
+│       │   ├───band
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───spatial_ref
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───x
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   ├───y
+│       │   │       .zarray
+│       │   │       .zattrs
+│       │   │       0
+│       │   │
+│       │   └───__xarray_dataarray_variable__
+│       │           .zarray
+│       │           .zattrs
+│       │           0.0.0
+│       │           1.0.0
+│       │
+│       └───kimongo-etl-job-difference
 │           │   .zattrs
 │           │   .zgroup
 │           │
@@ -217,7 +304,11 @@ C:.
 │       ndvi_log.txt
 │
 └───stac_catalog
-    └───stac_catalog-20240908_214931.json
+    ├───baseline_catalog-20240910_154345
+    │   │   catalog.json
+    │   │
+    │   └───S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722.SAFE
+    └───current_catalog-20240910_145458
         │   catalog.json
         │
         └───S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE -- renamed, too long for github.
@@ -229,12 +320,24 @@ C:.
 ##  Runing the Project
 
 1. Install Required Packages:
+
 ```bash
 pip install -r requirements.txt
 ```
+2. Dask Scheduler
+
+```bash
+dask-scheduler
+
+dask-worker tcp://127.0.0.1:8786 --nworkers 4
+```
 
 4. Run the Jupyter Notebook:
-`jupyter notebook ETL_Workflow.ipynb`
+`jupyter notebook .ipynb `
+
+- [Current_ETL.ipynb](Current_ETL.ipynb)
+- [Baseline.ipynb](Baseline.ipynb)
+- [Change.ipynb](Change.ipynb)
 
 
 # NDVI (Normalized Difference Vegetation Index) and Deforestation:
@@ -246,9 +349,9 @@ pip install -r requirements.txt
 Deforestation is the clearing of forests, usually for agriculture, logging, or development. It leads to a decrease in vegetation and thus a decrease in NDVI values.
 
 
-# RESULT
+## Initial Result
 
-![NDVI Map](./NDVI%20Map.png)
+![NDVI Map](current%20ndvi%20map.png)
 
 
 - Green Areas: Areas with dark green colors on the map likely represent areas with dense and healthy vegetation.
@@ -261,6 +364,7 @@ Deforestation is the clearing of forests, usually for agriculture, logging, or d
 
 The map provides a visual representation of possible deforestation in the Kimongo Area of Maiombe, Congo Basin. It suggests that while there is still a significant amount of forest cover, some deforestation has occurred.
 
+
 # Next step in my analysis:
 
 Additional data is needed to provide more information for complete analysis:
@@ -268,3 +372,43 @@ Additional data is needed to provide more information for complete analysis:
 - **Baseline NDVI**: Comparing the NDVI values to a baseline map from before the deforestation period to quantify the extent of change.
 
 - **Land Use Data**: Overlaying the NDVI map with land use data (e.g., agriculture, mining, urban areas) to understand the causes of deforestation.
+
+
+# PART 2
+
+####  Baseline Product
+
+![Baseline Product](./img/base-3.png)
+
+[Stac_Catalog](./stac_catalog/baseline_catalog-20240910_154345/)
+
+# NDVI Difference Results
+
+![NDVI Diff Map](./NDVI%20Diff%20Map.png)
+
+This part of the analysis, compares NDVI maps from 2018 (baseline) and 2024 (current).
+
+**Current NDVI:**
+
+- **Dark Green:** Dense and healthy vegetation in 2024.
+- **Yellow/Orange:** Less dense vegetation, potentially due to deforestation, degraded vegetation, or seasonal changes.
+
+**Baseline NDVI:**
+
+- **Dark Green:** Dense forest cover in 2018.
+
+**NDVI Difference (2024 - 2018):**
+
+- **Red:**  Significant decrease in NDVI, likely representing deforestation (e.g., logging, agriculture, mining).
+- **Orange:**  Smaller decrease in NDVI, potentially indicating less severe deforestation or vegetation degradation.
+- **Green:**  Increase in NDVI, suggesting potential forest regrowth or areas that were already less dense and have recovered.
+
+## Deductions
+
+- **Deforestation is evident:** The red and orange areas on the NDVI difference map highlight areas where deforestation has likely occurred. 
+- **Deforestation Patterns:** Deforestation appears concentrated in specific areas, possibly along river valleys, roads, or zones of high human activity.
+- **Potential for Regrowth:** The presence of green areas in the difference map indicates that some regions might be experiencing regrowth or were already less densely forested.
+
+## Conclusion
+
+The NDVI analysis provides a clear visual depiction of potential deforestation in the Kimongo area of the Maiombe Congo Basin, highlighting areas of vegetation loss and potential regrowth. Additionally, ground-truthing data from fieldwork can help verify the accuracy of the NDVI results.

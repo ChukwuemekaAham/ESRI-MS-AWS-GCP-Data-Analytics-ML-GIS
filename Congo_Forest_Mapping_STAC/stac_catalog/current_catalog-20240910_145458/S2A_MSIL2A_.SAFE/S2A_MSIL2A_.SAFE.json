@@ -47,12 +47,14 @@
     {
       "rel": "root",
       "href": "../catalog.json",
-      "type": "application/json"
+      "type": "application/json",
+      "title": "Kimongo Sentinel-2 Catalog"
     },
     {
       "rel": "parent",
       "href": "../catalog.json",
-      "type": "application/json"
+      "type": "application/json",
+      "title": "Kimongo Sentinel-2 Catalog"
     }
   ],
   "assets": {

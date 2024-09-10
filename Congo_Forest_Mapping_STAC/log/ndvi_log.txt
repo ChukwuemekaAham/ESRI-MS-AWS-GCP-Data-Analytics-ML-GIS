@@ -1,7 +1,67 @@
-2024-Sep-08-21:49:31 : Preliminaries complete. Initiating process create_stac_item
-2024-Sep-08-21:49:31 : Stack creation complete. Initiating process_deforestation_analysis
-2024-Sep-08-21:50:15 : Raster dataset saved. process_deforestation_analysis complete
-2024-Sep-08-21:50:31 : Loading Zarr dataset
-2024-Sep-08-21:50:35 : Loading complete
-2024-Sep-08-21:50:35 : Creating NDVI Map
-2024-Sep-08-21:50:45 : Map created. ETL workflow complete.
+2024-Sep-10-14:54:58 : Preliminaries complete. Initiating process for current dataset: create_stac_item 
+2024-Sep-10-14:54:58 : Stack creation complete. Initiating process for deforestation analysis
+2024-Sep-10-15:11:15 : Initiating Current NDVI calculation
+2024-Sep-10-15:11:15 : Processing deforestation analysis for S2A_MSIL2A_20240728T090601_N0511_R050_T33MTR_20240728T165450.SAFE...
+2024-Sep-10-15:11:18 : Red band number of bands: 2
+2024-Sep-10-15:11:18 : NIR band number of bands: 2
+2024-Sep-10-15:11:18 : Current NDVI calculated successfully.
+2024-Sep-10-15:11:18 : Current NDVI Raster dataset saved to Zarr store.
+2024-Sep-10-15:14:56 : Loading Current dataset from Zarr
+2024-Sep-10-15:14:56 : Loading complete
+2024-Sep-10-15:14:56 : Creating Current NDVI Map
+2024-Sep-10-15:15:03 : Current NDVI Map created.2024-Sep-10-15:32:07 : Initiating create_baseline_stac_item process
+2024-Sep-10-15:32:26 : Baseline stac creation complete. Initiating process_baseline_analysis
+2024-Sep-10-15:36:21 : Initiating Baseline NDVI calculation
+2024-Sep-10-15:37:02 : Processing analysis for S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722.SAFE...
+2024-Sep-10-15:37:03 : Red band number of bands: 2
+2024-Sep-10-15:37:03 : NIR band number of bands: 2
+2024-Sep-10-15:37:03 : Baseline NDVI calculation complete
+2024-Sep-10-15:37:05 : Error opening files: 'DirectoryStore' object has no attribute 'close'
+2024-Sep-10-15:37:58 : Initiating Baseline NDVI calculation
+2024-Sep-10-15:38:08 : Processing analysis for S2A_MSIL2A_20181117T091241_N0213_R050_T33MTR_20201129T230722.SAFE...
+2024-Sep-10-15:38:08 : Red band number of bands: 2
+2024-Sep-10-15:38:08 : NIR band number of bands: 2
+2024-Sep-10-15:38:08 : Baseline NDVI calculation complete
+2024-Sep-10-15:38:09 : Error opening files: 'DirectoryStore' object has no attribute 'close'
+2024-Sep-10-15:39:22 : Loading Baseline dataset from Zarr
+2024-Sep-10-15:39:22 : Loading complete
+2024-Sep-10-15:39:22 : Creating baseline NDVI Map
+2024-Sep-10-15:39:26 : Baseline NDVI Map created.
+2024-Sep-10-15:40:44 : Loading Baseline dataset from Zarr
+2024-Sep-10-15:40:44 : Loading complete
+2024-Sep-10-15:40:44 : Creating baseline NDVI Map
+2024-Sep-10-15:40:49 : Baseline NDVI Map created.
+2024-Sep-10-15:43:23 : Initiating create_baseline_stac_item process
+2024-Sep-10-15:43:46 : Baseline stac creation complete. Initiating process_baseline_analysis
+2024-Sep-10-15:48:55 : Loading Current_ndvi and Baseline_ndvi from zarr store
+2024-Sep-10-15:50:03 : Processing... NDVI difference analysis
+2024-Sep-10-15:50:03 : NDVI Difference saved to Zarr store.
+2024-Sep-10-15:50:51 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-15:50:51 : Loading complete
+2024-Sep-10-15:50:52 : Creating NDVI Difference Maps
+2024-Sep-10-15:51:04 : NDVI Differnce Map created.
+2024-Sep-10-15:51:04 : Dask client closed. ETL workflow complete.
+2024-Sep-10-16:01:28 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:01:32 : Loading complete
+2024-Sep-10-16:01:57 : Loading Current_ndvi and Baseline_ndvi from zarr store
+2024-Sep-10-16:02:19 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:02:19 : Loading complete
+2024-Sep-10-16:02:19 : Creating NDVI Difference Maps
+2024-Sep-10-16:02:30 : NDVI Differnce Map created.
+2024-Sep-10-16:02:30 : Dask client closed. ETL workflow complete.
+2024-Sep-10-16:03:57 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:03:58 : Loading complete
+2024-Sep-10-16:04:07 : Loading Current_ndvi and Baseline_ndvi from zarr store
+2024-Sep-10-16:04:11 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:04:11 : Loading complete
+2024-Sep-10-16:04:11 : Creating NDVI Difference Maps
+2024-Sep-10-16:04:19 : NDVI Differnce Map created.
+2024-Sep-10-16:04:19 : Dask client closed. ETL workflow complete.
+2024-Sep-10-16:06:11 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:06:12 : Loading complete
+2024-Sep-10-16:06:19 : Loading Current_ndvi and Baseline_ndvi from zarr store
+2024-Sep-10-16:06:25 : Loading NDVI Difference dataset from zarr store
+2024-Sep-10-16:06:25 : Loading complete
+2024-Sep-10-16:06:25 : Creating NDVI Difference Maps
+2024-Sep-10-16:06:34 : NDVI Differnce Map created.
+2024-Sep-10-16:06:34 : Dask client closed. ETL workflow complete.
