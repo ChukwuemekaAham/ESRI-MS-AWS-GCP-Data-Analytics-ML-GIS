@@ -15,7 +15,6 @@ To address these challenges and advance the mission of global agricultural plast
 
 ## About AI for Good - International Telecommunication Union (ITU)
 
-
 AI for Good is organized by ITU in partnership with 40 UN Sister Agencies. The goal of AI for Good is to identify practical applications of AI to advance the United Nations Sustainable Development Goals and scale those solutions for global impact. It’s the leading action-oriented, global & inclusive United Nations platform on AI.
 
 ## Evaluation

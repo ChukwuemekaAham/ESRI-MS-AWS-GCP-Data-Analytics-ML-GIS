@@ -1,5 +1,7 @@
 # GEE
 
+https://code.earthengine.google.com/6503d98eb855b0e50c317370c8cc24e1 
+
 **It is notable that the training samples we are providing are collected by visually implement of satellite in April and May of each test region.**
 
 Features in the training samples are prepared with images on 20240416 for VNM and Spain and on 20240501 for Kenya.
