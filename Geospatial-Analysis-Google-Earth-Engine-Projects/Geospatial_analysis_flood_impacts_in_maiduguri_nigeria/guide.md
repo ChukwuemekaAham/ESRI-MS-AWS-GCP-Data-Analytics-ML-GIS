@@ -49,4 +49,4 @@ This guide outlines the steps involved in flood mapping using Sentinel-1 data, s
 * **SAR Expertise:**  Specialized SAR image processing knowledge and tools are required.
 * **Validation:**  Compare your results with ground truth data to verify accuracy.
 
-This guide provides a structured approach to flood mapping with Sentinel-1 data.  Remember to tailor these steps to your specific needs and the data you have. Let me know if you have any questions or need help with specific aspects of the workflow!
+This guide provides a structured approach to flood mapping with Sentinel-1 data. 
