@@ -1,8 +1,10 @@
-# Rapid Geospatial Analysis of Flood Impacts buildings and landcover in Maiduguri, Borno State, Nigeria (September 2024)
+# Rapid Geospatial Analysis of Flood Impacts on Cropland in Maiduguri, Borno State, Nigeria (September 2024)
 
 ## Project Overview
 
-This project aims to conduct a rapid geospatial analysis of the flood impacts in Maiduguri, Borno State, Nigeria, during the September 2024 flood event. The analysis leverages remote sensing data, primarily Sentinel-2 imagery, alongside OpenStreetMap data to assess flood extent, buildings affected, crop damage, and the vulnerability of affected populations.
+This project aims to conduct a rapid geospatial analysis of the flood impacts on cropland Maiduguri, Borno State, Nigeria, during the September 2024 flood event. The analysis leverages remote sensing data, primarily Sentinel-2 imagery, alongside ESA Landcover data to assess flood extent, buildings affected, crop damage, and the vulnerability of affected populations.
+
+**ESA Landcover Data:** This project utilizes the ESA Landcover 100m dataset. This global dataset provides land cover information for various land use types. For this project, we are focusing on Cropland (LC code 40).
 
 ## Problem Statement
 
@@ -11,7 +13,7 @@ Although flooding is not a recurring issue in Maiduguri, it often cause signific
 ## Research Questions
 
 * **Flood Extent and Severity:**  What was the spatial extent and severity of flooding in Maiduguri in September 2024?
-* **Crop Impact Assessment:**  How much cropland and buildings were affected by the flood, and what types of landcover types were most impacted?
+* **Crop Impact Assessment:**  How much cropland were affected by the flood, and what types of landcover types were most impacted?
 * **Vulnerability Assessment:** What are the most vulnerable areas and populations in Maiduguri with respect to flood-related crop damage, considering factors such as population density and crop type distribution?
 
 ## Data Sources
