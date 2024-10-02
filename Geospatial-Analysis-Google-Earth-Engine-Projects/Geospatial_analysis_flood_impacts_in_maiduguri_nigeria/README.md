@@ -2,74 +2,69 @@
 
 ## Project Overview
 
-This project aims to conduct a rapid geospatial analysis of the flood impacts on cropland Maiduguri, Borno State, Nigeria, during the September 2024 flood event. The analysis leverages remote sensing data, primarily Sentinel-2 imagery, alongside ESA Landcover data to assess flood extent, buildings affected, crop damage, and the vulnerability of affected populations.
+This project aims to conduct a rapid geospatial analysis of the flood impacts on cropland in Maiduguri, Borno State, Nigeria, during the September 2024 flood event. The analysis leverages remote sensing data, primarily Sentinel-2 imagery, alongside ESA Landcover data to assess flood extent and crop damage.
 
 **ESA Landcover Data:** This project utilizes the ESA Landcover 100m dataset. This global dataset provides land cover information for various land use types. For this project, we are focusing on Cropland (LC code 40).
+
+But we can also utilize other codes such as:
+
+* Tree Cover (LC code 10)
+* Shrubland (LC code 20)
+* Grassland (LC code 30)
+* Built-up (LC code 50)
+* Bare / Sparse Vegetation (LC code 60)
+* Mangroves (LC code 90)
+
+This will help in analyzing the specific impacts of the floods on different land cover types and assess the overall vulnerability of the region. 
 
 ## Problem Statement
 
 Although flooding is not a recurring issue in Maiduguri, it often cause significant damage to agricultural lands and impacting food security. Understanding the extent and severity of flood-related damage is crucial for effective disaster response, recovery planning, and long-term mitigation efforts.
 
+Area = 810.87 km2
+
 ## Research Questions
 
 * **Flood Extent and Severity:**  What was the spatial extent and severity of flooding in Maiduguri in September 2024?
 * **Crop Impact Assessment:**  How much cropland were affected by the flood, and what types of landcover types were most impacted?
-* **Vulnerability Assessment:** What are the most vulnerable areas and populations in Maiduguri with respect to flood-related crop damage, considering factors such as population density and crop type distribution?
 
 ## Data Sources
 
-* **Sentinel-2:** Sentinel-2 imagery from September 2024 will be used for:
+* **Sentinel-2:** Sentinel-2 imagery from June 2024 (pre-flood) and August/September 2024 (post-flood) will be used for:
     * Mapping flood extent using a water mask or flood detection algorithm.
     * Calculating the Normalized Difference Vegetation Index (NDVI) to assess crop health and identify flood-affected areas.
-* **OpenStreetMap Data:** Downloaded for Maiduguri to obtain:
-    * Building footprint to determine population density and vulnerability.
-    * Land use information (cropland, forest, urban areas) to assess the types of crops impacted by flooding.
-* **Population Data:** High-resolution population density data for Maiduguri, potentially from WorldPop or UNOSAT, to assess people's exposure to flooded cropland.
+* **ESA Landcover Data:**  Downloaded for Maiduguri to identify the types of land cover affected by flooding.
 
 ## Pipeline
 
 **1. Data Acquisition:**
 
-* **Download Sentinel-2 Data:** Acquired Sentinel-2 data for September 2024 over Maiduguri. The script uses Google Earth Engine to search for the necessary data and the Data Space Browser to initially visualize the area.
-* **Download OpenStreetMap Data:**
-    * Define a bounding box for Maiduguri using Google Maps or OpenStreetMap's map editor.
-    * Use the `osmnx` library to query the OpenStreetMap API and download the buildings information data within the bounding box.
-
-#### Analysis and Visualization:
-- The code combines the Sentinel-2 and OpenStreetMap data.
-- It calculates the flooded landcover area by intersecting the water mask with the landcover layer.
-- It then visualizes the data using Matplotlib. The code creates a flood extent map, a crop impact map showing NDVI, and a vulnerability map using the flooded landcover ratio.
-
-#### Output and Communication
-... (Generate report, share data, and communicate findings) ...
+* **Download Sentinel-2 Data:** Acquired Sentinel-2 data for June 2024 (pre-flood) and August/September 2024 (post-flood) over Maiduguri. The script uses Google Earth Engine to search for the necessary data and the Data Space Browser to initially visualize the area.
+* **Download ESA Landcover Data:**  Downloaded ESA Landcover 100m data for Maiduguri.
 
 **2. Data Processing:**
 
-* **Sentinel-1 Processing:**
-    * Sentinel-2 data is processed using googel earth engine ee and geemap to open the downloaded image and extract relevant bands.
-    * Apply a water mask (or a flood detection algorithm) using:
-        * Existing water mask datasets for the area (e.g., Global Surface Water).
-        * Thresholding on a suitable band (e.g., NDWI).
-        * Machine learning model trained on known flooded areas.
-    * Calculate NDVI using the appropriate bands.
-    * Threshold NDVI values to identify healthy and unhealthy vegetation, potentially indicating flood damage.
-* **OpenStreetMap Processing:**
-    * Load and process the OpenStreetMap data using the `osmium` library to extract building footprints and land use information.
-    * Create a GeoDataFrame using `geopandas` for the extracted OpenStreetMap data, including geometries and attributes.
-    * Transform the GeoDataFrame to the same coordinate reference system (CRS) as your Sentinel-2 data.
+* **Flood Extent Mapping:**
+    * Calculate the Modified Normalized Difference Water Index (MNDWI) for pre-flood (June) and post-flood (August/September) Sentinel-2 images using Earth Engine.
+    * Apply a threshold to the MNDWI to create a binary flood mask.
+    * Combine the flood masks from both periods to get the overall flood extent.
+* **Landcover Processing:**
+    *  Use Earth Engine and `geemap` to open the ESA Landcover data.
+    *  Clip the Landcover data to the region of interest (`roi`)
+    *  Convert the Landcover raster to vector polygons using Earth Engine and `geemap`.
 
-**3. Analysis and Visualization:**
+**3. Flood Impact Analysis:**
 
-* **Combine Datasets:** Overlay the Sentinel-2 data (NDVI and water mask) with the OpenStreetMap and ESA Landcover data (buildings and land use) using GeoPandas.
-* **Calculate Flood Impacts:**  Intersect the water mask with the landcover layer to identify flooded landcover areas.
-* **Compute Vulnerability:**
-    * Calculate the ratio of flooded landcover to total landcover at different scales (e.g., municipality level).
-    * Calculate the number of buildings affected by the flood
-    * Use population density data to calculate the exposure of people to flooded landcover (e.g., people per square meter of flooded landcover).
-* **Visualization:** Create maps and charts to visualize:
-    * Flood extent map in Maiduguri.
-    * Crop impact map showing areas of flooded landcover, with severity indicated by color.
-    * Vulnerability map displaying exposure of people to flooded landcover using a heatmap.
+* **Crop Impact Assessment:**
+    * Calculate the NDVI for the pre-flood and post-flood Sentinel-2 images using Earth Engine.
+    * Mask the NDVI with the flood extent mask to get NDVI values only for flooded areas.
+    * Calculate statistics (e.g., mean NDVI, standard deviation) for the NDVI in the flooded areas.
+    *  Compare pre-flood and post-flood NDVI values to assess crop health changes.
+    *  Visualize the NDVI in the flooded areas using `geemap` and Earth Engine, highlighting areas of significant NDVI change. 
+* **Land Cover Impact Assessment:**
+    * Intersect the flood extent with the ESA Landcover layer to identify flooded land cover areas.
+    * Calculate the area of each flooded land cover type.
+    * Visualize the affected land cover types using `geemap` and Earth Engine. 
 
 **4. Output and Communication:**
 
@@ -79,8 +74,7 @@ Although flooding is not a recurring issue in Maiduguri, it often cause signific
 
 ## Additional Considerations
 
-* **Time Series Analysis:** Download Sentinel-2 data for multiple dates around the flood to analyze the situation's evolution.
+* **Time Series Analysis:**  Download Sentinel-2 data for multiple dates around the flood to analyze the situation's evolution.
 * **Machine Learning:** Explore automated flood extent, crop damage, and vulnerability detection using machine learning algorithms.
 * **Community Engagement:** Gather ground-truth data and validate the analysis through community engagement.
 * **Uncertainty Assessment:** Analyze uncertainty associated with data sources and analytical methods using bootstrapping or other statistical techniques.
-* **3D Visualization:** Use tools like `pyvista` for immersive 3D visualizations.
