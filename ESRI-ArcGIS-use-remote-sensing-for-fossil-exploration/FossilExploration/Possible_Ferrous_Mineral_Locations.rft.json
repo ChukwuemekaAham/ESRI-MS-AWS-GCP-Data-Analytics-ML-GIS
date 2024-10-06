@@ -1,0 +1,299 @@
+{
+  "description": "",
+  "name": "Possible Ferrous Mineral Locations",
+  "arguments": {
+    "type": "MaskFunctionArguments",
+    "Raster": {
+      "description": "",
+      "name": "Raster",
+      "arguments": {
+        "type": "LocalFunctionArguments",
+        "Rasters": {
+          "name": "_Rasters",
+          "isDataset": false,
+          "isPublic": false,
+          "type": "RasterFunctionVariable",
+          "_object_id": 5,
+          "value": {
+            "elements": [
+              {
+                "description": "Performs a Relational greater-than-equal-to operation on two inputs on a cell-by-cell basis. Returns 1 for cells where the first raster is greater than or equal to the second raster and 0 if it is not.",
+                "name": "Greater Than Equal",
+                "arguments": {
+                  "type": "LocalFunctionArguments",
+                  "Rasters": {
+                    "name": "_Rasters",
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 10,
+                    "value": {
+                      "elements": [
+                        {
+                          "name": "Input raster",
+                          "isDataset": true,
+                          "isPublic": true,
+                          "type": "RasterFunctionVariable",
+                          "_object_id": 13
+                        },
+                        {
+                          "name": "Threshold",
+                          "value": {
+                            "type": "Scalar",
+                            "value": 1.15,
+                            "_object_id": 15
+                          },
+                          "isDataset": true,
+                          "isPublic": true,
+                          "type": "RasterFunctionVariable",
+                          "_object_id": 14
+                        }
+                      ],
+                      "type": "ArgumentArray",
+                      "_object_id": 11
+                    }
+                  },
+                  "Operation": {
+                    "name": "Operation",
+                    "value": 29,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 16
+                  },
+                  "CellsizeType": {
+                    "name": "CellsizeType",
+                    "value": 2,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 17
+                  },
+                  "ExtentType": {
+                    "name": "ExtentType",
+                    "value": 1,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 18
+                  },
+                  "_object_id": 9
+                },
+                "function": {
+                  "type": "LocalFunction",
+                  "pixelType": "UNKNOWN",
+                  "name": "Greater Than Equal",
+                  "description": "Performs a Relational greater-than-equal-to operation on two inputs on a cell-by-cell basis. Returns 1 for cells where the first raster is greater than or equal to the second raster and 0 if it is not.",
+                  "_object_id": 19
+                },
+                "functionType": 0,
+                "thumbnail": "",
+                "properties": {
+                  "MatchVariable": {
+                    "name": "MatchVariable",
+                    "value": true,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 21
+                  },
+                  "UnionDimension": {
+                    "name": "UnionDimension",
+                    "value": false,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 22
+                  },
+                  "type": "PropertySet",
+                  "_object_id": 20
+                },
+                "type": "RasterFunctionTemplate",
+                "_object_id": 8
+              },
+              {
+                "description": "Performs a Relational less-than-or-equal-to operation on two inputs on a cell-by-cell basis. Returns 1 for cells where the first raster is less than or equal to the second raster and 0 where it is not.",
+                "name": "Less Than Equal",
+                "arguments": {
+                  "type": "LocalFunctionArguments",
+                  "Rasters": {
+                    "name": "_Rasters",
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 25,
+                    "value": {
+                      "elements": [
+                        {
+                          "_object_ref_id": 13
+                        },
+                        {
+                          "name": "Threshold",
+                          "value": {
+                            "type": "Scalar",
+                            "value": 1.3,
+                            "_object_id": 30
+                          },
+                          "isDataset": true,
+                          "isPublic": true,
+                          "type": "RasterFunctionVariable",
+                          "_object_id": 29
+                        }
+                      ],
+                      "type": "ArgumentArray",
+                      "_object_id": 26
+                    }
+                  },
+                  "Operation": {
+                    "name": "Operation",
+                    "value": 34,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 31
+                  },
+                  "CellsizeType": {
+                    "name": "CellsizeType",
+                    "value": 2,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 32
+                  },
+                  "ExtentType": {
+                    "name": "ExtentType",
+                    "value": 1,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 33
+                  },
+                  "_object_id": 24
+                },
+                "function": {
+                  "type": "LocalFunction",
+                  "pixelType": "UNKNOWN",
+                  "name": "Less Than Equal",
+                  "description": "Performs a Relational less-than-or-equal-to operation on two inputs on a cell-by-cell basis. Returns 1 for cells where the first raster is less than or equal to the second raster and 0 where it is not.",
+                  "_object_id": 34
+                },
+                "functionType": 0,
+                "thumbnail": "",
+                "properties": {
+                  "MatchVariable": {
+                    "name": "MatchVariable",
+                    "value": true,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 36
+                  },
+                  "UnionDimension": {
+                    "name": "UnionDimension",
+                    "value": false,
+                    "isDataset": false,
+                    "isPublic": false,
+                    "type": "RasterFunctionVariable",
+                    "_object_id": 37
+                  },
+                  "type": "PropertySet",
+                  "_object_id": 35
+                },
+                "type": "RasterFunctionTemplate",
+                "_object_id": 23
+              }
+            ],
+            "type": "ArgumentArray",
+            "_object_id": 6
+          }
+        },
+        "Operation": {
+          "name": "Operation",
+          "value": 17,
+          "isDataset": false,
+          "isPublic": false,
+          "type": "RasterFunctionVariable",
+          "_object_id": 38
+        },
+        "CellsizeType": {
+          "name": "CellsizeType",
+          "value": 2,
+          "isDataset": false,
+          "isPublic": false,
+          "type": "RasterFunctionVariable",
+          "_object_id": 39
+        },
+        "ExtentType": {
+          "name": "ExtentType",
+          "value": 1,
+          "isDataset": false,
+          "isPublic": false,
+          "type": "RasterFunctionVariable",
+          "_object_id": 40
+        },
+        "_object_id": 4
+      },
+      "function": {
+        "type": "LocalFunction",
+        "pixelType": "UNKNOWN",
+        "name": "Boolean And",
+        "description": "Performs a Boolean And operation on the cell values of two input rasters. If both input values are true (non-zero), the output value is 1. If one or both inputs are false (zero), the output is 0.",
+        "_object_id": 41
+      },
+      "functionType": 0,
+      "help": "",
+      "thumbnail": "",
+      "thumbnailEx": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAYAAAAenrcsAAAAAXNSR0IArs4c6QAAEw1JREFUeF7tXWlwFNUWPhFDACUmQDCyRREDorKYuBUiIOUG7sIDlaCWghtgwROhyuJZUpb6KASrwLXcWEQEBUEFFFEU9xAQREqCihEEJGhCQJawvfqaN1ZPd0/OTPfpmemZc6oofqTvued+5353OffeMxlHjx49SiqKgCLgiECGEkR7hiIQGQEliPYORaAOBNKCIPv27aMNGzbQzz//TH/++Sft37/fgCQzM5Py8/OpS5cudNppp2lHUQRsCKQsQY4cOULbt2+nr776ir755hs6cOBARPdnZGTQww8/THl5edpFFIEwBFKSIIg7LFmyhFasWEF///036/KWLVvS6NGjCURRUQTMCKQcQTBTzJs3j77++uuoPd23b1+6/PLLo/5eP0wfBFKOIIsXL6alS5fS4cOHo/Ji/fr16f7776dTTz01qu/1o/RCIKUIUl5eTs8++yxZj3aysrKoTZs2VFhYSKeccgqBFLt27aKKigravXs39evXj7Kzs9PL89raqBBIGYIgUvXCCy/Qpk2bwhp+4okn0s0332yQA8SwysGDB+n444/X/UdU3SX9PkoZgmD2ePHFFwkdPiTYdPfv35+6deuWfp7VFosgkDIEmTlzJpWWloaBglnj3nvvpeOOO04ELFWSfgikBEEQuRo3blzYWQdmj9tuu426du2afl7VFoshkBIEWbt2Lb388sthoDRu3JiGDx9OJ598shhYqij9EEgJguDc49NPPw3zXosWLQyCNGrUKP28qi0WQyDwBMGVEoR2N27cGAZKhw4d6J577tHolFhXSU9FgSfI3r17aerUqfT777+HebBHjx504403pqdXtdViCASeIH/99RdNmTKF8L9ZcPZx4YUXigGlitITgcATZOvWrQZBMJOYZeTIkXp9JD37tGirA0+QX375xSAI9iJmefLJJ6lhw4aiYKmy9EMg8AT59ttv6fXXX7eFeB977LH086a2WByBwBNkwYIF9PHHH4cB065dOyPEq6IIeEUg8ATBBcX169eH4dC9e3fjhq6KIuAVgaQnCK6RYAmF57NOguiV+YIivjnhhBMIt3idBFffb731VuMtulXef/99WrNmjWO5zp07Ex5WuRXMck6PuHDiP2jQIMrNzXWr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",
+      "type": "RasterFunctionTemplate",
+      "_object_id": 3
+    },
+    "NoDataInterpretation": {
+      "name": "NoDataInterpretation",
+      "value": 0,
+      "isDataset": false,
+      "isPublic": false,
+      "type": "RasterFunctionVariable",
+      "_object_id": 42
+    },
+    "NoDataValues": {
+      "name": "NoDataValues",
+      "isDataset": false,
+      "isPublic": false,
+      "type": "RasterFunctionVariable",
+      "_object_id": 43
+    },
+    "IncludedRanges": {
+      "name": "IncludedRanges",
+      "value": [
+        0,
+        0
+      ],
+      "isDataset": false,
+      "isPublic": false,
+      "type": "RasterFunctionVariable",
+      "_object_id": 44
+    },
+    "Invert": {
+      "name": "Invert",
+      "value": false,
+      "isDataset": false,
+      "isPublic": false,
+      "type": "RasterFunctionVariable",
+      "_object_id": 46
+    },
+    "_object_id": 2
+  },
+  "function": {
+    "type": "MaskFunction",
+    "pixelType": "UNKNOWN",
+    "name": "Mask",
+    "description": "Sets values that you do not want to display.",
+    "_object_id": 47
+  },
+  "functionType": 0,
+  "thumbnail": "",
+  "type": "RasterFunctionTemplate",
+  "_object_id": 1,
+  "help": "",
+  "thumbnailEx": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAYAAAAenrcsAAAAAXNSR0IArs4c6QAAEw1JREFUeF7tXWlwFNUWPhFDACUmQDCyRREDorKYuBUiIOUG7sIDlaCWghtgwROhyuJZUpb6KASrwLXcWEQEBUEFFFEU9xAQREqCihEEJGhCQJawvfqaN1ZPd0/OTPfpmemZc6oofqTvued+5353OffeMxlHjx49SiqKgCLgiECGEkR7hiIQGQEliPYORaAOBNKCIPv27aMNGzbQzz//TH/++Sft37/fgCQzM5Py8/OpS5cudNppp2lHUQRsCKQsQY4cOULbt2+nr776ir755hs6cOBARPdnZGTQww8/THl5edpFFIEwBFKSIIg7LFmyhFasWEF///036/KWLVvS6NGjCURRUQTMCKQcQTBTzJs3j77++uuoPd23b1+6/PLLo/5eP0wfBFKOIIsXL6alS5fS4cOHo/Ji/fr16f7776dTTz01qu/1o/RCIKUIUl5eTs8++yxZj3aysrKoTZs2VFhYSKeccgqBFLt27aKKigravXs39evXj7Kzs9PL89raqBBIGYIgUvXCCy/Qpk2bwhp+4okn0s0332yQA8SwysGDB+n444/X/UdU3SX9PkoZgmD2ePHFFwkdPiTYdPfv35+6deuWfp7VFosgkDIEmTlzJpWWloaBglnj3nvvpeOOO04ELFWSfgikBEEQuRo3blzYWQdmj9tuu426du2afl7VFoshkBIEWbt2Lb388sthoDRu3JiGDx9OJ598shhYqij9EEgJguDc49NPPw3zXosWLQyCNGrUKP28qi0WQyDwBMGVEoR2N27cGAZKhw4d6J577tHolFhXSU9FgSfI3r17aerUqfT777+HebBHjx504403pqdXtdViCASeIH/99RdNmTKF8L9ZcPZx4YUXigGlitITgcATZOvWrQZBMJOYZeTIkXp9JD37tGirA0+QX375xSAI9iJmefLJJ6lhw4aiYKmy9EMg8AT59ttv6fXXX7eFeB977LH086a2WByBwBNkwYIF9PHHH4cB065dOyPEq6IIeEUg8ATBBcX169eH4dC9e3fjhq6KIuAVgaQnCK6RYAmF57NOguiV+YIivjnhhBMIt3idBFffb731VuMtulXef/99WrNmjWO5zp07Ex5WuRXMck6PuHDiP2jQIMrNzXWr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"
+}

@@ -1,17 +1,17 @@
-# Introduction
-
-Data engineering is a fundamental part of every analysis. The term refers to the planning, preparation, and processing of data to make it more
-useful for analysis. It can include simple tasks like identifying and correcting imperfections in your data and calculating new fields. It can also
-include more complex tasks like reducing the dimensions of a multivariate dataset.
-
-Data engineering also involves the process of geoenriching your data. Geoenrichment can include various tasks:
-· Adding a spatial location to your data, referred to as geocoding
-· Using other data sources to extract information and add, or enrich, these values to your dataset
-· Calculating new fields that represent spatial characteristics, like the distance from a particular feature in a landscape
+# Enhancing Voter Turnout Analysis through Data Engineering in ArcGIS
 
 In this project, I use ArcGIS Notebooks and the Data Engineering view in ArcGIS Pro to perform data engineering tasks. These tasks use the built-in tools that are available with these products as well as tools that are available by integrating open-source libraries. Using ArcGIS
-Notebooks allows you to document and share the steps you take to prepare your data for an analysis. You will then have transparent and
+Notebooks allows you to document and share the steps you take to prepare your data for an analysis. This ensures transparent and
 reproducible research or analysis.
+
+# Introduction
+
+Data engineering is a fundamental part of every analysis. The term refers to the planning, preparation, and processing of data to make it more useful for analysis. It can include simple tasks like identifying and correcting imperfections in your data and calculating new fields. It can also include more complex tasks like reducing the dimensions of a multivariate dataset.
+
+Data engineering also involves the process of geoenriching your data. Geoenrichment can include various tasks:
+- Adding a spatial location to your data, referred to as geocoding
+- Using other data sources to extract information and add, or enrich, these values to your dataset
+- Calculating new fields that represent spatial characteristics, like the distance from a particular feature in a landscape
 
 
 ## Scenario
