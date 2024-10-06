@@ -1,0 +1,758 @@
+VolcanoNumber,VolcanoName,EruptionNumber,EruptionCategory,EvidenceMethod_Dating,VEI,ErupStartDate,ErupEndDate,Latitude,Longitude
+284096,Nishinoshima,22407,Confirmed Eruption,Historical Observations,,8/14/2021,8/14/2021,27.247,140.874
+284130,Fukutoku-Oka-no-Ba,22408,Confirmed Eruption,Historical Observations,,8/13/2021,8/19/2021,24.285,141.481
+290260,Chirinkotan,22410,Confirmed Eruption,Historical Observations,,8/8/2021,8/19/2021,48.98,153.48
+312030,Pavlof,22411,Confirmed Eruption,Historical Observations,,8/5/2021,8/19/2021,55.417,-161.894
+284170,Pagan,22409,Confirmed Eruption,Historical Observations,,7/29/2021,7/29/2021,18.13,145.8
+252120,Ulawun,22414,Confirmed Eruption,Historical Observations,,7/29/2021,8/3/2021,-5.05,151.33
+264270,Sirung,22405,Confirmed Eruption,Historical Observations,,7/21/2021,7/21/2021,-8.508,124.13
+357090,Copahue,22413,Confirmed Eruption,Historical Observations,,7/2/2021,8/19/2021,-37.856,-71.183
+273070,Taal,22406,Confirmed Eruption,Historical Observations,,7/1/2021,7/9/2021,14.002,120.993
+345020,Rincon de la Vieja,22412,Confirmed Eruption,Historical Observations,,6/28/2021,8/19/2021,10.83,-85.324
+345070,Turrialba,22403,Confirmed Eruption,Historical Observations,,6/13/2021,7/23/2021,10.025,-83.767
+261170,Kerinci,22400,Confirmed Eruption,Historical Observations,,5/31/2021,6/13/2021,-1.697,101.264
+311120,Great Sitkin,22401,Confirmed Eruption,Historical Observations,,5/25/2021,8/19/2021,52.076,-176.13
+344040,Telica,22402,Confirmed Eruption,Historical Observations,,5/22/2021,7/3/2021,12.606,-86.84
+263200,Dieng Volcanic Complex,22397,Confirmed Eruption,Historical Observations,,4/29/2021,4/29/2021,-7.2,109.879
+263310,Tengger Caldera,22404,Confirmed Eruption,Historical Observations,,4/15/2021,8/19/2021,-7.942,112.95
+233020,"Fournaise, Piton de la",22395,Confirmed Eruption,Historical Observations,,4/9/2021,5/24/2021,-21.244,55.708
+371030,Krysuvik-Trolladyngja,22399,Confirmed Eruption,Historical Observations,,3/19/2021,8/19/2021,63.917,-22.067
+312070,Veniaminof,22393,Confirmed Eruption,Historical Observations,,2/28/2021,4/5/2021,56.17,-159.38
+311060,Semisopochnoi,22392,Confirmed Eruption,Historical Observations,,2/2/2021,8/19/2021,51.93,179.58
+263340,Raung,22383,Confirmed Eruption,Historical Observations,,1/21/2021,4/14/2021,-8.119,114.056
+263250,Merapi,22381,Confirmed Eruption,Historical Observations,1,12/31/2020,8/19/2021,-7.54,110.446
+360150,Soufriere St. Vincent,22385,Confirmed Eruption,Historical Observations,4,12/27/2020,4/22/2021,13.33,-61.18
+344020,San Cristobal,22394,Confirmed Eruption,Historical Observations,3,12/27/2020,3/19/2021,12.702,-87.004
+263310,Tengger Caldera,22382,Confirmed Eruption,Historical Observations,1,12/26/2020,12/28/2020,-7.942,112.95
+332010,Kilauea,22380,Confirmed Eruption,Historical Observations,0,12/20/2020,5/23/2021,19.421,-155.287
+233020,"Fournaise, Piton de la",22371,Confirmed Eruption,Historical Observations,0,12/7/2020,12/8/2020,-21.244,55.708
+264230,Lewotolok,22373,Confirmed Eruption,Historical Observations,2,11/27/2020,8/19/2021,-8.274,123.508
+282060,Kikai,22374,Confirmed Eruption,Historical Observations,1,10/6/2020,10/6/2020,30.793,130.305
+255060,Kavachi,22364,Confirmed Eruption,Historical Observations,0,9/2/2020,4/10/2021,-8.991,157.979
+282050,Kuchinoerabujima,22391,Confirmed Eruption,Historical Observations,1,8/29/2020,8/29/2020,30.443,130.217
+261080,Sinabung,22365,Confirmed Eruption,Historical Observations,3,8/8/2020,8/19/2021,3.17,98.392
+344040,Telica,22368,Confirmed Eruption,Historical Observations,1,7/20/2020,12/9/2020,12.606,-86.84
+263340,Raung,22367,Confirmed Eruption,Historical Observations,1,7/16/2020,10/3/2020,-8.119,114.056
+345070,Turrialba,22369,Confirmed Eruption,Historical Observations,1,6/18/2020,8/24/2020,10.025,-83.767
+357090,Copahue,22376,Confirmed Eruption,Historical Observations,2,6/16/2020,10/19/2020,-37.856,-71.183
+311240,Cleveland,22361,Confirmed Eruption,Historical Observations,3,6/1/2020,6/1/2020,52.825,-169.944
+282060,Kikai,22359,Confirmed Eruption,Historical Observations,1,4/29/2020,4/29/2020,30.793,130.305
+300130,Karymsky,22360,Confirmed Eruption,Historical Observations,3,4/1/2020,8/19/2021,54.049,159.443
+266030,Soputan,22354,Confirmed Eruption,Historical Observations,2,3/23/2020,4/2/2020,1.112,124.737
+255060,Kavachi,22357,Confirmed Eruption,Historical Observations,0,3/16/2020,4/30/2020,-8.991,157.979
+290240,Sarychev Peak,22384,Confirmed Eruption,Historical Observations,1,2/29/2020,8/19/2021,48.092,153.2
+343100,San Miguel,22355,Confirmed Eruption,Historical Observations,1,2/22/2020,2/22/2020,13.434,-88.269
+233020,"Fournaise, Piton de la",22343,Confirmed Eruption,Historical Observations,0,2/10/2020,4/6/2020,-21.244,55.708
+345020,Rincon de la Vieja,22346,Confirmed Eruption,Historical Observations,2,1/30/2020,12/13/2020,10.83,-85.324
+353010,Fernandina,22347,Confirmed Eruption,Historical Observations,0,1/12/2020,1/13/2020,-0.37,-91.55
+273070,Taal,22344,Confirmed Eruption,Historical Observations,4,1/12/2020,1/22/2020,14.002,120.993
+282050,Kuchinoerabujima,22345,Confirmed Eruption,Historical Observations,3,1/11/2020,5/13/2020,30.443,130.217
+241040,Whakaari/White Island,22338,Confirmed Eruption,Historical Observations,2,12/9/2019,12/9/2019,-37.52,177.18
+311060,Semisopochnoi,22341,Confirmed Eruption,Historical Observations,1,12/7/2019,6/19/2020,51.93,179.58
+284096,Nishinoshima,22340,Confirmed Eruption,Historical Observations,1,12/5/2019,8/27/2020,27.247,140.874
+282060,Kikai,22339,Confirmed Eruption,Historical Observations,2,11/2/2019,11/2/2019,30.793,130.305
+243070,Lateiki,22334,Confirmed Eruption,Historical Observations,1,10/13/2019,10/22/2019,-19.18,-174.87
+283110,Asamayama,22326,Confirmed Eruption,Historical Observations,2,8/7/2019,8/25/2019,36.406,138.523
+357090,Copahue,22336,Confirmed Eruption,Historical Observations,2,8/2/2019,11/12/2019,-37.856,-71.183
+263090,Tangkuban Parahu,22325,Confirmed Eruption,Historical Observations,1,7/26/2019,9/17/2019,-6.77,107.6
+311360,Shishaldin,22330,Confirmed Eruption,Historical Observations,3,7/23/2019,5/4/2020,54.756,-163.97
+311060,Semisopochnoi,22328,Confirmed Eruption,Historical Observations,1,7/16/2019,8/24/2019,51.93,179.58
+252120,Ulawun,22319,Confirmed Eruption,Historical Observations,4,6/26/2019,10/5/2019,-5.05,151.33
+354020,Ubinas,22324,Confirmed Eruption,Historical Observations,2,6/24/2019,9/12/2019,-16.355,-70.903
+290250,Raikoke,22321,Confirmed Eruption,Historical Observations,3,6/22/2019,7/1/2019,48.292,153.25
+233020,"Fournaise, Piton de la",22318,Confirmed Eruption,Historical Observations,0,6/11/2019,10/27/2019,-21.244,55.708
+311120,Great Sitkin,22322,Confirmed Eruption,Historical Observations,1,6/1/2019,6/7/2019,52.076,-176.13
+290240,Sarychev Peak,22320,Confirmed Eruption,Historical Observations,2,5/16/2019,10/7/2019,48.092,153.2
+341040,Colima,22323,Confirmed Eruption,Historical Observations,1,5/11/2019,7/12/2019,19.514,-103.62
+282110,Asosan,22317,Confirmed Eruption,Historical Observations,2,4/16/2019,6/16/2020,32.884,131.104
+300260,Klyuchevskoy,22310,Confirmed Eruption,Historical Observations,2,4/9/2019,3/20/2021,56.056,160.642
+352090,Sangay,22312,Confirmed Eruption,Historical Observations,2,3/26/2019,8/19/2021,-2.005,-78.341
+344020,San Cristobal,22311,Confirmed Eruption,Historical Observations,1,3/4/2019,3/4/2019,12.702,-87.004
+233020,"Fournaise, Piton de la",22307,Confirmed Eruption,Historical Observations,0,2/18/2019,3/10/2019,-21.244,55.708
+263310,Tengger Caldera,22306,Confirmed Eruption,Historical Observations,2,2/18/2019,7/28/2019,-7.942,112.95
+300130,Karymsky,22309,Confirmed Eruption,Historical Observations,2,2/16/2019,9/24/2019,54.049,159.443
+345040,Poas,22303,Confirmed Eruption,Historical Observations,2,2/7/2019,9/30/2019,10.2,-84.233
+261080,Sinabung,22316,Confirmed Eruption,Historical Observations,4,2/6/2019,6/9/2019,3.17,98.392
+256010,Tinakula,22313,Confirmed Eruption,Historical Observations,2,12/8/2018,8/19/2021,-10.386,165.804
+267020,Karangetang,22294,Confirmed Eruption,Historical Observations,2,11/25/2018,8/6/2021,2.781,125.407
+357040,Planchon-Peteroa,22297,Confirmed Eruption,Historical Observations,1,11/7/2018,5/7/2019,-35.223,-70.568
+282050,Kuchinoerabujima,22296,Confirmed Eruption,Historical Observations,3,10/21/2018,2/3/2019,30.443,130.217
+268060,Gamalama,22295,Confirmed Eruption,Historical Observations,1,10/4/2018,10/6/2018,0.8,127.33
+266030,Soputan,22293,Confirmed Eruption,Historical Observations,3,10/2/2018,12/16/2018,1.112,124.737
+260010,Barren Island,22292,Confirmed Eruption,Historical Observations,1,9/25/2018,7/29/2021,12.278,93.858
+252120,Ulawun,22286,Confirmed Eruption,Historical Observations,2,9/21/2018,10/12/2018,-5.05,151.33
+290240,Sarychev Peak,22288,Confirmed Eruption,Historical Observations,2,9/8/2018,10/15/2018,48.092,153.2
+311060,Semisopochnoi,22289,Confirmed Eruption,Historical Observations,1,9/8/2018,10/31/2018,51.93,179.58
+312070,Veniaminof,22290,Confirmed Eruption,Historical Observations,1,9/4/2018,12/23/2018,56.17,-159.38
+290390,Alaid,22281,Confirmed Eruption,Historical Observations,1,8/20/2018,8/21/2018,50.861,155.565
+352090,Sangay,22283,Confirmed Eruption,Historical Observations,2,8/8/2018,12/7/2018,-2.005,-78.341
+345020,Rincon de la Vieja,22282,Confirmed Eruption,Historical Observations,1,7/28/2018,6/11/2019,10.83,-85.324
+284096,Nishinoshima,22280,Confirmed Eruption,Historical Observations,1,7/12/2018,7/21/2018,27.247,140.874
+233005,Mayotte,22337,Confirmed Eruption,Seismicity,0,7/3/2018,8/20/2019,-12.83,45.17
+353050,"Negra, Sierra",22279,Confirmed Eruption,Historical Observations,2,6/26/2018,8/23/2018,-0.83,-91.17
+344040,Telica,22277,Confirmed Eruption,Historical Observations,1,6/21/2018,8/15/2018,12.606,-86.84
+262000,Krakatau,22275,Confirmed Eruption,Historical Observations,3,6/18/2018,4/17/2020,-6.102,105.423
+353010,Fernandina,22278,Confirmed Eruption,Historical Observations,1,6/16/2018,6/21/2018,-0.37,-91.55
+311120,Great Sitkin,22276,Confirmed Eruption,Historical Observations,1,6/10/2018,8/11/2018,52.076,-176.13
+252120,Ulawun,22285,Confirmed Eruption,Historical Observations,1,6/8/2018,6/8/2018,-5.05,151.33
+263250,Merapi,22264,Confirmed Eruption,Historical Observations,3,5/11/2018,6/21/2020,-7.54,110.446
+300130,Karymsky,22265,Confirmed Eruption,Historical Observations,3,4/28/2018,9/30/2018,54.049,159.443
+261140,Marapi,22262,Confirmed Eruption,Historical Observations,2,4/27/2018,5/2/2018,-0.38,100.474
+344020,San Cristobal,22266,Confirmed Eruption,Historical Observations,1,4/22/2018,4/22/2018,12.702,-87.004
+261170,Kerinci,22274,Confirmed Eruption,Historical Observations,1,4/21/2018,10/17/2020,-1.697,101.264
+223020,Nyamulagira,22315,Confirmed Eruption,Historical Observations,0,4/18/2018,8/5/2021,-1.408,29.2
+233020,"Fournaise, Piton de la",22261,Confirmed Eruption,Historical Observations,0,4/3/2018,11/1/2018,-21.244,55.708
+263200,Dieng Volcanic Complex,22263,Confirmed Eruption,Historical Observations,1,4/1/2018,4/1/2018,-7.2,109.879
+282090,Kirishimayama,22257,Confirmed Eruption,Historical Observations,3,3/1/2018,6/27/2018,31.934,130.862
+352090,Sangay,22259,Confirmed Eruption,Historical Observations,1,2/25/2018,2/25/2018,-2.005,-78.341
+267020,Karangetang,22256,Confirmed Eruption,Historical Observations,1,2/2/2018,2/2/2018,2.781,125.407
+283120,Kusatsu-Shiranesan,22258,Confirmed Eruption,Historical Observations,1,1/23/2018,1/23/2018,36.618,138.528
+343100,San Miguel,22251,Confirmed Eruption,Historical Observations,1,1/14/2018,5/30/2018,13.434,-88.269
+273030,Mayon,22250,Confirmed Eruption,Historical Observations,2,1/13/2018,10/12/2019,13.257,123.685
+251002,Kadovar,22246,Confirmed Eruption,Historical Observations,2,1/5/2018,8/19/2021,-3.608,144.588
+272020,Kanlaon,22249,Confirmed Eruption,Historical Observations,2,12/9/2017,12/9/2017,10.412,123.132
+264020,Agung,22241,Confirmed Eruption,Historical Observations,3,11/21/2017,6/13/2019,-8.343,115.508
+261230,Dempo,22248,Confirmed Eruption,Historical Observations,1,11/9/2017,11/9/2017,-4.016,103.121
+256010,Tinakula,22239,Confirmed Eruption,Historical Observations,3,10/21/2017,10/26/2017,-10.386,165.804
+290240,Sarychev Peak,22308,Confirmed Eruption,Historical Observations,2,10/12/2017,11/13/2017,48.092,153.2
+282090,Kirishimayama,22242,Confirmed Eruption,Historical Observations,2,10/11/2017,10/17/2017,31.934,130.862
+257030,Ambae,22240,Confirmed Eruption,Historical Observations,3,9/6/2017,10/30/2018,-15.389,167.835
+353010,Fernandina,22245,Confirmed Eruption,Historical Observations,2,9/4/2017,9/7/2017,-0.37,-91.55
+344020,San Cristobal,22252,Confirmed Eruption,Historical Observations,3,8/18/2017,11/11/2017,12.702,-87.004
+261170,Kerinci,22273,Confirmed Eruption,Historical Observations,1,8/13/2017,8/13/2017,-1.697,101.264
+352090,Sangay,22231,Confirmed Eruption,Historical Observations,2,7/20/2017,10/26/2017,-2.005,-78.341
+264050,Sangeang Api,22228,Confirmed Eruption,Historical Observations,2,7/15/2017,6/10/2020,-8.2,119.07
+233020,"Fournaise, Piton de la",22224,Confirmed Eruption,Historical Observations,0,7/14/2017,8/28/2017,-21.244,55.708
+252120,Ulawun,22225,Confirmed Eruption,Historical Observations,1,6/11/2017,11/3/2017,-5.05,151.33
+273010,Bulusan,22229,Confirmed Eruption,Historical Observations,1,6/5/2017,6/5/2017,12.769,124.056
+261140,Marapi,22226,Confirmed Eruption,Historical Observations,1,6/4/2017,6/4/2017,-0.38,100.474
+300130,Karymsky,22230,Confirmed Eruption,Historical Observations,3,6/4/2017,1/27/2018,54.049,159.443
+357090,Copahue,22232,Confirmed Eruption,Historical Observations,1,6/4/2017,12/7/2018,-37.856,-71.183
+345020,Rincon de la Vieja,22208,Confirmed Eruption,Historical Observations,2,5/23/2017,3/15/2018,10.83,-85.324
+263200,Dieng Volcanic Complex,22227,Confirmed Eruption,Historical Observations,1,4/30/2017,7/2/2017,-7.2,109.879
+284096,Nishinoshima,22207,Confirmed Eruption,Historical Observations,2,4/18/2017,8/17/2017,27.247,140.874
+345040,Poas,22209,Confirmed Eruption,Historical Observations,1,4/12/2017,11/6/2017,10.2,-84.233
+222120,"Lengai, Ol Doinyo",22284,Confirmed Eruption,Historical Observations,0,4/9/2017,8/19/2021,-2.764,35.914
+360160,Kick 'em Jenny,22260,Confirmed Eruption,Hydrophonic,0,3/29/2017,3/29/2017,12.3,-61.64
+282080,Aira,22203,Confirmed Eruption,Historical Observations,1,3/25/2017,8/19/2021,31.593,130.657
+300010,Kambalny,22198,Confirmed Eruption,Historical Observations,3,3/24/2017,4/10/2017,51.306,156.875
+262000,Krakatau,22188,Confirmed Eruption,Historical Observations,1,2/19/2017,2/19/2017,-6.102,105.423
+344020,San Cristobal,22269,Confirmed Eruption,Historical Observations,1,2/18/2017,4/19/2017,12.702,-87.004
+233020,"Fournaise, Piton de la",22184,Confirmed Eruption,Historical Observations,0,1/31/2017,2/27/2017,-21.244,55.708
+243030,Unnamed,22185,Confirmed Eruption,Historical Observations,0,1/23/2017,1/31/2017,-20.852,-175.55
+260010,Barren Island,22187,Confirmed Eruption,Historical Observations,2,1/15/2017,5/16/2017,12.278,93.858
+343100,San Miguel,22192,Confirmed Eruption,Historical Observations,1,1/7/2017,1/7/2017,13.434,-88.269
+311300,Bogoslof,22182,Confirmed Eruption,Historical Observations,3,12/20/2016,8/30/2017,53.93,-168.03
+290260,Chirinkotan,22175,Confirmed Eruption,Historical Observations,3,11/29/2016,4/7/2017,48.98,153.48
+223020,Nyamulagira,22202,Confirmed Eruption,Historical Observations,0,11/27/2016,5/2/2017,-1.408,29.2
+300120,Zhupanovsky,22177,Confirmed Eruption,Historical Observations,2,11/20/2016,11/20/2016,53.589,159.15
+261170,Kerinci,22172,Confirmed Eruption,Historical Observations,1,11/15/2016,11/21/2016,-1.697,101.264
+354006,Sabancaya,22158,Confirmed Eruption,Historical Observations,3,11/6/2016,8/19/2021,-15.787,-71.857
+290380,Ebeko,22176,Confirmed Eruption,Historical Observations,2,10/20/2016,8/19/2021,50.686,156.014
+252120,Ulawun,22171,Confirmed Eruption,Historical Observations,1,10/11/2016,11/18/2016,-5.05,151.33
+282110,Asosan,22174,Confirmed Eruption,Historical Observations,3,10/7/2016,11/12/2016,32.884,131.104
+300130,Karymsky,22178,Confirmed Eruption,Historical Observations,2,10/5/2016,10/8/2016,54.049,159.443
+222120,"Lengai, Ol Doinyo",22305,Confirmed Eruption,Historical Observations,,9/21/2016,10/13/2016,-2.764,35.914
+241040,Whakaari/White Island,22147,Confirmed Eruption,Historical Observations,1,9/13/2016,9/13/2016,-37.52,177.18
+354020,Ubinas,22181,Confirmed Eruption,Historical Observations,2,9/13/2016,3/2/2017,-16.355,-70.903
+233020,"Fournaise, Piton de la",22145,Confirmed Eruption,Historical Observations,0,9/11/2016,9/18/2016,-21.244,55.708
+268060,Gamalama,22150,Confirmed Eruption,Historical Observations,1,8/3/2016,8/4/2016,0.8,127.33
+264030,Rinjani,22149,Confirmed Eruption,Historical Observations,2,8/1/2016,9/27/2016,-8.42,116.47
+290360,Chikurachki,22153,Confirmed Eruption,Historical Observations,2,7/27/2016,8/18/2016,50.324,155.461
+343100,San Miguel,22154,Confirmed Eruption,Historical Observations,1,6/18/2016,6/18/2016,13.434,-88.269
+273010,Bulusan,22151,Confirmed Eruption,Historical Observations,2,6/10/2016,3/2/2017,12.769,124.056
+345040,Poas,22156,Confirmed Eruption,Historical Observations,1,6/5/2016,8/16/2016,10.2,-84.233
+233020,"Fournaise, Piton de la",22144,Confirmed Eruption,Historical Observations,0,5/26/2016,5/27/2016,-21.244,55.708
+241040,Whakaari/White Island,22121,Confirmed Eruption,Historical Observations,1,4/27/2016,4/27/2016,-37.52,177.18
+390080,Bristol Island,22133,Confirmed Eruption,Historical Observations,1,4/24/2016,7/19/2016,-59.017,-26.533
+344020,San Cristobal,22130,Confirmed Eruption,Historical Observations,2,4/22/2016,4/22/2016,12.702,-87.004
+311240,Cleveland,22128,Confirmed Eruption,Historical Observations,2,4/16/2016,1/16/2019,52.825,-169.944
+261170,Kerinci,22125,Confirmed Eruption,Historical Observations,2,3/31/2016,6/9/2016,-1.697,101.264
+390130,Zavodovski,22159,Confirmed Eruption,Historical Observations,1,3/30/2016,5/16/2016,-56.3,-27.57
+290360,Chikurachki,22127,Confirmed Eruption,Historical Observations,2,3/29/2016,3/31/2016,50.324,155.461
+312030,Pavlof,22129,Confirmed Eruption,Historical Observations,2,3/27/2016,7/30/2016,55.417,-161.894
+352090,Sangay,22237,Confirmed Eruption,Historical Observations,2,3/25/2016,11/17/2016,-2.005,-78.341
+273010,Bulusan,22114,Confirmed Eruption,Historical Observations,2,2/22/2016,2/22/2016,12.769,124.056
+343100,San Miguel,22117,Confirmed Eruption,Historical Observations,1,1/12/2016,1/18/2016,13.434,-88.269
+357070,"Chillan, Nevados de",22119,Confirmed Eruption,Historical Observations,2,1/8/2016,8/19/2021,-36.868,-71.378
+266030,Soputan,22105,Confirmed Eruption,Historical Observations,3,1/2/2016,2/7/2016,1.112,124.737
+344090,Momotombo,22107,Confirmed Eruption,Historical Observations,2,12/1/2015,4/7/2016,12.423,-86.539
+272020,Kanlaon,22106,Confirmed Eruption,Historical Observations,2,11/24/2015,6/18/2016,10.412,123.132
+261140,Marapi,22111,Confirmed Eruption,Historical Observations,1,11/14/2015,11/14/2015,-0.38,100.474
+263310,Tengger Caldera,22103,Confirmed Eruption,Historical Observations,2,11/12/2015,11/12/2016,-7.942,112.95
+355100,Lascar,22110,Confirmed Eruption,Historical Observations,2,10/30/2015,4/2/2017,-23.37,-67.73
+264030,Rinjani,22104,Confirmed Eruption,Historical Observations,2,10/25/2015,12/24/2015,-8.42,116.47
+252010,Langila,22123,Confirmed Eruption,Historical Observations,2,10/22/2015,8/19/2021,-5.525,148.42
+344100,Masaya,22108,Confirmed Eruption,Historical Observations,1,10/3/2015,8/16/2021,11.985,-86.165
+243060,Tofua,22370,Confirmed Eruption,Historical Observations,0,10/2/2015,8/15/2021,-19.75,-175.07
+290390,Alaid,21096,Confirmed Eruption,Historical Observations,1,9/29/2015,8/11/2016,50.861,155.565
+344040,Telica,21097,Confirmed Eruption,Historical Observations,2,9/23/2015,5/11/2016,12.606,-86.84
+357090,Copahue,21098,Confirmed Eruption,Historical Observations,2,9/18/2015,12/30/2016,-37.856,-71.183
+266100,Lokon-Empung,21093,Confirmed Eruption,Historical Observations,1,8/30/2015,9/28/2015,1.358,124.792
+300260,Klyuchevskoy,21095,Confirmed Eruption,Historical Observations,3,8/28/2015,6/15/2018,56.056,160.642
+352050,Cotopaxi,21088,Confirmed Eruption,Historical Observations,2,8/14/2015,1/24/2016,-0.677,-78.436
+343100,San Miguel,22233,Confirmed Eruption,Historical Observations,1,8/13/2015,8/13/2015,13.434,-88.269
+360160,Kick 'em Jenny,21090,Confirmed Eruption,Historical Observations,0,7/23/2015,7/24/2015,12.3,-61.64
+268060,Gamalama,21087,Confirmed Eruption,Historical Observations,2,7/16/2015,9/8/2015,0.8,127.33
+264270,Sirung,21086,Confirmed Eruption,Historical Observations,1,7/7/2015,7/8/2015,-8.508,124.13
+283020,Hakoneyama,21080,Confirmed Eruption,Historical Observations,1,6/29/2015,7/1/2015,35.233,139.021
+354006,Sabancaya,21089,Confirmed Eruption,Historical Observations,1,6/28/2015,7/9/2015,-15.787,-71.857
+222120,"Lengai, Ol Doinyo",22304,Confirmed Eruption,Historical Observations,0,6/20/2015,8/24/2015,-2.764,35.914
+283110,Asamayama,21081,Confirmed Eruption,Historical Observations,1,6/16/2015,6/16/2015,36.406,138.523
+345020,Rincon de la Vieja,22132,Confirmed Eruption,Historical Observations,1,6/16/2015,5/1/2016,10.83,-85.324
+342110,Pacaya,22157,Confirmed Eruption,Historical Observations,1,6/7/2015,8/19/2021,14.382,-90.601
+282050,Kuchinoerabujima,21073,Confirmed Eruption,Historical Observations,3,5/29/2015,6/19/2015,30.443,130.217
+353020,Wolf,21075,Confirmed Eruption,Historical Observations,4,5/25/2015,6/2/2015,0.02,-91.35
+266100,Lokon-Empung,21071,Confirmed Eruption,Historical Observations,1,5/20/2015,5/27/2015,1.358,124.792
+344040,Telica,21074,Confirmed Eruption,Historical Observations,2,5/7/2015,5/28/2015,12.606,-86.84
+273010,Bulusan,21072,Confirmed Eruption,Historical Observations,2,5/1/2015,7/17/2015,12.769,124.056
+331021,Axial Seamount,21092,Confirmed Eruption,Seismicity,0,4/23/2015,5/24/2015,45.95,-130
+358020,Calbuco,21076,Confirmed Eruption,Historical Observations,4,4/22/2015,5/26/2015,-41.33,-72.618
+345070,Turrialba,20998,Confirmed Eruption,Historical Observations,2,3/8/2015,12/7/2019,10.025,-83.767
+344020,San Cristobal,22268,Confirmed Eruption,Historical Observations,2,3/5/2015,6/12/2015,12.702,-87.004
+290360,Chikurachki,20990,Confirmed Eruption,Historical Observations,3,2/16/2015,2/18/2015,50.324,155.461
+233020,"Fournaise, Piton de la",20982,Confirmed Eruption,Historical Observations,0,2/4/2015,10/31/2015,-21.244,55.708
+343100,San Miguel,20994,Confirmed Eruption,Historical Observations,1,1/26/2015,4/11/2015,13.434,-88.269
+352090,Sangay,22236,Confirmed Eruption,Historical Observations,2,1/19/2015,4/7/2015,-2.005,-78.341
+266030,Soputan,20988,Confirmed Eruption,Historical Observations,3,1/6/2015,3/7/2015,1.112,124.737
+300260,Klyuchevskoy,20992,Confirmed Eruption,Historical Observations,2,1/1/2015,5/10/2015,56.056,160.642
+243040,Hunga Tonga-Hunga Ha'apai,20983,Confirmed Eruption,Historical Observations,2,12/19/2014,1/23/2015,-20.536,-175.382
+268060,Gamalama,20989,Confirmed Eruption,Historical Observations,2,12/18/2014,12/25/2014,0.8,127.33
+357120,Villarrica,20996,Confirmed Eruption,Historical Observations,1,12/2/2014,8/13/2021,-39.42,-71.93
+263340,Raung,21070,Confirmed Eruption,Historical Observations,3,11/23/2014,8/30/2015,-8.119,114.056
+384010,Fogo,20977,Confirmed Eruption,Historical Observations,3,11/23/2014,2/8/2015,14.95,-24.35
+290260,Chirinkotan,22223,Confirmed Eruption,Historical Observations,2,11/21/2014,8/10/2015,48.98,153.48
+351020,"Ruiz, Nevado del",20995,Confirmed Eruption,Historical Observations,2,11/18/2014,8/19/2021,4.892,-75.324
+390090,Saunders,22271,Confirmed Eruption,Historical Observations,1,11/12/2014,5/12/2021,-57.8,-26.483
+312030,Pavlof,20975,Confirmed Eruption,Historical Observations,1,11/12/2014,11/15/2014,55.417,-161.894
+345070,Turrialba,20974,Confirmed Eruption,Historical Observations,2,10/29/2014,12/8/2014,10.025,-83.767
+283040,Ontakesan,20964,Confirmed Eruption,Historical Observations,3,9/27/2014,10/14/2014,35.893,137.48
+345020,Rincon de la Vieja,20961,Confirmed Eruption,Historical Observations,1,9/17/2014,10/24/2014,10.83,-85.324
+282110,Asosan,20960,Confirmed Eruption,Historical Observations,2,8/30/2014,5/1/2016,32.884,131.104
+373030,Bardarbunga,20955,Confirmed Eruption,Historical Observations,0,8/29/2014,2/27/2015,64.633,-17.516
+342110,Pacaya,22222,Confirmed Eruption,Historical Observations,1,8/25/2014,2/17/2015,14.382,-90.601
+273030,Mayon,20959,Confirmed Eruption,Historical Observations,0,8/12/2014,10/19/2014,13.257,123.685
+282050,Kuchinoerabujima,20952,Confirmed Eruption,Historical Observations,1,8/3/2014,8/3/2014,30.443,130.217
+344020,San Cristobal,22267,Confirmed Eruption,Historical Observations,2,7/20/2014,10/1/2014,12.702,-87.004
+252140,Rabaul,20957,Confirmed Eruption,Historical Observations,3,7/7/2014,9/18/2014,-4.271,152.203
+357090,Copahue,20954,Confirmed Eruption,Historical Observations,1,7/4/2014,12/2/2014,-37.856,-71.183
+251020,Manam,20956,Confirmed Eruption,Historical Observations,2,6/29/2014,8/19/2021,-4.08,145.037
+233020,"Fournaise, Piton de la",20919,Confirmed Eruption,Historical Observations,0,6/21/2014,6/21/2014,-21.244,55.708
+267020,Karangetang,20914,Confirmed Eruption,Historical Observations,2,6/8/2014,3/15/2016,2.781,125.407
+300120,Zhupanovsky,20908,Confirmed Eruption,Historical Observations,3,6/6/2014,3/24/2016,53.589,159.15
+312030,Pavlof,20909,Confirmed Eruption,Historical Observations,3,5/31/2014,6/2/2014,55.417,-161.894
+264050,Sangeang Api,20911,Confirmed Eruption,Historical Observations,3,5/30/2014,11/5/2015,-8.2,119.07
+223020,Nyamulagira,20942,Confirmed Eruption,Historical Observations,0,5/30/2014,5/14/2016,-1.408,29.2
+284141,Ahyi,20936,Confirmed Eruption,Hydrophonic,0,4/24/2014,5/17/2014,20.42,145.03
+263300,Semeru,22221,Confirmed Eruption,Historical Observations,3,4/1/2014,8/19/2021,-8.108,112.922
+262000,Krakatau,20932,Confirmed Eruption,Historical Observations,1,3/31/2014,3/31/2014,-6.102,105.423
+251030,Karkar,20910,Confirmed Eruption,Historical Observations,1,3/26/2014,3/27/2014,-4.649,145.964
+263250,Merapi,20892,Confirmed Eruption,Historical Observations,3,3/9/2014,4/20/2014,-7.54,110.446
+263180,Slamet,20933,Confirmed Eruption,Historical Observations,2,3/8/2014,9/17/2014,-7.242,109.208
+263280,Kelut,20934,Confirmed Eruption,Historical Observations,4,2/13/2014,2/15/2014,-7.93,112.308
+267020,Karangetang,20913,Confirmed Eruption,Historical Observations,1,2/9/2014,2/9/2014,2.781,125.407
+344020,San Cristobal,20941,Confirmed Eruption,Historical Observations,1,2/4/2014,4/11/2014,12.702,-87.004
+261140,Marapi,20931,Confirmed Eruption,Historical Observations,1,2/3/2014,2/26/2014,-0.38,100.474
+255060,Kavachi,20920,Confirmed Eruption,Historical Observations,1,1/29/2014,1/29/2014,-8.991,157.979
+311360,Shishaldin,20937,Confirmed Eruption,Historical Observations,1,1/28/2014,10/16/2015,54.756,-163.97
+282110,Asosan,20935,Confirmed Eruption,Historical Observations,1,1/13/2014,2/19/2014,32.884,131.104
+343100,San Miguel,20906,Confirmed Eruption,Historical Observations,2,12/29/2013,7/28/2014,13.434,-88.269
+284096,Nishinoshima,20916,Confirmed Eruption,Historical Observations,2,11/20/2013,11/17/2015,27.247,140.874
+263250,Merapi,20842,Confirmed Eruption,Historical Observations,2,11/18/2013,11/18/2013,-7.54,110.446
+300120,Zhupanovsky,20907,Confirmed Eruption,Historical Observations,3,10/23/2013,10/26/2013,53.589,159.15
+260010,Barren Island,20918,Confirmed Eruption,Historical Observations,2,10/12/2013,5/17/2016,12.278,93.858
+263090,Tangkuban Parahu,20987,Confirmed Eruption,Historical Observations,1,10/5/2013,10/5/2013,-6.77,107.6
+221020,Zubair Group,21068,Confirmed Eruption,Historical Observations,2,9/28/2013,11/20/2013,15.05,42.18
+344040,Telica,22195,Confirmed Eruption,Historical Observations,1,9/25/2013,9/25/2013,12.606,-86.84
+261080,Sinabung,20818,Confirmed Eruption,Historical Observations,4,9/15/2013,8/30/2018,3.17,98.392
+211060,Etna,20841,Confirmed Eruption,Historical Observations,2,9/3/2013,8/19/2021,37.748,14.999
+354020,Ubinas,20832,Confirmed Eruption,Historical Observations,2,9/1/2013,2/27/2016,-16.355,-70.903
+264250,Iliwerung,20912,Confirmed Eruption,Historical Observations,0,8/20/2013,8/20/2013,-8.53,123.57
+300260,Klyuchevskoy,20786,Confirmed Eruption,Historical Observations,1,8/15/2013,12/20/2013,56.056,160.642
+357120,Villarrica,20838,Confirmed Eruption,Historical Observations,1,7/25/2013,7/29/2013,-39.42,-71.93
+252120,Ulawun,20835,Confirmed Eruption,Historical Observations,1,7/8/2013,12/21/2013,-5.05,151.33
+263340,Raung,22378,Confirmed Eruption,Historical Observations,1,6/29/2013,7/31/2013,-8.119,114.056
+312070,Veniaminof,20836,Confirmed Eruption,Historical Observations,3,6/13/2013,10/12/2013,56.17,-159.38
+290260,Chirinkotan,20757,Confirmed Eruption,Historical Observations,1,6/11/2013,6/1/2014,48.98,153.48
+344020,San Cristobal,20817,Confirmed Eruption,Historical Observations,1,6/7/2013,6/7/2013,12.702,-87.004
+263300,Semeru,22220,Confirmed Eruption,Historical Observations,1,6/4/2013,11/29/2013,-8.108,112.922
+282060,Kikai,20781,Confirmed Eruption,Historical Observations,1,6/4/2013,6/4/2013,30.793,130.305
+261170,Kerinci,22216,Confirmed Eruption,Historical Observations,2,6/2/2013,6/2/2013,-1.697,101.264
+345070,Turrialba,20831,Confirmed Eruption,Historical Observations,2,5/21/2013,6/4/2013,10.025,-83.767
+312030,Pavlof,20807,Confirmed Eruption,Historical Observations,3,5/13/2013,6/26/2013,55.417,-161.894
+273030,Mayon,20798,Confirmed Eruption,Historical Observations,2,5/7/2013,5/7/2013,13.257,123.685
+355100,Lascar,20789,Confirmed Eruption,Historical Observations,1,4/2/2013,11/20/2013,-23.37,-67.73
+342110,Pacaya,20802,Confirmed Eruption,Historical Observations,2,3/5/2013,4/10/2014,14.382,-90.601
+263090,Tangkuban Parahu,20822,Confirmed Eruption,Historical Observations,2,2/21/2013,3/6/2013,-6.77,107.6
+260010,Barren Island,20754,Confirmed Eruption,Historical Observations,1,2/16/2013,2/16/2013,12.278,93.858
+290070,Etorofu-Yakeyama [Grozny Group],20762,Confirmed Eruption,Historical Observations,2,2/16/2013,4/4/2013,45.012,147.871
+284305,Mariana Back-Arc Segment at 15.5°N,21102,Confirmed Eruption,Historical Observations,0,2/13/2013,12/1/2015,15.406,144.506
+251030,Karkar,20779,Confirmed Eruption,Historical Observations,3,1/29/2013,2/26/2013,-4.649,145.964
+352090,Sangay,22235,Confirmed Eruption,Historical Observations,2,1/25/2013,5/24/2013,-2.005,-78.341
+252140,Rabaul,20811,Confirmed Eruption,Historical Observations,2,1/19/2013,3/11/2014,-4.271,152.203
+341040,Colima,20759,Confirmed Eruption,Historical Observations,2,1/6/2013,3/7/2017,19.514,-103.62
+344020,San Cristobal,20816,Confirmed Eruption,Historical Observations,2,12/26/2012,12/28/2012,12.702,-87.004
+357090,Copahue,20760,Confirmed Eruption,Historical Observations,2,12/22/2012,12/10/2013,-37.856,-71.183
+252010,Langila,20788,Confirmed Eruption,Historical Observations,1,12/1/2012,12/5/2012,-5.525,148.42
+300240,Tolbachik,20825,Confirmed Eruption,Historical Observations,4,11/27/2012,9/5/2013,55.832,160.326
+241080,Tongariro,20827,Confirmed Eruption,Historical Observations,2,11/21/2012,11/21/2012,-39.157,175.632
+290150,Chirpoi,20756,Confirmed Eruption,Historical Observations,0,11/11/2012,10/18/2016,46.532,150.871
+252120,Ulawun,20834,Confirmed Eruption,Historical Observations,1,11/6/2012,12/11/2012,-5.05,151.33
+284170,Pagan,20804,Confirmed Eruption,Historical Observations,2,10/30/2012,12/11/2012,18.13,145.8
+345020,Rincon de la Vieja,22161,Confirmed Eruption,Historical Observations,1,10/17/2012,10/17/2012,10.83,-85.324
+263340,Raung,22377,Confirmed Eruption,Historical Observations,3,10/16/2012,1/6/2013,-8.119,114.056
+264150,Paluweh,20806,Confirmed Eruption,Historical Observations,2,10/8/2012,10/31/2013,-8.32,121.708
+290390,Alaid,20750,Confirmed Eruption,Historical Observations,2,10/5/2012,12/12/2012,50.861,155.565
+261140,Marapi,20797,Confirmed Eruption,Historical Observations,1,9/26/2012,9/26/2012,-0.38,100.474
+268060,Gamalama,20766,Confirmed Eruption,Historical Observations,1,9/15/2012,9/17/2012,0.8,127.33
+266100,Lokon-Empung,20794,Confirmed Eruption,Historical Observations,2,9/15/2012,9/9/2013,1.358,124.792
+344020,San Cristobal,20815,Confirmed Eruption,Historical Observations,2,9/8/2012,9/15/2012,12.702,-87.004
+234010,Heard,20768,Confirmed Eruption,Historical Observations,0,9/5/2012,1/20/2021,-53.106,73.513
+300260,Klyuchevskoy,20785,Confirmed Eruption,Historical Observations,1,9/1/2012,1/28/2013,56.056,160.642
+266030,Soputan,20821,Confirmed Eruption,Historical Observations,3,8/26/2012,9/19/2012,1.112,124.737
+290070,Etorofu-Yakeyama [Grozny Group],20761,Confirmed Eruption,Historical Observations,2,8/16/2012,8/25/2012,45.012,147.871
+241040,Whakaari/White Island,20839,Confirmed Eruption,Historical Observations,2,8/7/2012,10/11/2013,-37.52,177.18
+241080,Tongariro,20826,Confirmed Eruption,Historical Observations,2,8/6/2012,8/7/2012,-39.157,175.632
+242050,Monowai,20799,Confirmed Eruption,Hydrophonic,0,8/3/2012,8/4/2012,-25.887,-177.188
+242005,Havre Seamount,20748,Confirmed Eruption,Historical Observations,1,7/17/2012,7/19/2012,-31.08,-179.033
+267020,Karangetang,20776,Confirmed Eruption,Historical Observations,2,5/14/2012,9/5/2013,2.781,125.407
+351080,Galeras,20764,Confirmed Eruption,Historical Observations,2,5/13/2012,1/30/2014,1.22,-77.37
+264270,Sirung,20819,Confirmed Eruption,Historical Observations,2,5/8/2012,5/12/2012,-8.508,124.13
+252120,Ulawun,20833,Confirmed Eruption,Historical Observations,1,5/7/2012,5/31/2012,-5.05,151.33
+252080,Witori,20805,Confirmed Eruption,Historical Observations,2,5/3/2012,7/11/2012,-5.576,150.516
+344100,Masaya,22143,Confirmed Eruption,Historical Observations,1,4/30/2012,6/8/2012,11.985,-86.165
+261140,Marapi,20796,Confirmed Eruption,Historical Observations,1,3/1/2012,5/18/2012,-0.38,100.474
+351020,"Ruiz, Nevado del",20814,Confirmed Eruption,Historical Observations,3,2/22/2012,7/12/2013,4.892,-75.324
+345020,Rincon de la Vieja,20813,Confirmed Eruption,Historical Observations,1,2/19/2012,4/14/2012,10.83,-85.324
+311110,Kanaga,20774,Confirmed Eruption,Historical Observations,2,2/18/2012,2/18/2012,51.923,-177.168
+284120,Ioto,20772,Confirmed Eruption,Historical Observations,1,2/10/2012,5/2/2012,24.751,141.289
+251030,Karkar,20778,Confirmed Eruption,Historical Observations,3,2/1/2012,2/1/2012,-4.649,145.964
+345070,Turrialba,20830,Confirmed Eruption,Historical Observations,2,1/12/2012,1/18/2012,10.025,-83.767
+264230,Lewotolok,20791,Confirmed Eruption,Historical Observations,1,1/2/2012,1/14/2012,-8.274,123.508
+221020,Zubair Group,20840,Confirmed Eruption,Historical Observations,2,12/18/2011,1/12/2012,15.05,42.18
+261170,Kerinci,22217,Confirmed Eruption,Historical Observations,1,12/15/2011,12/15/2011,-1.697,101.264
+268060,Gamalama,20765,Confirmed Eruption,Historical Observations,2,12/5/2011,12/23/2011,0.8,127.33
+352080,Tungurahua,22215,Confirmed Eruption,Historical Observations,3,11/27/2011,3/16/2016,-1.467,-78.442
+223020,Nyamulagira,20801,Confirmed Eruption,Historical Observations,2,11/6/2011,3/16/2012,-1.408,29.2
+358057,"Hudson, Cerro",20770,Confirmed Eruption,Historical Observations,2,10/26/2011,11/1/2011,-45.9,-72.97
+383020,Hierro,20769,Confirmed Eruption,Historical Observations,2,10/10/2011,3/5/2012,27.73,-18.03
+257020,Gaua,20938,Confirmed Eruption,Historical Observations,1,9/17/2011,10/10/2011,-14.27,167.5
+345020,Rincon de la Vieja,20812,Confirmed Eruption,Historical Observations,1,8/22/2011,9/27/2011,10.83,-85.324
+344020,San Cristobal,10898,Confirmed Eruption,Historical Observations,1,8/21/2011,10/23/2011,12.702,-87.004
+261140,Marapi,20795,Confirmed Eruption,Historical Observations,2,8/3/2011,10/12/2011,-0.38,100.474
+262000,Krakatau,20787,Confirmed Eruption,Historical Observations,2,7/31/2011,9/9/2012,-6.102,105.423
+311240,Cleveland,20758,Confirmed Eruption,Historical Observations,2,7/19/2011,8/18/2015,52.825,-169.944
+266030,Soputan,20820,Confirmed Eruption,Historical Observations,3,7/3/2011,8/15/2011,1.112,124.737
+266100,Lokon-Empung,20793,Confirmed Eruption,Historical Observations,2,6/26/2011,5/1/2012,1.358,124.792
+222120,"Lengai, Ol Doinyo",20790,Confirmed Eruption,Historical Observations,0,6/22/2011,7/15/2014,-2.764,35.914
+221101,Nabro,20800,Confirmed Eruption,Historical Observations,4,6/13/2011,6/3/2012,13.37,41.7
+352090,Sangay,22234,Confirmed Eruption,Historical Observations,2,6/6/2011,9/19/2012,-2.005,-78.341
+357150,Puyehue-Cordon Caulle,20809,Confirmed Eruption,Historical Observations,5,6/4/2011,4/21/2012,-40.59,-72.117
+257030,Ambae,20752,Confirmed Eruption,Historical Observations,1,6/4/2011,7/10/2011,-15.389,167.835
+373010,Grimsvotn,20767,Confirmed Eruption,Historical Observations,4,5/21/2011,5/28/2011,64.416,-17.316
+282110,Asosan,20753,Confirmed Eruption,Historical Observations,1,5/15/2011,6/9/2011,32.884,131.104
+263300,Semeru,22219,Confirmed Eruption,Historical Observations,2,5/13/2011,7/20/2012,-8.108,112.922
+284170,Pagan,20803,Confirmed Eruption,Historical Observations,2,4/23/2011,9/1/2011,18.13,145.8
+352080,Tungurahua,22214,Confirmed Eruption,Historical Observations,2,4/20/2011,5/26/2011,-1.467,-78.442
+331021,Axial Seamount,20921,Confirmed Eruption,Historical Observations,0,4/6/2011,4/12/2011,45.95,-130
+300260,Klyuchevskoy,20783,Confirmed Eruption,Historical Observations,1,3/30/2011,7/3/2011,56.056,160.642
+252140,Rabaul,20810,Confirmed Eruption,Historical Observations,2,3/29/2011,8/12/2011,-4.271,152.203
+267020,Karangetang,20775,Confirmed Eruption,Historical Observations,2,3/11/2011,8/13/2011,2.781,125.407
+344040,Telica,20823,Confirmed Eruption,Historical Observations,2,3/7/2011,6/14/2011,12.606,-86.84
+266100,Lokon-Empung,20792,Confirmed Eruption,Historical Observations,1,2/22/2011,2/22/2011,1.358,124.792
+357040,Planchon-Peteroa,20808,Confirmed Eruption,Historical Observations,3,2/17/2011,6/26/2011,-35.223,-70.568
+282090,Kirishimayama,20782,Confirmed Eruption,Historical Observations,2,1/19/2011,9/7/2011,31.934,130.862
+345070,Turrialba,20829,Confirmed Eruption,Historical Observations,1,1/14/2011,1/14/2011,10.025,-83.767
+221041,Dallol,20939,Confirmed Eruption,Historical Observations,0,1/4/2011,1/4/2011,14.242,40.3
+263310,Tengger Caldera,16064,Confirmed Eruption,Historical Observations,3,11/26/2010,6/13/2011,-7.942,112.95
+352080,Tungurahua,11645,Confirmed Eruption,Historical Observations,3,11/22/2010,1/2/2011,-1.467,-78.442
+300230,Kizimen,19264,Confirmed Eruption,Historical Observations,3,11/11/2010,9/13/2013,55.131,160.32
+273010,Bulusan,16772,Confirmed Eruption,Historical Observations,2,11/6/2010,5/13/2011,12.769,124.056
+263250,Merapi,15925,Confirmed Eruption,Historical Observations,4,10/26/2010,7/15/2012,-7.54,110.446
+262000,Krakatau,15634,Confirmed Eruption,Historical Observations,2,10/25/2010,3/9/2011,-6.102,105.423
+233020,"Fournaise, Piton de la",14392,Confirmed Eruption,Historical Observations,1,10/14/2010,12/10/2010,-21.244,55.708
+260010,Barren Island,15388,Confirmed Eruption,Historical Observations,2,9/17/2010,6/22/2011,12.278,93.858
+357040,Planchon-Peteroa,11947,Confirmed Eruption,Historical Observations,2,9/6/2010,10/13/2010,-35.223,-70.568
+261080,Sinabung,15404,Confirmed Eruption,Historical Observations,2,8/27/2010,9/18/2010,3.17,98.392
+211060,Etna,13854,Confirmed Eruption,,1,8/25/2010,4/27/2013,37.748,14.999
+351080,Galeras,11381,Confirmed Eruption,Historical Observations,2,8/25/2010,8/25/2010,1.22,-77.37
+251020,Manam,14935,Confirmed Eruption,Historical Observations,2,8/10/2010,12/15/2013,-4.08,145.037
+267020,Karangetang,16544,Confirmed Eruption,Historical Observations,3,8/6/2010,12/16/2010,2.781,125.407
+252140,Rabaul,15101,Confirmed Eruption,Historical Observations,1,7/23/2010,7/25/2010,-4.271,152.203
+290380,Ebeko,18879,Confirmed Eruption,Historical Observations,1,7/2/2010,7/9/2010,50.686,156.014
+290270,Ekarma,18833,Confirmed Eruption,Historical Observations,2,6/30/2010,8/10/2010,48.958,153.93
+344020,San Cristobal,10897,Confirmed Eruption,Historical Observations,2,6/9/2010,1/13/2011,12.702,-87.004
+300070,Gorely,19026,Confirmed Eruption,Historical Observations,1,6/6/2010,6/22/2010,52.559,158.03
+311240,Cleveland,19819,Confirmed Eruption,Historical Observations,2,5/30/2010,6/2/2010,52.825,-169.944
+284193,South Sarigan Seamount,18529,Confirmed Eruption,Historical Observations,3,5/27/2010,5/29/2010,16.58,145.78
+252120,Ulawun,15077,Confirmed Eruption,Historical Observations,2,5/26/2010,5/27/2011,-5.05,151.33
+300250,Bezymianny,19388,Confirmed Eruption,Historical Observations,3,5/21/2010,8/19/2021,55.972,160.595
+284170,Pagan,18524,Confirmed Eruption,Historical Observations,1,5/3/2010,8/11/2010,18.13,145.8
+284040,Miyakejima,18282,Confirmed Eruption,Historical Observations,1,4/11/2010,7/21/2010,34.094,139.526
+211060,Etna,13853,Confirmed Eruption,Historical Observations,2,4/8/2010,4/8/2010,37.748,14.999
+282090,Kirishimayama,17165,Confirmed Eruption,Historical Observations,1,3/30/2010,7/10/2010,31.934,130.862
+372020,Eyjafjallajokull,12563,Confirmed Eruption,Historical Observations,4,3/20/2010,6/23/2010,63.633,-19.633
+284130,Fukutoku-Oka-no-Ba,18469,Confirmed Eruption,Historical Observations,1,2/3/2010,4/8/2010,24.285,141.481
+263300,Semeru,22218,Confirmed Eruption,Historical Observations,2,1/5/2010,11/29/2010,-8.108,112.922
+345070,Turrialba,11247,Confirmed Eruption,Historical Observations,2,1/5/2010,3/7/2010,10.025,-83.767
+223020,Nyamulagira,14085,Confirmed Eruption,Historical Observations,1,1/2/2010,1/29/2010,-1.408,29.2
+352080,Tungurahua,11644,Confirmed Eruption,Historical Observations,3,1/1/2010,7/29/2010,-1.467,-78.442
+300250,Bezymianny,19387,Confirmed Eruption,Historical Observations,3,12/17/2009,2/16/2010,55.972,160.595
+344120,Concepcion,11080,Confirmed Eruption,Historical Observations,1,12/11/2009,3/12/2011,11.538,-85.622
+357120,Villarrica,12184,Confirmed Eruption,Historical Observations,1,11/22/2009,4/20/2012,-39.42,-71.93
+345040,Poas,11193,Confirmed Eruption,Historical Observations,1,11/16/2009,10/13/2014,10.2,-84.233
+233020,"Fournaise, Piton de la",14391,Confirmed Eruption,Historical Observations,1,11/5/2009,1/12/2010,-21.244,55.708
+311240,Cleveland,19828,Confirmed Eruption,Historical Observations,2,10/2/2009,12/12/2009,52.825,-169.944
+257020,Gaua,15231,Confirmed Eruption,Historical Observations,2,9/27/2009,6/19/2010,-14.27,167.5
+263200,Dieng Volcanic Complex,15793,Confirmed Eruption,Historical Observations,1,9/27/2009,9/27/2009,-7.2,109.879
+252010,Langila,15003,Confirmed Eruption,Historical Observations,2,9/16/2009,2/16/2010,-5.525,148.42
+273030,Mayon,16819,Confirmed Eruption,Historical Observations,2,9/15/2009,1/1/2010,13.257,123.685
+344020,San Cristobal,10896,Confirmed Eruption,Historical Observations,2,9/6/2009,12/26/2009,12.702,-87.004
+300260,Klyuchevskoy,19485,Confirmed Eruption,Historical Observations,2,8/1/2009,12/20/2010,56.056,160.642
+221115,Manda Hararo,13944,Confirmed Eruption,Historical Observations,2,6/28/2009,7/1/2009,12.17,40.82
+311240,Cleveland,19827,Confirmed Eruption,Historical Observations,2,6/25/2009,6/25/2009,52.825,-169.944
+290240,Sarychev Peak,18819,Confirmed Eruption,Historical Observations,4,6/11/2009,7/16/2009,48.092,153.2
+242050,Monowai,22197,Confirmed Eruption,Hydrophonic,0,5/4/2009,12/16/2009,-25.887,-177.188
+264030,Rinjani,16227,Confirmed Eruption,Historical Observations,2,5/2/2009,5/23/2010,-8.42,116.47
+263180,Slamet,15765,Confirmed Eruption,Historical Observations,1,4/21/2009,6/22/2009,-7.242,109.208
+353010,Fernandina,11677,Confirmed Eruption,Historical Observations,2,4/10/2009,4/28/2009,-0.37,-91.55
+284040,Miyakejima,18281,Confirmed Eruption,Historical Observations,1,4/1/2009,4/1/2009,34.094,139.526
+261170,Kerinci,15533,Confirmed Eruption,Historical Observations,1,4/1/2009,6/19/2009,-1.697,101.264
+262000,Krakatau,15633,Confirmed Eruption,Historical Observations,2,3/25/2009,9/16/2009,-6.102,105.423
+243040,Hunga Tonga-Hunga Ha'apai,14733,Confirmed Eruption,Historical Observations,2,3/17/2009,3/22/2009,-20.536,-175.382
+313030,Redoubt,20391,Confirmed Eruption,Historical Observations,3,3/15/2009,7/1/2009,60.485,-152.742
+290380,Ebeko,18878,Confirmed Eruption,Historical Observations,1,2/11/2009,7/13/2009,50.686,156.014
+357120,Villarrica,12183,Confirmed Eruption,Historical Observations,1,1/29/2009,3/24/2009,-39.42,-71.93
+283110,Asamayama,17812,Confirmed Eruption,Historical Observations,2,1/21/2009,5/2/2009,36.406,138.523
+263200,Dieng Volcanic Complex,15792,Confirmed Eruption,Historical Observations,1,1/15/2009,1/15/2009,-7.2,109.879
+345040,Poas,11192,Confirmed Eruption,Historical Observations,1,1/12/2009,3/21/2009,10.2,-84.233
+311240,Cleveland,19826,Confirmed Eruption,Historical Observations,2,1/2/2009,1/21/2009,52.825,-169.944
+261230,Dempo,15575,Confirmed Eruption,Historical Observations,1,1/1/2009,1/1/2009,-4.016,103.121
+300090,Koryaksky,19045,Confirmed Eruption,Historical Observations,2,12/23/2008,8/27/2009,53.321,158.712
+267020,Karangetang,16543,Confirmed Eruption,Historical Observations,2,11/29/2008,3/24/2010,2.781,125.407
+344020,San Cristobal,10895,Confirmed Eruption,Historical Observations,1,11/21/2008,11/21/2008,12.702,-87.004
+285070,Akan,18707,Confirmed Eruption,Historical Observations,1,11/18/2008,11/28/2008,43.384,144.013
+243120,Tafu-Maka,14799,Confirmed Eruption,Historical Observations,0,11/16/2008,11/16/2008,-15.37,-174.23
+243130,West Mata,14800,Confirmed Eruption,Historical Observations,0,11/16/2008,5/16/2009,-15.1,-173.75
+221060,Alu-Dalafilla,13927,Confirmed Eruption,Historical Observations,3,11/3/2008,12/16/2008,13.793,40.553
+351050,"Huila, Nevado del",11314,Confirmed Eruption,Historical Observations,3,10/26/2008,1/14/2012,2.93,-76.03
+357120,Villarrica,12182,Confirmed Eruption,Historical Observations,1,10/26/2008,,-39.42,-71.93
+351080,Galeras,11380,Confirmed Eruption,Historical Observations,3,10/21/2008,1/2/2010,1.22,-77.37
+300260,Klyuchevskoy,19484,Confirmed Eruption,Historical Observations,1,10/8/2008,4/16/2009,56.056,160.642
+233020,"Fournaise, Piton de la",14390,Confirmed Eruption,Historical Observations,1,9/21/2008,2/4/2009,-21.244,55.708
+256010,Tinakula,15210,Confirmed Eruption,Historical Observations,1,9/19/2008,11/29/2008,-10.386,165.804
+282090,Kirishimayama,17163,Confirmed Eruption,Historical Observations,1,8/22/2008,8/22/2008,31.934,130.862
+273030,Mayon,16818,Confirmed Eruption,Historical Observations,1,8/10/2008,8/10/2008,13.257,123.685
+283110,Asamayama,17811,Confirmed Eruption,Historical Observations,1,8/10/2008,8/14/2008,36.406,138.523
+311130,Kasatochi,19745,Confirmed Eruption,Historical Observations,4,8/7/2008,8/9/2008,52.177,-175.508
+344120,Concepcion,11077,Confirmed Eruption,Historical Observations,1,7/30/2008,7/30/2008,11.538,-85.622
+290360,Chikurachki,18860,Confirmed Eruption,Historical Observations,2,7/29/2008,8/8/2008,50.324,155.461
+352010,Reventador,11449,Confirmed Eruption,Historical Observations,2,7/27/2008,8/19/2021,-0.077,-77.656
+252070,Krummel-Garbuna-Welcker,15009,Confirmed Eruption,Historical Observations,2,7/13/2008,10/4/2008,-5.416,150.027
+311290,Okmok,19852,Confirmed Eruption,Historical Observations,4,7/12/2008,8/19/2008,53.43,-168.13
+300250,Bezymianny,19386,Confirmed Eruption,Historical Observations,3,7/11/2008,8/23/2008,55.972,160.595
+344040,Telica,10943,Confirmed Eruption,Historical Observations,1,7/5/2008,7/5/2008,12.606,-86.84
+241130,Rumble III,14676,Confirmed Eruption,Historical Observations,0,7/2/2008,,-35.745,178.478
+344020,San Cristobal,10894,Confirmed Eruption,Historical Observations,1,6/22/2008,8/5/2008,12.702,-87.004
+263340,Raung,16166,Confirmed Eruption,Historical Observations,2,6/12/2008,6/17/2008,-8.119,114.056
+266030,Soputan,16439,Confirmed Eruption,Historical Observations,3,6/6/2008,11/2/2008,1.112,124.737
+353060,"Azul, Cerro",11720,Confirmed Eruption,Historical Observations,1,5/29/2008,6/17/2008,-0.92,-91.408
+257040,Ambrym,15297,Confirmed Eruption,Historical Observations,2,5/23/2008,12/17/2018,-16.25,168.12
+260010,Barren Island,15387,Confirmed Eruption,Historical Observations,2,5/13/2008,4/19/2010,12.278,93.858
+211060,Etna,13852,Confirmed Eruption,Historical Observations,1,5/13/2008,7/4/2009,37.748,14.999
+284040,Miyakejima,18280,Confirmed Eruption,Historical Observations,1,5/8/2008,5/8/2008,34.094,139.526
+358041,Chaiten,12271,Confirmed Eruption,Historical Observations,4,5/2/2008,5/31/2011,-42.833,-72.646
+344100,Masaya,11042,Confirmed Eruption,Historical Observations,1,4/29/2008,12/17/2008,11.985,-86.165
+264160,Egon,16278,Confirmed Eruption,Historical Observations,2,4/15/2008,4/28/2008,-8.676,122.455
+268030,Ibu,16582,Confirmed Eruption,Historical Observations,1,4/5/2008,8/19/2021,1.488,127.63
+261170,Kerinci,15532,Confirmed Eruption,Historical Observations,1,3/24/2008,,-1.697,101.264
+252070,Krummel-Garbuna-Welcker,15008,Confirmed Eruption,Historical Observations,1,3/11/2008,3/13/2008,-5.416,150.027
+312070,Veniaminof,20178,Confirmed Eruption,Historical Observations,1,2/22/2008,3/1/2008,56.17,-159.38
+282110,Asosan,17351,Confirmed Eruption,Historical Observations,1,2/17/2008,2/17/2008,32.884,131.104
+242050,Monowai,14723,Confirmed Eruption,Hydrophonic,0,2/8/2008,2/8/2008,-25.887,-177.188
+345040,Poas,11191,Confirmed Eruption,Historical Observations,1,1/13/2008,1/13/2008,10.2,-84.233
+284040,Miyakejima,18279,Confirmed Eruption,Historical Observations,1,1/7/2008,1/7/2008,34.094,139.526
+351050,"Huila, Nevado del",11313,Confirmed Eruption,Historical Observations,2,1/2/2008,4/16/2008,2.93,-76.03
+357110,Llaima,12077,Confirmed Eruption,Historical Observations,3,1/1/2008,6/12/2009,-38.692,-71.729
+261160,Talang,15499,Confirmed Eruption,Historical Observations,2,11/27/2007,12/16/2007,-0.979,100.681
+284200,Anatahan,18538,Confirmed Eruption,Historical Observations,2,11/27/2007,8/9/2008,16.35,145.67
+344120,Concepcion,11076,Confirmed Eruption,Historical Observations,2,11/24/2007,12/20/2007,11.538,-85.622
+344020,San Cristobal,10893,Confirmed Eruption,Historical Observations,1,11/8/2007,,12.702,-87.004
+344040,Telica,10942,Confirmed Eruption,Historical Observations,1,10/28/2007,2/18/2008,12.606,-86.84
+262000,Krakatau,15626,Confirmed Eruption,Historical Observations,2,10/23/2007,8/30/2008,-6.102,105.423
+263280,Kelut,15958,Confirmed Eruption,Historical Observations,2,10/16/2007,4/16/2008,-7.93,112.308
+351080,Galeras,11379,Confirmed Eruption,Historical Observations,3,10/4/2007,1/17/2008,1.22,-77.37
+221010,"Tair, Jebel at",13923,Confirmed Eruption,Historical Observations,3,9/30/2007,6/16/2008,15.55,41.83
+241100,Ruapehu,14669,Confirmed Eruption,Historical Observations,1,9/25/2007,9/25/2007,-39.28,175.57
+261170,Kerinci,15531,Confirmed Eruption,Historical Observations,1,9/9/2007,9/9/2007,-1.697,101.264
+252080,Witori,15029,Confirmed Eruption,Historical Observations,1,8/28/2007,8/28/2007,-5.576,150.516
+290360,Chikurachki,18859,Confirmed Eruption,Historical Observations,2,8/19/2007,11/1/2007,50.324,155.461
+312030,Pavlof,20153,Confirmed Eruption,Historical Observations,2,8/15/2007,9/13/2007,55.417,-161.894
+221115,Manda Hararo,13943,Confirmed Eruption,Historical Observations,2,8/12/2007,8/14/2007,12.17,40.82
+263340,Raung,16165,Confirmed Eruption,Historical Observations,2,7/26/2007,8/26/2007,-8.119,114.056
+268040,Gamkonora,16595,Confirmed Eruption,Historical Observations,2,7/8/2007,7/16/2007,1.38,127.53
+311240,Cleveland,19825,Confirmed Eruption,Historical Observations,2,6/17/2007,8/12/2008,52.825,-169.944
+266030,Soputan,16438,Confirmed Eruption,Historical Observations,3,6/16/2007,11/9/2007,1.112,124.737
+222120,"Lengai, Ol Doinyo",13828,Confirmed Eruption,Historical Observations,3,6/16/2007,10/9/2010,-2.764,35.914
+357110,Llaima,12076,Confirmed Eruption,Historical Observations,2,5/26/2007,8/8/2007,-38.692,-71.729
+251070,Ritter Island,14977,Confirmed Eruption,Historical Observations,1,5/19/2007,5/21/2007,-5.519,148.115
+300250,Bezymianny,19385,Confirmed Eruption,Historical Observations,3,5/10/2007,12/24/2007,55.972,160.595
+252120,Ulawun,15075,Confirmed Eruption,Historical Observations,2,5/1/2007,5/1/2007,-5.05,151.33
+257050,Lopevi,15322,Confirmed Eruption,Historical Observations,2,4/21/2007,5/14/2007,-16.507,168.346
+255060,Kavachi,15180,Confirmed Eruption,Historical Observations,1,4/2/2007,4/6/2007,-8.991,157.979
+283040,Ontakesan,20962,Confirmed Eruption,Historical Observations,0,3/24/2007,,35.893,137.48
+211060,Etna,13849,Confirmed Eruption,Historical Observations,2,3/19/2007,5/16/2008,37.748,14.999
+261160,Talang,15498,Confirmed Eruption,Historical Observations,2,3/19/2007,6/22/2007,-0.979,100.681
+352010,Reventador,11448,Confirmed Eruption,Historical Observations,2,3/15/2007,10/11/2007,-0.077,-77.656
+290360,Chikurachki,18858,Confirmed Eruption,Historical Observations,2,3/4/2007,4/18/2007,50.324,155.461
+351050,"Huila, Nevado del",11312,Confirmed Eruption,Historical Observations,3,2/19/2007,5/28/2007,2.93,-76.03
+300260,Klyuchevskoy,19483,Confirmed Eruption,Historical Observations,2,2/15/2007,7/15/2007,56.056,160.642
+344120,Concepcion,11075,Confirmed Eruption,Historical Observations,1,2/9/2007,7/10/2007,11.538,-85.622
+264260,"Tara, Batu",16353,Confirmed Eruption,Historical Observations,2,1/17/2007,11/26/2015,-7.791,123.585
+233010,Karthala,14208,Confirmed Eruption,Historical Observations,2,1/12/2007,1/15/2007,-11.75,43.38
+266030,Soputan,16434,Confirmed Eruption,Historical Observations,1,12/14/2006,12/26/2006,1.112,124.737
+242050,Monowai,14722,Confirmed Eruption,Hydrophonic,0,12/12/2006,11/4/2007,-25.887,-177.188
+344040,Telica,10940,Confirmed Eruption,Historical Observations,1,12/11/2006,2/17/2007,12.606,-86.84
+284170,Pagan,18522,Confirmed Eruption,Historical Observations,1,12/4/2006,12/8/2006,18.13,145.8
+223020,Nyamulagira,14084,Confirmed Eruption,Historical Observations,2,11/27/2006,12/5/2006,-1.408,29.2
+311161,Korovin,19768,Confirmed Eruption,Historical Observations,1,11/25/2006,3/3/2007,52.381,-174.166
+257040,Ambrym,15296,Confirmed Eruption,Historical Observations,2,11/8/2006,12/27/2007,-16.25,168.12
+251070,Ritter Island,14976,Confirmed Eruption,Historical Observations,1,10/17/2006,10/17/2006,-5.519,148.115
+273010,Bulusan,16771,Confirmed Eruption,Historical Observations,2,10/10/2006,10/4/2007,12.769,124.056
+241100,Ruapehu,14668,Confirmed Eruption,Historical Observations,1,10/4/2006,10/4/2006,-39.28,175.57
+261230,Dempo,15574,Confirmed Eruption,Historical Observations,1,9/25/2006,9/25/2006,-4.016,103.121
+345040,Poas,11190,Confirmed Eruption,Historical Observations,1,9/25/2006,12/16/2006,10.2,-84.233
+312260,Fourpeaked,20250,Confirmed Eruption,Historical Observations,2,9/17/2006,9/17/2006,58.77,-153.672
+261160,Talang,15497,Confirmed Eruption,Historical Observations,1,9/10/2006,9/10/2006,-0.979,100.681
+344120,Concepcion,11074,Confirmed Eruption,Historical Observations,2,9/1/2006,9/21/2006,11.538,-85.622
+284040,Miyakejima,18278,Confirmed Eruption,Historical Observations,1,8/23/2006,8/23/2006,34.094,139.526
+252140,Rabaul,15100,Confirmed Eruption,Historical Observations,4,8/11/2006,1/31/2010,-4.271,152.203
+252010,Langila,15002,Confirmed Eruption,Historical Observations,2,8/9/2006,7/6/2008,-5.525,148.42
+243080,Home Reef,14771,Confirmed Eruption,Historical Observations,2,8/7/2006,8/16/2006,-18.992,-174.775
+344040,Telica,10939,Confirmed Eruption,Historical Observations,1,8/4/2006,8/6/2006,12.606,-86.84
+344100,Masaya,11041,Confirmed Eruption,Historical Observations,1,8/4/2006,10/25/2006,11.985,-86.165
+233020,"Fournaise, Piton de la",14389,Confirmed Eruption,Historical Observations,1,7/20/2006,5/1/2007,-21.244,55.708
+211060,Etna,13848,Confirmed Eruption,Historical Observations,2,7/14/2006,12/15/2006,37.748,14.999
+273030,Mayon,16817,Confirmed Eruption,Historical Observations,1,7/13/2006,10/1/2006,13.257,123.685
+267020,Karangetang,16541,Confirmed Eruption,Historical Observations,1,7/3/2006,10/16/2007,2.781,125.407
+272020,Kanlaon,16638,Confirmed Eruption,Historical Observations,2,6/3/2006,7/25/2006,10.412,123.132
+233010,Karthala,14207,Confirmed Eruption,Historical Observations,0,5/28/2006,6/3/2006,-11.75,43.38
+355100,Lascar,11878,Confirmed Eruption,Historical Observations,3,4/18/2006,7/18/2007,-23.37,-67.73
+300250,Bezymianny,19384,Confirmed Eruption,Historical Observations,3,4/16/2006,12/29/2006,55.972,160.595
+354020,Ubinas,11791,Confirmed Eruption,Historical Observations,2,3/25/2006,7/4/2009,-16.355,-70.903
+345040,Poas,11189,Confirmed Eruption,Historical Observations,1,3/24/2006,3/24/2006,10.2,-84.233
+285070,Akan,18704,Confirmed Eruption,Historical Observations,1,3/21/2006,3/21/2006,43.384,144.013
+273010,Bulusan,16770,Confirmed Eruption,Historical Observations,2,3/21/2006,6/28/2006,12.769,124.056
+284200,Anatahan,18537,Confirmed Eruption,Historical Observations,2,3/20/2006,6/26/2006,16.35,145.67
+242030,Raoul Island,14702,Confirmed Eruption,Historical Observations,1,3/17/2006,3/17/2006,-29.27,-177.92
+263250,Merapi,15923,Confirmed Eruption,Historical Observations,1,3/16/2006,8/9/2007,-7.54,110.446
+234010,Heard,14412,Confirmed Eruption,Historical Observations,0,3/11/2006,3/3/2008,-53.106,73.513
+342110,Pacaya,22213,Confirmed Eruption,Historical Observations,3,3/9/2006,10/26/2010,14.382,-90.601
+312070,Veniaminof,20177,Confirmed Eruption,Historical Observations,1,3/3/2006,9/7/2006,56.17,-159.38
+252120,Ulawun,15074,Confirmed Eruption,Historical Observations,2,3/1/2006,1/18/2007,-5.05,151.33
+273030,Mayon,16816,Confirmed Eruption,Historical Observations,1,2/21/2006,2/23/2006,13.257,123.685
+284040,Miyakejima,18277,Confirmed Eruption,Historical Observations,1,2/17/2006,2/17/2006,34.094,139.526
+256010,Tinakula,15209,Confirmed Eruption,Historical Observations,2,2/11/2006,11/9/2007,-10.386,165.804
+311240,Cleveland,19818,Confirmed Eruption,Historical Observations,3,2/6/2006,10/28/2006,52.825,-169.944
+266030,Soputan,16433,Confirmed Eruption,Historical Observations,1,12/26/2005,1/24/2006,1.112,124.737
+266020,Ambang,20947,Confirmed Eruption,Historical Observations,1,12/22/2005,,0.75,124.42
+211060,Etna,13847,Confirmed Eruption,Historical Observations,1,12/16/2005,12/22/2005,37.748,14.999
+313010,Augustine,20273,Confirmed Eruption,Historical Observations,3,12/9/2005,4/27/2006,59.363,-153.43
+300250,Bezymianny,19383,Confirmed Eruption,Historical Observations,2,11/29/2005,12/1/2005,55.972,160.595
+257030,Ambae,15237,Confirmed Eruption,Historical Observations,2,11/27/2005,2/16/2006,-15.389,167.835
+233010,Karthala,14206,Confirmed Eruption,Historical Observations,3,11/24/2005,12/8/2005,-11.75,43.38
+351080,Galeras,11378,Confirmed Eruption,Historical Observations,2,11/24/2005,7/12/2006,1.22,-77.37
+344020,San Cristobal,10892,Confirmed Eruption,Historical Observations,2,11/13/2005,5/27/2006,12.702,-87.004
+257050,Lopevi,15321,Confirmed Eruption,Historical Observations,2,10/27/2005,8/1/2006,-16.507,168.346
+353050,"Negra, Sierra",11713,Confirmed Eruption,Historical Observations,3,10/22/2005,10/30/2005,-0.83,-91.17
+252070,Krummel-Garbuna-Welcker,15007,Confirmed Eruption,Historical Observations,2,10/16/2005,11/17/2005,-5.416,150.027
+233020,"Fournaise, Piton de la",14388,Confirmed Eruption,Historical Observations,0,10/4/2005,1/18/2006,-21.244,55.708
+221113,Dabbahu,13942,Confirmed Eruption,Historical Observations,3,9/26/2005,9/29/2005,12.595,40.48
+312070,Veniaminof,20176,Confirmed Eruption,Historical Observations,1,9/7/2005,11/4/2005,56.17,-159.38
+273030,Mayon,16815,Confirmed Eruption,Historical Observations,0,8/17/2005,,13.257,123.685
+334050,Northern EPR at 9.8°N,10346,Confirmed Eruption,Historical Observations,0,8/16/2005,1/16/2006,9.83,-104.3
+344120,Concepcion,11073,Confirmed Eruption,Historical Observations,2,7/28/2005,11/10/2005,11.538,-85.622
+234011,McDonald Islands,14399,Confirmed Eruption,Historical Observations,0,7/12/2005,,-53.03,72.6
+284130,Fukutoku-Oka-no-Ba,18467,Confirmed Eruption,Historical Observations,1,7/2/2005,7/21/2005,24.285,141.481
+343020,Santa Ana,10768,Confirmed Eruption,Historical Observations,3,6/16/2005,10/1/2005,13.853,-89.63
+260010,Barren Island,15386,Confirmed Eruption,Historical Observations,2,5/26/2005,12/23/2007,12.278,93.858
+353010,Fernandina,11676,Confirmed Eruption,Historical Observations,2,5/13/2005,5/29/2005,-0.37,-91.55
+355100,Lascar,11877,Confirmed Eruption,Historical Observations,3,5/4/2005,5/4/2005,-23.37,-67.73
+252010,Langila,15001,Confirmed Eruption,Historical Observations,2,4/19/2005,3/31/2006,-5.525,148.42
+266030,Soputan,16437,Confirmed Eruption,Historical Observations,2,4/19/2005,7/18/2005,1.112,124.737
+233010,Karthala,14205,Confirmed Eruption,Historical Observations,2,4/16/2005,4/18/2005,-11.75,43.38
+360050,Soufriere Hills,12348,Confirmed Eruption,Historical Observations,3,4/15/2005,2/5/2013,16.72,-62.18
+282110,Asosan,17350,Confirmed Eruption,Historical Observations,1,4/14/2005,8/16/2005,32.884,131.104
+284040,Miyakejima,18276,Confirmed Eruption,Historical Observations,1,4/12/2005,5/18/2005,34.094,139.526
+261160,Talang,15496,Confirmed Eruption,Historical Observations,2,4/12/2005,7/18/2005,-0.979,100.681
+252120,Ulawun,15073,Confirmed Eruption,Historical Observations,2,3/27/2005,8/9/2005,-5.05,151.33
+311240,Cleveland,19817,Confirmed Eruption,Historical Observations,2,3/13/2005,11/27/2005,52.825,-169.944
+290360,Chikurachki,18857,Confirmed Eruption,Historical Observations,1,3/12/2005,4/7/2005,50.324,155.461
+344100,Masaya,11040,Confirmed Eruption,Historical Observations,1,3/4/2005,3/30/2005,11.985,-86.165
+242050,Monowai,14721,Confirmed Eruption,Hydrophonic,0,3/2/2005,6/27/2006,-25.887,-177.188
+311161,Korovin,19767,Confirmed Eruption,Historical Observations,1,2/23/2005,5/5/2005,52.381,-174.166
+233020,"Fournaise, Piton de la",14386,Confirmed Eruption,Historical Observations,0,2/17/2005,2/26/2005,-21.244,55.708
+264160,Egon,16277,Confirmed Eruption,Historical Observations,1,2/6/2005,2/27/2005,-8.676,122.455
+257050,Lopevi,15320,Confirmed Eruption,Historical Observations,2,1/30/2005,3/31/2005,-16.507,168.346
+290380,Ebeko,18877,Confirmed Eruption,Historical Observations,2,1/29/2005,2/16/2005,50.686,156.014
+252140,Rabaul,15099,Confirmed Eruption,Historical Observations,2,1/25/2005,2/17/2006,-4.271,152.203
+272020,Kanlaon,16749,Confirmed Eruption,Historical Observations,2,1/25/2005,5/25/2005,10.412,123.132
+300260,Klyuchevskoy,19482,Confirmed Eruption,Historical Observations,2,1/20/2005,4/7/2005,56.056,160.642
+341090,Popocatepetl,10556,Confirmed Eruption,Historical Observations,2,1/9/2005,8/19/2021,19.023,-98.622
+312070,Veniaminof,20175,Confirmed Eruption,Historical Observations,2,1/4/2005,2/14/2005,56.17,-159.38
+344020,San Cristobal,10891,Confirmed Eruption,Historical Observations,1,12/3/2004,12/7/2004,12.702,-87.004
+284040,Miyakejima,18275,Confirmed Eruption,Historical Observations,1,11/30/2004,12/9/2004,34.094,139.526
+252010,Langila,15000,Confirmed Eruption,Historical Observations,2,11/24/2004,12/25/2004,-5.525,148.42
+352010,Reventador,11447,Confirmed Eruption,Historical Observations,2,11/7/2004,3/16/2006,-0.077,-77.656
+344040,Telica,10938,Confirmed Eruption,Historical Observations,1,11/5/2004,1/29/2005,12.606,-86.84
+373010,Grimsvotn,12842,Confirmed Eruption,Historical Observations,3,11/1/2004,11/4/2004,64.416,-17.316
+251020,Manam,14934,Confirmed Eruption,Historical Observations,4,10/24/2004,12/12/2009,-4.08,145.037
+282030,Suwanosejima,16947,Confirmed Eruption,Historical Observations,2,10/23/2004,8/19/2021,29.638,129.714
+266030,Soputan,16436,Confirmed Eruption,Historical Observations,3,10/18/2004,12/27/2004,1.112,124.737
+264030,Rinjani,16226,Confirmed Eruption,Historical Observations,2,10/1/2004,10/5/2004,-8.42,116.47
+321050,St. Helens,20560,Confirmed Eruption,Historical Observations,2,10/1/2004,1/27/2008,46.2,-122.18
+257050,Lopevi,15319,Confirmed Eruption,Historical Observations,2,9/16/2004,9/16/2004,-16.507,168.346
+300260,Klyuchevskoy,19481,Confirmed Eruption,Historical Observations,1,9/15/2004,9/15/2004,56.056,160.642
+211060,Etna,13846,Confirmed Eruption,Historical Observations,1,9/7/2004,3/8/2005,37.748,14.999
+283110,Asamayama,17810,Confirmed Eruption,Historical Observations,2,9/1/2004,12/9/2004,36.406,138.523
+261140,Marapi,15479,Confirmed Eruption,Historical Observations,2,8/5/2004,8/5/2004,-0.38,100.474
+357120,Villarrica,12181,Confirmed Eruption,Historical Observations,1,8/5/2004,12/24/2007,-39.42,-71.93
+386011,Nightingale Island,13145,Confirmed Eruption,Historical Observations,0,7/29/2004,7/30/2004,-37.42,-12.48
+290260,Chirinkotan,18830,Confirmed Eruption,Historical Observations,2,7/20/2004,7/20/2004,48.98,153.48
+342110,Pacaya,19887,Confirmed Eruption,Historical Observations,3,7/19/2004,9/11/2005,14.382,-90.601
+351080,Galeras,11377,Confirmed Eruption,Historical Observations,3,7/16/2004,2/7/2005,1.22,-77.37
+311161,Korovin,19766,Confirmed Eruption,Historical Observations,1,7/4/2004,,52.381,-174.166
+264160,Egon,16276,Confirmed Eruption,Historical Observations,2,7/3/2004,9/16/2004,-8.676,122.455
+234070,Marion Island,14414,Confirmed Eruption,Historical Observations,1,6/24/2004,6/24/2004,-46.9,37.75
+261170,Kerinci,15529,Confirmed Eruption,Historical Observations,2,6/22/2004,10/24/2004,-1.697,101.264
+263310,Tengger Caldera,16063,Confirmed Eruption,Historical Observations,2,6/8/2004,6/24/2004,-7.942,112.95
+273030,Mayon,16814,Confirmed Eruption,Historical Observations,1,6/3/2004,9/12/2004,13.257,123.685
+267040,Awu,16570,Confirmed Eruption,Historical Observations,2,6/2/2004,8/16/2004,3.689,125.447
+341090,Popocatepetl,10552,Confirmed Eruption,Historical Observations,2,5/26/2004,5/26/2004,19.023,-98.622
+268030,Ibu,16581,Confirmed Eruption,Historical Observations,0,5/16/2004,2/22/2005,1.488,127.63
+223020,Nyamulagira,14083,Confirmed Eruption,Historical Observations,2,5/8/2004,5/28/2004,-1.408,29.2
+233020,"Fournaise, Piton de la",14385,Confirmed Eruption,Historical Observations,0,5/2/2004,10/16/2004,-21.244,55.708
+252120,Ulawun,15072,Confirmed Eruption,Historical Observations,2,4/12/2004,4/14/2004,-5.05,151.33
+284200,Anatahan,18536,Confirmed Eruption,Historical Observations,3,4/12/2004,9/3/2005,16.35,145.67
+267020,Karangetang,16540,Confirmed Eruption,Historical Observations,2,4/2/2004,8/5/2005,2.781,125.407
+344040,Telica,10937,Confirmed Eruption,Historical Observations,1,3/31/2004,3/31/2004,12.606,-86.84
+243060,Tofua,14752,Confirmed Eruption,Historical Observations,1,3/19/2004,10/18/2014,-19.75,-175.07
+255060,Kavachi,15179,Confirmed Eruption,Historical Observations,1,3/15/2004,,-8.991,157.979
+282060,Kikai,17003,Confirmed Eruption,Historical Observations,2,3/5/2004,10/16/2004,30.793,130.305
+360050,Soufriere Hills,12347,Confirmed Eruption,Historical Observations,3,3/3/2004,5/2/2004,16.72,-62.18
+285050,Tokachidake,18661,Confirmed Eruption,Historical Observations,1,2/25/2004,4/19/2004,43.418,142.686
+311360,Shishaldin,20100,Confirmed Eruption,Historical Observations,2,2/17/2004,7/16/2004,54.756,-163.97
+312070,Veniaminof,20174,Confirmed Eruption,Historical Observations,2,2/16/2004,9/5/2004,56.17,-159.38
+257060,Epi,15332,Confirmed Eruption,Historical Observations,2,2/16/2004,2/24/2004,-16.68,168.37
+211060,Etna,13838,Confirmed Eruption,Historical Observations,1,2/12/2004,2/14/2004,37.748,14.999
+264160,Egon,16275,Confirmed Eruption,Historical Observations,1,1/29/2004,2/5/2004,-8.676,122.455
+252010,Langila,14999,Confirmed Eruption,Historical Observations,2,1/20/2004,1/27/2004,-5.525,148.42
+300250,Bezymianny,19382,Confirmed Eruption,Historical Observations,3,1/14/2004,2/16/2005,55.972,160.595
+282110,Asosan,17349,Confirmed Eruption,Historical Observations,1,1/14/2004,1/14/2004,32.884,131.104
+251020,Manam,14933,Confirmed Eruption,Historical Observations,1,10/26/2003,3/28/2004,-4.08,145.037
+344100,Masaya,11038,Confirmed Eruption,Historical Observations,1,9/22/2003,12/12/2003,11.985,-86.165
+266100,Lokon-Empung,16463,Confirmed Eruption,Historical Observations,3,9/12/2003,9/12/2003,1.358,124.792
+357070,"Chillan, Nevados de",11992,Confirmed Eruption,Historical Observations,1,8/29/2003,9/15/2003,-36.868,-71.378
+268060,Gamalama,16675,Confirmed Eruption,Historical Observations,2,7/31/2003,10/2/2003,0.8,127.33
+354006,Sabancaya,11752,Confirmed Eruption,Historical Observations,2,7/30/2003,7/31/2003,-15.787,-71.857
+300250,Bezymianny,19381,Confirmed Eruption,Historical Observations,3,7/26/2003,8/1/2003,55.972,160.595
+263200,Dieng Volcanic Complex,15791,Confirmed Eruption,Historical Observations,1,7/16/2003,7/16/2003,-7.2,109.879
+282110,Asosan,17348,Confirmed Eruption,Historical Observations,1,7/10/2003,7/14/2003,32.884,131.104
+284211,NW Rota-1,18539,Confirmed Eruption,Historical Observations,0,7/2/2003,3/16/2010,14.601,144.775
+264200,Leroboleng,16308,Confirmed Eruption,Historical Observations,3,6/26/2003,7/29/2003,-8.365,122.833
+344020,San Cristobal,10890,Confirmed Eruption,Historical Observations,1,6/17/2003,6/13/2004,12.702,-87.004
+234010,Heard,14410,Confirmed Eruption,Historical Observations,0,6/9/2003,6/14/2004,-53.106,73.513
+257050,Lopevi,15318,Confirmed Eruption,Historical Observations,3,6/8/2003,6/16/2003,-16.507,168.346
+334040,Northern EPR at 10.7°N,10326,Confirmed Eruption,Historical Observations,0,5/31/2003,10/15/2003,10.73,-103.58
+233020,"Fournaise, Piton de la",14384,Confirmed Eruption,Historical Observations,1,5/30/2003,1/10/2004,-21.244,55.708
+264180,Lewotobi,16304,Confirmed Eruption,Historical Observations,2,5/30/2003,9/1/2003,-8.542,122.775
+357120,Villarrica,12180,Confirmed Eruption,Historical Observations,1,5/23/2003,3/25/2004,-39.42,-71.93
+251020,Manam,14932,Confirmed Eruption,Historical Observations,1,5/17/2003,5/23/2003,-4.08,145.037
+284200,Anatahan,18535,Confirmed Eruption,Historical Observations,3,5/10/2003,7/12/2003,16.35,145.67
+290360,Chikurachki,18856,Confirmed Eruption,Historical Observations,2,4/17/2003,7/3/2003,50.324,155.461
+244000,Vailulu'u,14803,Confirmed Eruption,Historical Observations,0,4/16/2003,,-14.215,-169.058
+252120,Ulawun,15071,Confirmed Eruption,Historical Observations,2,4/14/2003,10/10/2003,-5.05,151.33
+242050,Monowai,14720,Confirmed Eruption,Hydrophonic,0,4/10/2003,9/16/2004,-25.887,-177.188
+357110,Llaima,12075,Confirmed Eruption,Historical Observations,2,4/9/2003,4/16/2003,-38.692,-71.729
+273030,Mayon,16812,Confirmed Eruption,Historical Observations,2,3/17/2003,5/14/2003,13.257,123.685
+211060,Etna,13837,Confirmed Eruption,Historical Observations,1,3/8/2003,11/9/2003,37.748,14.999
+272020,Kanlaon,16748,Confirmed Eruption,Historical Observations,1,3/7/2003,7/23/2003,10.412,123.132
+282060,Kikai,17002,Confirmed Eruption,Historical Observations,2,2/16/2003,10/16/2003,30.793,130.305
+283110,Asamayama,17809,Confirmed Eruption,Historical Observations,1,2/6/2003,4/18/2003,36.406,138.523
+300250,Bezymianny,19380,Confirmed Eruption,Historical Observations,2,12/25/2002,12/28/2002,55.972,160.595
+266100,Lokon-Empung,16462,Confirmed Eruption,Historical Observations,2,12/23/2002,4/1/2003,1.358,124.792
+272020,Kanlaon,16747,Confirmed Eruption,Historical Observations,1,11/28/2002,11/28/2002,10.412,123.132
+300260,Klyuchevskoy,19480,Confirmed Eruption,Historical Observations,2,11/24/2002,4/8/2004,56.056,160.642
+233020,"Fournaise, Piton de la",14383,Confirmed Eruption,Historical Observations,2,11/16/2002,12/3/2002,-21.244,55.708
+263100,Papandayan,15688,Confirmed Eruption,Historical Observations,2,11/11/2002,12/19/2002,-7.32,107.73
+352010,Reventador,11446,Confirmed Eruption,Historical Observations,4,11/3/2002,1/10/2003,-0.077,-77.656
+242050,Monowai,14719,Confirmed Eruption,Hydrophonic,0,11/1/2002,11/24/2002,-25.887,-177.188
+251020,Manam,14931,Confirmed Eruption,Historical Observations,2,10/31/2002,,-4.08,145.037
+211060,Etna,13836,Confirmed Eruption,Historical Observations,3,10/26/2002,1/28/2003,37.748,14.999
+355100,Lascar,11875,Confirmed Eruption,Historical Observations,2,10/26/2002,10/27/2002,-23.37,-67.73
+344040,Telica,10936,Confirmed Eruption,Historical Observations,0,10/17/2002,,12.606,-86.84
+357110,Llaima,12074,Confirmed Eruption,Historical Observations,1,10/13/2002,,-38.692,-71.729
+264180,Lewotobi,16300,Confirmed Eruption,Historical Observations,1,10/12/2002,10/12/2002,-8.542,122.775
+273030,Mayon,16811,Confirmed Eruption,Historical Observations,1,10/11/2002,10/11/2002,13.257,123.685
+352020,Guagua Pichincha,11499,Confirmed Eruption,Historical Observations,1,10/11/2002,12/7/2002,-0.171,-78.598
+252140,Rabaul,15098,Confirmed Eruption,Historical Observations,2,10/6/2002,2/17/2004,-4.271,152.203
+267010,Ruang,16493,Confirmed Eruption,Historical Observations,4,9/25/2002,9/29/2002,2.3,125.37
+312070,Veniaminof,20173,Confirmed Eruption,Historical Observations,1,9/24/2002,3/23/2003,56.17,-159.38
+252120,Ulawun,15066,Confirmed Eruption,Historical Observations,2,8/22/2002,11/3/2002,-5.05,151.33
+284090,Izu-Torishima,18372,Confirmed Eruption,Historical Observations,2,8/12/2002,8/20/2002,30.484,140.303
+252080,Witori,15027,Confirmed Eruption,Historical Observations,3,8/3/2002,3/26/2003,-5.576,150.516
+223020,Nyamulagira,14082,Confirmed Eruption,Historical Observations,2,7/25/2002,9/16/2002,-1.408,29.2
+311161,Korovin,19765,Confirmed Eruption,Historical Observations,1,7/16/2002,,52.381,-174.166
+263340,Raung,16162,Confirmed Eruption,Historical Observations,2,6/16/2002,8/25/2002,-8.119,114.056
+351080,Galeras,11376,Confirmed Eruption,Historical Observations,1,6/7/2002,6/7/2002,1.22,-77.37
+342110,Pacaya,19886,Confirmed Eruption,Historical Observations,1,5/30/2002,6/17/2002,14.382,-90.601
+344020,San Cristobal,10889,Confirmed Eruption,Historical Observations,1,5/29/2002,12/16/2002,12.702,-87.004
+252010,Langila,14998,Confirmed Eruption,Historical Observations,2,5/25/2002,4/9/2003,-5.525,148.42
+242050,Monowai,14718,Confirmed Eruption,Hydrophonic,0,5/24/2002,5/24/2002,-25.887,-177.188
+223030,Nyiragongo,14107,Confirmed Eruption,Historical Observations,2,5/17/2002,8/19/2021,-1.52,29.25
+282060,Kikai,17001,Confirmed Eruption,Historical Observations,2,5/11/2002,7/16/2002,30.793,130.305
+352020,Guagua Pichincha,11498,Confirmed Eruption,Historical Observations,1,4/16/2002,4/16/2002,-0.171,-78.598
+300260,Klyuchevskoy,19479,Confirmed Eruption,Historical Observations,2,4/9/2002,6/9/2002,56.056,160.642
+257060,Epi,15331,Confirmed Eruption,Historical Observations,1,3/16/2002,3/16/2002,-16.68,168.37
+266100,Lokon-Empung,16461,Confirmed Eruption,Historical Observations,2,2/9/2002,5/16/2002,1.358,124.792
+290360,Chikurachki,18855,Confirmed Eruption,Historical Observations,2,1/25/2002,4/22/2002,50.324,155.461
+223030,Nyiragongo,14106,Confirmed Eruption,Historical Observations,1,1/17/2002,2/3/2002,-1.52,29.25
+343100,San Miguel,10866,Confirmed Eruption,Historical Observations,1,1/16/2002,1/16/2002,13.434,-88.269
+251020,Manam,14930,Confirmed Eruption,Historical Observations,3,1/13/2002,5/21/2002,-4.08,145.037
+233020,"Fournaise, Piton de la",14382,Confirmed Eruption,Historical Observations,1,1/5/2002,1/16/2002,-21.244,55.708
+342090,Fuego,10733,Confirmed Eruption,Historical Observations,3,1/4/2002,8/19/2021,14.473,-90.88
+211060,Etna,13835,Confirmed Eruption,Historical Observations,1,12/16/2001,10/30/2002,37.748,14.999
+300250,Bezymianny,19379,Confirmed Eruption,Historical Observations,2,12/10/2001,1/6/2002,55.972,160.595
+360160,Kick 'em Jenny,12468,Confirmed Eruption,Hydrophonic,0,12/4/2001,12/6/2001,12.3,-61.64
+352020,Guagua Pichincha,11497,Confirmed Eruption,Historical Observations,1,11/26/2001,11/26/2001,-0.171,-78.598
+385052,Walvis Ridge at 33°S,13144,Confirmed Eruption,Historical Observations,0,11/24/2001,3/16/2002,-32.958,-5.22
+300130,Karymsky,19187,Confirmed Eruption,Historical Observations,3,11/15/2001,4/1/2016,54.049,159.443
+342110,Pacaya,19880,Confirmed Eruption,Historical Observations,1,10/31/2001,10/31/2001,14.382,-90.601
+300100,Avachinsky,19104,Confirmed Eruption,Historical Observations,1,10/5/2001,10/5/2001,53.256,158.836
+390081,Montagu Island,13205,Confirmed Eruption,Historical Observations,1,10/1/2001,9/20/2007,-58.445,-26.374
+243091,Unnamed,14772,Confirmed Eruption,Historical Observations,2,9/27/2001,9/28/2001,-18.325,-174.365
+261160,Talang,15494,Confirmed Eruption,Historical Observations,1,9/25/2001,11/15/2001,-0.979,100.681
+284120,Ioto,18421,Confirmed Eruption,Historical Observations,1,9/21/2001,10/23/2001,24.751,141.289
+252120,Ulawun,15065,Confirmed Eruption,Historical Observations,2,8/28/2001,8/28/2001,-5.05,151.33
+300250,Bezymianny,19378,Confirmed Eruption,Historical Observations,3,7/23/2001,8/10/2001,55.972,160.595
+262000,Krakatau,15625,Confirmed Eruption,Historical Observations,1,7/21/2001,9/17/2001,-6.102,105.423
+211060,Etna,13832,Confirmed Eruption,Historical Observations,2,7/17/2001,8/9/2001,37.748,14.999
+251020,Manam,14929,Confirmed Eruption,Historical Observations,2,6/14/2001,6/25/2001,-4.08,145.037
+233020,"Fournaise, Piton de la",14381,Confirmed Eruption,Historical Observations,1,6/11/2001,7/7/2001,-21.244,55.708
+257050,Lopevi,15317,Confirmed Eruption,Historical Observations,3,6/8/2001,6/19/2001,-16.507,168.346
+268030,Ibu,16580,Confirmed Eruption,Historical Observations,0,5/28/2001,10/3/2001,1.488,127.63
+261170,Kerinci,15528,Confirmed Eruption,Historical Observations,2,5/12/2001,8/27/2002,-1.697,101.264
+344020,San Cristobal,10888,Confirmed Eruption,Historical Observations,1,5/11/2001,12/9/2001,12.702,-87.004
+234011,McDonald Islands,14397,Confirmed Eruption,Historical Observations,1,5/3/2001,,-53.03,72.6
+284141,Ahyi,18474,Confirmed Eruption,Hydrophonic,0,4/24/2001,4/25/2001,20.42,145.03
+344100,Masaya,11037,Confirmed Eruption,Historical Observations,1,4/23/2001,4/25/2001,11.985,-86.165
+261140,Marapi,15478,Confirmed Eruption,Historical Observations,2,4/13/2001,6/5/2001,-0.38,100.474
+233020,"Fournaise, Piton de la",14380,Confirmed Eruption,Historical Observations,1,3/27/2001,4/4/2001,-21.244,55.708
+241040,Whakaari/White Island,14495,Confirmed Eruption,Historical Observations,2,2/19/2001,2/19/2001,-37.52,177.18
+223020,Nyamulagira,14081,Confirmed Eruption,Historical Observations,2,2/6/2001,4/5/2001,-1.408,29.2
+311240,Cleveland,19816,Confirmed Eruption,Historical Observations,3,2/2/2001,4/15/2001,52.825,-169.944
+344040,Telica,10935,Confirmed Eruption,Historical Observations,1,1/17/2001,12/19/2001,12.606,-86.84
+252120,Ulawun,15064,Confirmed Eruption,Historical Observations,3,1/16/2001,5/3/2001,-5.05,151.33
+264090,Inielika,16258,Confirmed Eruption,Historical Observations,2,1/11/2001,3/16/2001,-8.73,120.98
+284040,Miyakejima,18274,Confirmed Eruption,Historical Observations,2,1/11/2001,11/24/2002,34.094,139.526
+273030,Mayon,16810,Confirmed Eruption,Historical Observations,3,1/8/2001,8/8/2001,13.257,123.685

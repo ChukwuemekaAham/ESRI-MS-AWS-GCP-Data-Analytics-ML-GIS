@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, September 27, 2023 4:48:28 PM</msg><msg code="0" type="0">json:
+{"element": "h5", "data": "Initial Data Assessment"}</msg><msg code="0" type="0">Making sure there are enough weighted features for analysis....</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 3105 valid input features."]}</msg><msg code="0" type="0">Evaluating the Analysis Field values....</msg><msg code="0" type="0">json:
+[{"element": "table", "data": [["Min", "0.0000"], ["Max", "0.4692"], ["Mean", "0.1232"], ["Std. Dev.", "0.0664"]], "elementProps": {"striped": "true", "className": "small", "noHeader": true, "title": "SNAPRATE_1 Properties:", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]</msg><msg code="0" type="0">Looking for locational outliers....</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There were 64 outlier locations; these will not be used to compute the optimal fixed distance band."]}</msg><msg code="0" type="0">json:
+{"element": "h5", "data": "Scale of Analysis"}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["The Neighborhood Distance used was 75 Kilometers."]}</msg><msg code="0" type="0">json:
+{"element": "h5", "data": "Optimized Outlier Analysis"}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Creating the random reference distribution with 499 permutations...."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Finding statistically significant outliers of high and low SNAPRATE_1 values...."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 1007 output features statistically significant based on an FDR correction for multiple testing and spatial dependence."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 34 statistically significant high outlier features."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 37 statistically significant low outlier features."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 528 features part of statistically significant low clusters."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["There are 408 features part of statistically significant high clusters"]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["38% of features had less than 8 neighbors based on the distance band of 75 Kilometers"]}</msg><msg code="0" type="0">json:
+{"element": "h5", "data": "Output"}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Pink output features are part of a cluster of high SNAPRATE_1 values."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Light Blue output features are part of a cluster of low SNAPRATE_1 values."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Red output features represent high outliers within a cluster of low SNAPRATE_1 values.."]}</msg><msg code="0" type="0">json:
+{"element": "unorderedlist", "data": ["Blue output features represent low outliers within a cluster of high SNAPRATE_1 values."]}</msg><msg code="0" type="0"></msg><msg code="0" type="3">Succeeded at Wednesday, September 27, 2023 4:48:48 PM (Elapsed Time: 19.97 seconds)</msg></messages>
