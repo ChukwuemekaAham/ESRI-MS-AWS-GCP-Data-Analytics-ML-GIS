@@ -1,0 +1,64 @@
+{
+  "version" : 1,
+  "name" : "Raster Functions History",
+  "historyItems" : [
+    {
+      "id" : "{5E16C23E-233B-44C2-ADF0-A238B292404C}",
+      "type" : 1,
+      "status" : 2,
+      "name" : "Clip",
+      "description" : "Sets the extent of a raster using coordinates or another dataset.",
+      "rftPath" : "Clip_{5E16C23E-233B-44C2-ADF0-A238B292404C}.rft.xml",
+      "startTime" : "638316767580000000",
+      "endTime" : "638316767580000000",
+      "remoteJobStateInfo" : {
+        "ID" : "_lcljob",
+        "Status" : 5,
+        "ReturnValue" : "",
+        "Messages" : [
+          {
+            "Text" : "Submitted.",
+            "Type" : 0
+          },
+          {
+            "Text" : "Executing...",
+            "Type" : 0
+          },
+          {
+            "Text" : "Succeeded.",
+            "Type" : 0
+          }
+        ]
+      }
+    },
+    {
+      "id" : "{F177EBDA-D474-40F4-8CAE-B9589B00CFC3}",
+      "type" : 1,
+      "status" : 2,
+      "name" : "Greater Than",
+      "description" : "Performs a Relational greater-than operation on two inputs on a cell-by-cell basis.  Returns 1 for cells where the first raster is greater than the second raster and 0 for cells if it is not.",
+      "rftPath" : "Greater Than_{F177EBDA-D474-40F4-8CAE-B9589B00CFC3}.rft.xml",
+      "startTime" : "638316772340000000",
+      "endTime" : "638316772340000000",
+      "remoteJobStateInfo" : {
+        "ID" : "_lcljob",
+        "Status" : 5,
+        "ReturnValue" : "",
+        "Messages" : [
+          {
+            "Text" : "Submitted.",
+            "Type" : 0
+          },
+          {
+            "Text" : "Executing...",
+            "Type" : 0
+          },
+          {
+            "Text" : "Succeeded.",
+            "Type" : 0
+          }
+        ]
+      }
+    }
+  ]
+}
