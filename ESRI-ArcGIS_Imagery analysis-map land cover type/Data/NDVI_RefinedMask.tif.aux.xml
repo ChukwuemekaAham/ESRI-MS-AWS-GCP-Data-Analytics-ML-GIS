@@ -1,0 +1,39 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="AcquisitionDate">5/14/2021 5:59:11 PM</MDI>
+    <MDI key="DataType">Generic</MDI>
+    <MDI key="ParentRasterType">Sentinel-2</MDI>
+    <MDI key="ParentTemplate">Multispectral-10m</MDI>
+    <MDI key="ProductName">S2MSI1C</MDI>
+    <MDI key="SensingOrbit">41</MDI>
+    <MDI key="SensorName">Sentinel-2A</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>Band_1</Description>
+    <Histograms>
+      <HistItem>
+        <HistMin>-0.5</HistMin>
+        <HistMax>1.5</HistMax>
+        <BucketCount>2</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>1027141|74639</HistCounts>
+      </HistItem>
+    </Histograms>
+    <Metadata>
+      <MDI key="BandName">Band_1</MDI>
+      <MDI key="ReflectanceGain">4.50367374</MDI>
+      <MDI key="RepresentationType">ATHEMATIC</MDI>
+      <MDI key="SolarIrradiance">1041.63</MDI>
+      <MDI key="STATISTICS_COVARIANCES">0.06315482008803296</MDI>
+      <MDI key="STATISTICS_EXCLUDEDVALUES"></MDI>
+      <MDI key="STATISTICS_MAXIMUM">1</MDI>
+      <MDI key="STATISTICS_MEAN">0.067744014231512</MDI>
+      <MDI key="STATISTICS_MEDIAN">0.000000</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_SKIPFACTORX">1</MDI>
+      <MDI key="STATISTICS_SKIPFACTORY">1</MDI>
+      <MDI key="STATISTICS_STDDEV">0.25130622771438</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
