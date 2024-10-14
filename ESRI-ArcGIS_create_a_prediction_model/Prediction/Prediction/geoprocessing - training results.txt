@@ -1,0 +1,404 @@
+RESULT FOR THREE VARIABLES - 1
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     TRAIN
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false
+Explanatory Training Distance Features     
+Explanatory Training Rasters     
+Input Prediction Features     
+Output Predicted Features     
+Output Prediction Surface     
+Match Explanatory Variables     
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Trained_Features
+Output Variable Importance Table     
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     100
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     1
+Calculate Uncertainty     FALSE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Thursday, September 7, 2023 11:57:03 AM
+Random Seed: 72699
+json:
+[{"element": "table", "data": [["Number of Trees", "100"], ["Leaf Size", "5"], ["Tree Depth Range", "20-30"], ["Mean Tree Depth", "24"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "1"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "50", "100"], ["MSE", "0.005", "0.005"], ["% of variation explained", "42.604", "45.418"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["2022 Per Capita Income", "8.98", "37"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "7.77", "32"], ["2022 Median Age", "7.40", "31"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.894"], ["p-value", "0.000"], ["Standard Error", "0.005"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.529"], ["p-value", "0.000"], ["Standard Error", "0.029"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Share", "prop": {"colspan": 2}}], ["Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}]], ["2022 Median Age", "22.30", "64.60", "24.80", "58.40", "1.00", "0.79*"], ["2022 Per Capita Income", "12514.00", "85462.00", "16065.00", "83699.00", "1.00", "0.93*"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.74", "33.77", "0.63", "20.84", "1.00*", "0.61*"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "right", "pad": "0px", "wrap": true}, "6": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Thursday, September 7, 2023 11:57:20 AM (Elapsed Time: 17.09 seconds)
+
+****************************************************************************************************************
+
+RESULT FOR THREE VARIABLES - 2
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     TRAIN
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false
+Explanatory Training Distance Features     
+Explanatory Training Rasters     
+Input Prediction Features     
+Output Predicted Features     
+Output Prediction Surface     
+Match Explanatory Variables     
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Trained_Features
+Output Variable Importance Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Variable_Importance_Table
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     100
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Validation_Table
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     10
+Calculate Uncertainty     TRUE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Friday, September 8, 2023 12:16:06 PM
+Random Seed: 203476
+json:
+[{"element": "table", "data": [["Number of Trees", "100"], ["Leaf Size", "5"], ["Tree Depth Range", "21-36"], ["Mean Tree Depth", "25"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "1"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "50", "100"], ["MSE", "0.006", "0.005"], ["% of variation explained", "39.812", "43.442"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["2022 Per Capita Income", "9.34", "38"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "8.07", "33"], ["2022 Median Age", "7.08", "29"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.893"], ["p-value", "0.000"], ["Standard Error", "0.005"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.534"], ["p-value", "0.000"], ["Standard Error", "0.029"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+
+
+Median R2 0.534 was approximately reached at seed 441982
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Share", "prop": {"colspan": 2}}], ["Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}]], ["2022 Median Age", "22.30", "64.60", "23.70", "58.40", "1.00", "0.82*"], ["2022 Per Capita Income", "12514.00", "85462.00", "16213.00", "66396.00", "1.00", "0.69*"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.63", "33.77", "1.09", "20.76", "1.00", "0.59*"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "right", "pad": "0px", "wrap": true}, "6": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Friday, September 8, 2023 12:16:35 PM (Elapsed Time: 29.08 seconds)
+
+
+
+*****************************************************************************************************************
+
+AFTER MORE VARIABLES WHERE ADDED - 3
+
+
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     TRAIN
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false;pop_sqmi false;state_abbr true;voter_turnout_2008 false;voter_turnout_2012 false;voter_turnout_2016 false;financial_X14060_X_A false;households_ACSHHBPOV_P false;educationalattainment_BACHDEG_CY_P false;disposableincome_AVGDI_CY false;miscellaneous_X12024_X_A false;maritalstatustotals_NEVMARR_CY_P false;educationalattainment_GED_CY_P false;financial_X14068_X_A false;educationalattainment_HSGRAD_CY_P false;educationalattainment_GRADDEG_CY_P false;educationalattainment_NOHS_CY_P false;householdincome_AVGHINC_CY false;lifemodegroupsNEW_TLIFECODE true
+Explanatory Training Distance Features     
+Explanatory Training Rasters     
+Input Prediction Features     
+Output Predicted Features     
+Output Prediction Surface     
+Match Explanatory Variables     
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Trained_Features
+Output Variable Importance Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Variable_Importance_Table
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     100
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Validation_Table
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     10
+Calculate Uncertainty     TRUE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Friday, September 8, 2023 12:27:34 PM
+Random Seed: 264705
+WARNING 110214: The following variables, STATE_ABBR, contain more than 15 categories, which can diminish the predictive power of the model.
+json:
+[{"element": "table", "data": [["Number of Trees", "100"], ["Leaf Size", "5"], ["Tree Depth Range", "18-27"], ["Mean Tree Depth", "22"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "7"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "50", "100"], ["MSE", "0.002", "0.001"], ["% of variation explained", "84.013", "85.538"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["voter_turnout_2016", "9.73", "37"], ["voter_turnout_2008", "4.88", "19"], ["voter_turnout_2012", "4.70", "18"], ["state_abbr", "2.33", "9"], ["2022 Per Capita Income", "0.81", "3"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.60", "2"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.49", "2"], ["pop_sqmi", "0.34", "1"], ["2022 Pop Age 15+: Never Married: Percent", "0.32", "1"], ["2022 Median Age", "0.32", "1"], ["2022 Pop Age 25+: < 9th Grade: Percent", "0.21", "1"], ["2022 Pop Age 25+: Bachelor's Degree: Percent", "0.19", "1"], ["2022 Pop Age 25+: GED: Percent", "0.18", "1"], ["2022 Pop Age 25+: Grad/Professional Degree: Percent", "0.18", "1"], ["2022 Value of Checking/Savings/Money Mkt/CDs: Average", "0.17", "1"], ["2022 Pop Age 25+: High School Diploma: Percent", "0.14", "1"], ["2022 Dominant LifeMode Grp Code", "0.13", "1"], ["2022 Value of Credit Card Debt: Average", "0.13", "0"], ["2022 Cash Gifts to Political Orgs: Average", "0.13", "0"], ["2022 Average Disposable Income", "0.12", "0"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.981"], ["p-value", "0.000"], ["Standard Error", "0.002"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.896"], ["p-value", "0.000"], ["Standard Error", "0.016"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+
+
+Median R2 0.896 was approximately reached at seed 74697
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Share", "prop": {"colspan": 2}}], ["Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}]], ["pop_sqmi", "0.10", "74146.70", "0.60", "18492.70", "1.00", "0.25*"], ["voter_turnout_2008", "0.33", "1.00", "0.20", "0.89", "0.84*", "0.84*"], ["voter_turnout_2012", "0.31", "1.00", "0.18", "0.84", "0.84*", "0.78*"], ["voter_turnout_2016", "0.31", "1.00", "0.17", "0.90", "0.83*", "0.85*"], ["2022 Median Age", "22.30", "64.60", "24.30", "58.70", "1.00", "0.81*"], ["2022 Per Capita Income", "12514.00", "85173.00", "13669.00", "85462.00", "1.00*", "0.98*"], ["2022 Value of Checking/Savings/Money Mkt/CDs: Average", "7747.03", "43473.99", "9009.86", "37827.06", "1.00", "0.81*"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.63", "33.77", "0.93", "19.42", "1.00", "0.56*"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.00", "46.08", "3.19", "45.47", "1.00", "0.92*"], ["2022 Pop Age 25+: Bachelor's Degree: Percent", "0.00", "47.68", "3.16", "40.31", "1.00", "0.78*"], ["2022 Average Disposable Income", "32901.00", "140490.00", "34258.00", "125678.00", "1.00", "0.85*"], ["2022 Cash Gifts to Political Orgs: Average", "7.29", "92.09", "7.23", "94.65", "0.97*", "1.03"], ["2022 Pop Age 15+: Never Married: Percent", "10.80", "66.09", "10.07", "60.17", "0.99*", "0.89*"], ["2022 Pop Age 25+: GED: Percent", "0.00", "24.33", "0.69", "15.17", "1.00", "0.60*"], ["2022 Value of Credit Card Debt: Average", "1268.44", "6253.42", "1332.39", "5536.54", "1.00", "0.84*"], ["2022 Pop Age 25+: High School Diploma: Percent", "6.07", "48.02", "6.26", "51.35", "0.93*", "1.00*"], ["2022 Pop Age 25+: Grad/Professional Degree: Percent", "0.00", "43.90", "1.30", "41.94", "1.00", "0.93*"], ["2022 Pop Age 25+: < 9th Grade: Percent", "0.00", "34.63", "0.30", "33.29", "1.00", "0.95*"], ["2022 Average Household Income", "40468.00", "220134.00", "42611.00", "196303.00", "1.00", "0.86*"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "right", "pad": "0px", "wrap": true}, "6": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Friday, September 8, 2023 12:28:28 PM (Elapsed Time: 53.95 seconds)
+
+*********************************************************************************************
+
+AFTER ADDING IS DISTANCE VARIABLES BY CITY SIZE - 4
+
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     TRAIN
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false;pop_sqmi false;state_abbr true;voter_turnout_2008 false;voter_turnout_2012 false;voter_turnout_2016 false;financial_X14060_X_A false;households_ACSHHBPOV_P false;educationalattainment_BACHDEG_CY_P false;disposableincome_AVGDI_CY false;miscellaneous_X12024_X_A false;maritalstatustotals_NEVMARR_CY_P false;educationalattainment_GED_CY_P false;financial_X14068_X_A false;educationalattainment_HSGRAD_CY_P false;educationalattainment_GRADDEG_CY_P false;educationalattainment_NOHS_CY_P false;householdincome_AVGHINC_CY false;lifemodegroupsNEW_TLIFECODE true
+Explanatory Training Distance Features     DistanceVariables\Cities10;DistanceVariables\Cities9;DistanceVariables\Cities8;DistanceVariables\Cities7;DistanceVariables\Cities6;DistanceVariables\Cities5
+Explanatory Training Rasters     
+Input Prediction Features     
+Output Predicted Features     
+Output Prediction Surface     
+Match Explanatory Variables     
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Trained_Features
+Output Variable Importance Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Variable_Importance_Table
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     100
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Validation_Table
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     10
+Calculate Uncertainty     TRUE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Friday, September 8, 2023 1:28:09 PM
+Random Seed: 473450
+WARNING 110214: The following variables, STATE_ABBR, contain more than 15 categories, which can diminish the predictive power of the model.
+json:
+[{"element": "table", "data": [["Number of Trees", "100"], ["Leaf Size", "5"], ["Tree Depth Range", "18-29"], ["Mean Tree Depth", "22"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "9"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "50", "100"], ["MSE", "0.001", "0.001"], ["% of variation explained", "84.836", "86.065"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["voter_turnout_2016", "10.17", "40"], ["voter_turnout_2012", "4.39", "17"], ["voter_turnout_2008", "3.93", "15"], ["state_abbr", "1.92", "8"], ["2022 Per Capita Income", "0.97", "4"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.86", "3"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.41", "2"], ["pop_sqmi", "0.28", "1"], ["2022 Median Age", "0.27", "1"], ["2022 Pop Age 15+: Never Married: Percent", "0.26", "1"], ["2022 Pop Age 25+: < 9th Grade: Percent", "0.18", "1"], ["2022 Pop Age 25+: GED: Percent", "0.17", "1"], ["2022 Value of Checking/Savings/Money Mkt/CDs: Average", "0.15", "1"], ["2022 Pop Age 25+: Bachelor's Degree: Percent", "0.14", "1"], ["2022 Pop Age 25+: Grad/Professional Degree: Percent", "0.14", "1"], ["2022 Pop Age 25+: High School Diploma: Percent", "0.11", "0"], ["CITIES10", "0.11", "0"], ["2022 Dominant LifeMode Grp Code", "0.11", "0"], ["CITIES5", "0.10", "0"], ["2022 Average Household Income", "0.10", "0"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.981"], ["p-value", "0.000"], ["Standard Error", "0.002"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.883"], ["p-value", "0.000"], ["Standard Error", "0.016"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+
+
+Median R2 0.883 was approximately reached at seed 562597
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Share", "prop": {"colspan": 2}}], ["Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}]], ["pop_sqmi", "0.10", "74146.70", "0.20", "22072.50", "1.00", "0.30*"], ["voter_turnout_2008", "0.33", "1.00", "0.20", "0.94", "0.83*", "0.91*"], ["voter_turnout_2012", "0.31", "1.00", "0.18", "0.98", "0.84*", "0.98*"], ["voter_turnout_2016", "0.31", "1.00", "0.17", "0.99", "0.83*", "0.99*"], ["2022 Median Age", "22.30", "64.60", "24.30", "59.00", "1.00", "0.82*"], ["2022 Per Capita Income", "12749.00", "85462.00", "12514.00", "66362.00", "1.00*", "0.74*"], ["2022 Value of Checking/Savings/Money Mkt/CDs: Average", "7747.03", "43473.99", "8327.18", "36659.18", "1.00", "0.79*"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.74", "33.77", "0.63", "20.76", "1.00*", "0.61*"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.00", "46.08", "2.63", "42.14", "1.00", "0.86*"], ["2022 Pop Age 25+: Bachelor's Degree: Percent", "0.00", "47.68", "3.86", "36.83", "1.00", "0.69*"], ["2022 Average Disposable Income", "33397.00", "140490.00", "32901.00", "120092.00", "1.00*", "0.81*"], ["2022 Cash Gifts to Political Orgs: Average", "7.23", "94.65", "7.59", "70.99", "1.00", "0.73*"], ["2022 Pop Age 15+: Never Married: Percent", "10.07", "66.09", "11.94", "61.53", "1.00", "0.89*"], ["2022 Pop Age 25+: GED: Percent", "0.00", "24.33", "0.00", "22.19", "1.00", "0.91*"], ["2022 Value of Credit Card Debt: Average", "1268.44", "6253.42", "1276.63", "5117.16", "1.00", "0.77*"], ["2022 Pop Age 25+: High School Diploma: Percent", "6.07", "48.02", "12.40", "51.35", "0.93*", "0.85*"], ["2022 Pop Age 25+: Grad/Professional Degree: Percent", "0.00", "43.90", "1.74", "30.77", "1.00", "0.66*"], ["2022 Pop Age 25+: < 9th Grade: Percent", "0.00", "34.63", "0.00", "20.29", "1.00", "0.59*"], ["2022 Average Household Income", "40744.00", "220134.00", "40468.00", "173904.00", "1.00*", "0.74*"], ["CITIES10", "0.00", "3975492.62", "5072.86", "1484140.03", "1.00", "0.37*"], ["CITIES9", "0.00", "3938808.89", "0.00", "1001842.96", "1.00", "0.25*"], ["CITIES8", "0.00", "464705.11", "0.00", "448303.67", "1.00", "0.96*"], ["CITIES7", "0.00", "535278.55", "0.00", "517120.45", "1.00", "0.97*"], ["CITIES6", "0.00", "269479.29", "0.00", "176951.56", "1.00", "0.66*"], ["CITIES5", "0.00", "5038308.62", "0.00", "1194366.62", "1.00", "0.24*"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "right", "pad": "0px", "wrap": true}, "6": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Friday, September 8, 2023 1:32:44 PM (Elapsed Time: 4 minutes 34 seconds)
+
+
+***************************************************************************************
+
+AFTER REMOVING THE VARIABLES WITH LESS IMPORTANCE - 5
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     TRAIN
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false;pop_sqmi false;state_abbr true;voter_turnout_2008 false;voter_turnout_2012 false;voter_turnout_2016 false;households_ACSHHBPOV_P false;maritalstatustotals_NEVMARR_CY_P false
+Explanatory Training Distance Features     
+Explanatory Training Rasters     
+Input Prediction Features     
+Output Predicted Features     
+Output Prediction Surface     
+Match Explanatory Variables     
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Trained_Features
+Output Variable Importance Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Variable_Importance_Table
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     1000
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Validation_Table
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     10
+Calculate Uncertainty     TRUE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Friday, September 8, 2023 2:41:33 PM
+Random Seed: 154584
+WARNING 110214: The following variables, STATE_ABBR, contain more than 15 categories, which can diminish the predictive power of the model.
+json:
+[{"element": "table", "data": [["Number of Trees", "1000"], ["Leaf Size", "5"], ["Tree Depth Range", "18-29"], ["Mean Tree Depth", "21"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "3"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "500", "1000"], ["MSE", "0.001", "0.001"], ["% of variation explained", "87.102", "87.327"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["voter_turnout_2016", "9.27", "35"], ["voter_turnout_2012", "5.43", "21"], ["voter_turnout_2008", "4.58", "17"], ["state_abbr", "2.44", "9"], ["2022 Per Capita Income", "1.41", "5"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.83", "3"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.71", "3"], ["2022 Median Age", "0.53", "2"], ["pop_sqmi", "0.49", "2"], ["2022 Pop Age 15+: Never Married: Percent", "0.49", "2"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.980"], ["p-value", "0.000"], ["Standard Error", "0.003"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.879"], ["p-value", "0.000"], ["Standard Error", "0.018"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+
+
+Median R2 0.879 was approximately reached at seed 506876
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Share", "prop": {"colspan": 2}}], ["Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}]], ["pop_sqmi", "0.10", "74146.70", "0.30", "15514.90", "1.00", "0.21*"], ["voter_turnout_2008", "0.20", "1.00", "0.33", "0.88", "1.00", "0.69*"], ["voter_turnout_2012", "0.18", "1.00", "0.32", "0.90", "1.00", "0.71*"], ["voter_turnout_2016", "0.17", "1.00", "0.33", "0.99", "1.00", "0.80*"], ["2022 Median Age", "22.30", "60.60", "29.20", "64.60", "0.91*", "0.82*"], ["2022 Per Capita Income", "12514.00", "85462.00", "15183.00", "71302.00", "1.00", "0.77*"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.63", "33.77", "1.77", "16.95", "1.00", "0.46*"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.00", "46.08", "2.48", "33.20", "1.00", "0.67*"], ["2022 Pop Age 15+: Never Married: Percent", "10.07", "66.09", "10.81", "48.77", "1.00", "0.68*"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "right", "pad": "0px", "wrap": true}, "6": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Friday, September 8, 2023 2:48:34 PM (Elapsed Time: 7 minutes 0 seconds)
+
+
+***** DEDUCTIONS 
+What is the validation R-squared value for this model?
+
+Answer
+If the R-squared value is approximately 0.981, the model predicted voter turnout in the validation data with an accuracy of about 98 percent.
+
+?
+What is the mean R-squared value over the 10 runs of this model?
+
+Answer
+If the R-squared values for each run of the model range from about 0.81 to 0.91, then the mean value is approximately 0.87.
+
+Hint
+?
+What are the two most important explanatory variables in this model?
+
+Answer
+The two most important variables are Voter_Turnout_2016 and Voter_Turnout_2012.
+
+
+
+
+
+
+
+****************************************************************************************
+
+PREDITION 6
+
+
+Forest-based Classification and Regression
+=====================
+Parameters
+
+Prediction Type     PREDICT_FEATURES
+Input Training Features     CountyElections2020
+Variable to Predict     voter_turnout_2020
+Treat Variable as Categorical     
+Explanatory Training Variables     gender_MEDAGE_CY false;householdincome_PCI_CY false;educationalattainment_SOMEHS_CY_P false;pop_sqmi false;state_abbr true;households_ACSHHBPOV_P false;maritalstatustotals_NEVMARR_CY_P false
+Explanatory Training Distance Features     
+Explanatory Training Rasters     
+Input Prediction Features     Tracts
+Output Predicted Features     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Predicted_Features
+Output Prediction Surface     
+Match Explanatory Variables     F5yearincrements_medage_cy '2022 Median Age';householdincome_pci_cy '2022 Per Capita Income';educationalattainment_hsgrad_cy_p '2022 Pop Age 25+: High School/No Diploma: Percent';POP12_SQMI pop_sqmi;State_Abbrev state_abbr;atrisk_acshhbpov_p '2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent';maritalstatustotals_nevmarr_cy_p '2022 Pop Age 15+: Never Married: Percent'
+Match Distance Features     
+Match Explanatory Rasters     
+Output Trained Features     
+Output Variable Importance Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Variable_Importance_Table
+Convert Polygons to Raster Resolution for Training     TRUE
+Number of Trees     1000
+Minimum Leaf Size     
+Maximum Tree Depth     
+Data Available per Tree (%)     100
+Number of Randomly Sampled Variables     
+Training Data Excluded for Validation (%)     10
+Output Classification Performance Table (Confusion Matrix)     
+Output  Validation Table     C:\Users\HP\Downloads\Google Cloud Partner Kickstart\GCP Professional Data Engineer\ESRI - Spatial Data Science MOOC\EsriTraining\Prediction\Prediction\Prediction_Data.gdb\Out_Validation_Table
+Compensate for Sparse Categories     FALSE
+Number of Runs for Validation     10
+Calculate Uncertainty     TRUE
+Output Uncertainty Raster Layers     
+Output Trained Model File     
+=====================
+Messages
+
+Start Time: Friday, September 8, 2023 6:24:30 PM
+Random Seed: 247139
+WARNING 110214: The following variables, STATE_ABBR, contain more than 15 categories, which can diminish the predictive power of the model.
+json:
+[{"element": "table", "data": [["Number of Trees", "1000"], ["Leaf Size", "5"], ["Tree Depth Range", "18-30"], ["Mean Tree Depth", "22"], ["% of Training Available per Tree", "100"], ["Number of Randomly Sampled Variables", "2"], ["% of Training Data Excluded for Validation", "10"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Characteristics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Number of Trees", "500", "1000"], ["MSE", "0.003", "0.002"], ["% of variation explained", "72.844", "73.410"]], "elementProps": {"striped": "true", "noHeader": true, "title": "Model Out of Bag Errors", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["Variable", "Importance", "%"], ["state_abbr", "6.62", "26"], ["2022 Per Capita Income", "5.12", "20"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "3.70", "14"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "3.11", "12"], ["2022 Median Age", "3.09", "12"], ["pop_sqmi", "2.06", "8"], ["2022 Pop Age 15+: Never Married: Percent", "1.89", "7"]], "elementProps": {"striped": "true", "title": "Top Variable Importance", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}, "2": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.962"], ["p-value", "0.000"], ["Standard Error", "0.003"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the data used to train the model compared to the observed categories for those features"], "title": "Training Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+json:
+[{"element": "table", "data": [["R-Squared", "0.726"], ["p-value", "0.000"], ["Standard Error", "0.023"]], "elementProps": {"striped": "true", "noHeader": true, "footnote": ["*Predictions for the test data (excluded from model training) compared to the observed values for those test features"], "title": "Validation Data: Regression Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "right", "pad": "0px", "wrap": true}}}]
+
+
+
+Median R2 0.726 was approximately reached at seed 996152
+json:
+[{"element": "table", "data": [[{"data": "Variable", "prop": {"rowspan": 2}}, {"data": "Training", "prop": {"colspan": 2}}, {"data": "Validation", "prop": {"text-align": "left", "colspan": 2}}, {"data": "Prediction", "prop": {"colspan": 2}}, {"data": "Share", "prop": {"colspan": 3}}], ["Minimum", "Maximum", "Minimum", "Maximum", "Minimum", "Maximum", {"data": ["Training", {"element": "sup", "data": "a"}], "prop": {"text-align": "right"}}, ["Validation", {"element": "sup", "data": "b"}], ["Prediction", {"element": "sup", "data": "c"}]], ["pop_sqmi", "0.10", "74146.70", "0.50", "10539.80", "0.00", "215350.00", "1.00", "0.14*", "2.90+"], ["2022 Median Age", "22.30", "64.60", "25.20", "60.60", "13.20", "82.40", "1.00", "0.84*", "1.64+"], ["2022 Per Capita Income", "12514.00", "85462.00", "12749.00", "85173.00", "35.00", "157337.00", "1.00", "0.99*", "2.16+"], ["2022 Pop Age 25+: High School/No Diploma: Percent", "0.63", "33.77", "0.93", "18.25", "0.00", "100.00", "1.00", "0.52*", "3.02+"], ["2021 HHs: Inc Below Poverty Level (ACS 5-Yr): Percent", "0.00", "45.47", "3.19", "46.08", "0.00", "100.00", "0.99*", "0.93*", "2.20+"], ["2022 Pop Age 15+: Never Married: Percent", "10.07", "66.09", "10.85", "57.57", "0.00", "100.00", "1.00", "0.83*", "1.79+"]], "elementProps": {"striped": "true", "footnote": ["(a) % of overlap between the ranges of the training data and the input explanatory variable", "(b) % of overlap between the ranges of the validation data and the training data", "(c) % of overlap between the ranges of the training data and the prediction data", "*  Data ranges do not coincide. Training or validation is occurring with incomplete data.", "+  Ranges of the training data and prediction data do not coincide and the tool is attempting to extrapolate."], "title": "Explanatory Variable Range Diagnostics", "0": {"align": "left", "pad": "0px", "wrap": true}, "1": {"align": "left", "pad": "0px", "wrap": true}, "2": {"align": "left", "pad": "0px", "wrap": true}, "3": {"align": "left", "pad": "0px", "wrap": true}, "4": {"align": "left", "pad": "0px", "wrap": true}, "5": {"align": "left", "pad": "0px", "wrap": true}, "6": {"align": "left", "pad": "0px", "wrap": true}, "7": {"align": "right", "pad": "0px", "wrap": true}, "8": {"align": "right", "pad": "0px", "wrap": true}, "9": {"align": "right", "pad": "0px", "wrap": true}}}]
+Succeeded at Friday, September 8, 2023 6:33:56 PM (Elapsed Time: 9 minutes 25 seconds)
+
+
+
+****** DEDUCTION
+
+The wide confidence intervals show that the model does not perform as well at the tract level as it did at the county level. In particular, it may be prone to overestimating turnout for low-turnout tracts. Because the goal of your analysis is to identify areas with low voter turnout, this model is not reliable enough to meet your needs. 
+
+When you change the scale of your analysis, you need to change or update your model. In this scenario, votes in the United States are mostly calculated at the county level and are not calculated at the tract level. You saw that tract-level prediction does not work nationwide. The factors that drive voter turnout are likely very different from place to place, making it difficult to find a model that predicts well for the entire country. It is often a good practice to reduce your study area and create more localized models. 
+
+You can end your analysis here or you can continue modifying and improving the model by reducing your study area to create a more localized model. Remember: your model will not be perfect. Your goal is to find a model that is useful for your objective, which, in this case, is a campaign to get out the vote.
+
+
+
