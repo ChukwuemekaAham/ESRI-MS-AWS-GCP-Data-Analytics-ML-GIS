@@ -1,0 +1,104 @@
+{
+  "Version" : 1,
+  "NumBands" : 3,
+  "TileSizeX" : 256,
+  "TileSizeY" : 256,
+  "NumClasses" : 1,
+  "NumTiles" : 1385,
+  "NumTilesAsDouble" : 1385,
+  "NextTileIndex" : 2456,
+  "OutputFeatures" : true,
+  "MetaDataMode" : "PASCAL_VOC_rectangles",
+  "MinCellSize" : {
+    "x" : 1,
+    "y" : 1,
+    "spatialReference" : {
+      "wkid" : 102100,
+      "latestWkid" : 3857
+    }
+  },
+  "MaxCellSize" : {
+    "x" : 1,
+    "y" : 1,
+    "spatialReference" : {
+      "wkid" : 102100,
+      "latestWkid" : 3857
+    }
+  },
+  "Classes" : [
+    {
+      "ClassValue" : 0,
+      "ClassName" : "0",
+      "Color" : [
+        41,
+        35,
+        190
+      ]
+    }
+  ],
+  "FeatureStats" : {
+    "NumClasses" : 1,
+    "NumImagesTotal" : 1385,
+    "NumFeaturesTotal" : 7116,
+    "NumImagesPerClass" : [
+      1385
+    ],
+    "NumFeaturesPerClass" : [
+      7116
+    ],
+    "NumFeaturesPerImage" : {
+      "Min" : 1,
+      "Max" : 20,
+      "Mean" : 5.1379061371841157,
+      "Sum" : 7116,
+      "Count" : 1385
+    },
+    "FeatureAreaPerClass" : [
+      {
+        "Min" : 37.78326687117832,
+        "Max" : 113.09733552923255,
+        "Mean" : 110.89443957972401,
+        "Sum" : 789124.83204931603,
+        "Count" : 7116
+      }
+    ]
+  },
+  "InputRastersProps" : {
+    "RasterCount" : 1,
+    "SensorName" : "Undefined",
+    "BandNames" : [
+      "",
+      "",
+      ""
+    ]
+  },
+  "BandStatsState" : [
+    {
+      "Min" : 0,
+      "Max" : 254,
+      "Mean" : 0,
+      "StdDev" : 0,
+      "M1" : 117.59543794577425,
+      "M2" : 144506764155.479,
+      "Num" : 90767356
+    },
+    {
+      "Min" : 0,
+      "Max" : 245,
+      "Mean" : 0,
+      "StdDev" : 0,
+      "M1" : 79.531843109681702,
+      "M2" : 148847875951.38242,
+      "Num" : 90767360
+    },
+    {
+      "Min" : 0,
+      "Max" : 244,
+      "Mean" : 0,
+      "StdDev" : 0,
+      "M1" : 80.627829188818509,
+      "M2" : 116730362329.96989,
+      "Num" : 90767360
+    }
+  ]
+}

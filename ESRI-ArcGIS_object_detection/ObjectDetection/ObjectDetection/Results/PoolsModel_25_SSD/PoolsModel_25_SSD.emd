@@ -1,0 +1,48 @@
+{
+    "ModelFile": "PoolsModel_25_SSD.pth",
+    "ImageHeight": 224,
+    "ImageWidth": 224,
+    "ModelParameters": {
+        "backbone": "resnet34"
+    },
+    "LearningRate": "slice(0.000630957344480193, 0.006309573444801929, None)",
+    "ModelName": "SingleShotDetector",
+    "average_precision_score": {
+        "0": 0.654280804970317
+    },
+    "resize_to": null,
+    "Framework": "arcgis.learn.models._inferencing",
+    "InferenceFunction": "ArcGISObjectDetector.py",
+    "ModelConfiguration": "_DynamicSSD",
+    "ModelType": "ObjectDetection",
+    "ExtractBands": [
+        0,
+        1,
+        2
+    ],
+    "backbone": "resnet34",
+    "Grids": [
+        15
+    ],
+    "Zooms": [
+        1.0
+    ],
+    "Ratios": [
+        [
+            1.0,
+            1.0
+        ]
+    ],
+    "SSDVersion": 2,
+    "Classes": [
+        {
+            "Value": 0,
+            "Name": "0",
+            "Color": [
+                130,
+                158,
+                180
+            ]
+        }
+    ]
+}
