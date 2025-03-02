@@ -6,6 +6,8 @@
 
 **Check out the simulation here:** https://www.theforage.com/simulations/deloitte-au/data-analytics-s5zy
 
+**Download** the [daikibo-telemetry-data.json.zip](https://www.theforage.com/simulations/deloitte-au/data-analytics-s5zy) file -> unzip -> and import it in Tableau.
+
 **Dashboard:** https://public.tableau.com/app/profile/chukwuemeka.aham/viz/DeliotteInternship-1/Dashboard1?publish=yes
 
 ## Certificate
