@@ -1,0 +1,5 @@
+2025-Feb-25-12:52:45 : Preliminaries complete. Initiating ELT process
+2025-Feb-25-12:52:45 : Data extraction complete. Initiating Transformation process
+2025-Feb-25-12:52:45 : SQL Connection initiated.
+2025-Feb-25-12:52:45 : Data loaded to Database as table. Running the query
+2025-Feb-25-12:52:45 : Process Complete.
