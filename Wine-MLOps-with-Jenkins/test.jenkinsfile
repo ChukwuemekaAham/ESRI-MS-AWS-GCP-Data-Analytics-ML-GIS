@@ -1,0 +1,29 @@
+pipeline {
+    agent {
+        label 'MLOpsAgent' // Ensure this label matches your Windows 11 agent
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add your Windows build commands here
+                sh 'echo Running build commands'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Add your Windows test commands here
+                sh 'echo Running test commands'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your Windows deploy commands here
+                sh 'echo Running deploy commands'
+            }
+        }
+    }
+}
